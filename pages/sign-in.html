@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign In | Stackly Cyber Security Services</title>
+  <meta name="description" content="Sign in to Stackly SOC Command & Cyber Defense Operations Portal. Role-based access for CISOs, Analysts, Enterprise Clients, and Auditors.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/animations.css">
+</head>
+<body>
+  <!-- Accessibility Skip Link -->
+  <a href="#signin-main" class="skip-link">Skip to login form</a>
+
+  <!-- Modern Viewport Loader -->
+  <div id="page-loader" aria-live="polite" role="status">
+    <div class="loader-content">
+      <div class="loader-brand">
+        <img src="../assets/images/logoStackly.webp" alt="Stackly Cyber Security Services" width="160" height="42">
+      </div>
+      <div class="loader-spinner-wrap">
+        <div class="loader-spinner"></div>
+        <div class="loader-pulse-ring"></div>
+      </div>
+      <div class="loader-text">
+        <span class="loader-status-dot"></span>
+        <span>Verifying Security Clearance...</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Authentication Split Layout (NO Navbar as required by specifications) -->
+  <div class="auth-wrapper">
+    <!-- Left Banner Side: Brand messaging, Trust indicators, Testimonial quote -->
+    <div class="auth-banner-side">
+      <div class="auth-banner-header">
+        <a href="../index.html" aria-label="Return to Stackly Home">
+          <img src="../assets/images/logoStackly.webp" alt="Stackly Logo" height="38" width="auto">
+        </a>
+        <a href="../index.html" class="btn btn-outline btn-sm">
+          <span>←</span> Back to Home
+        </a>
+      </div>
+
+      <div class="auth-banner-content" data-animate="fade-up">
+        <div class="badge-tag">
+          <span class="badge-dot"></span>
+          Restricted Enclave
+        </div>
+        <h1>Enter the Sovereign Cyber Defense Grid</h1>
+        <p style="font-size: 1.05rem; color: var(--text-secondary); margin-bottom: 1.5rem;">
+          Authenticate with role-based cryptographic credentials to access your organization's real-time SOC sensor metrics, threat mitigation logs, and compliance evidence vault.
+        </p>
+
+        <ul class="auth-trust-list">
+          <li class="auth-trust-item">
+            <span class="auth-trust-icon">✓</span>
+            <span>Zero-Trust FIPS 140-3 Hardware Token Compatible</span>
+          </li>
+          <li class="auth-trust-item">
+            <span class="auth-trust-icon">✓</span>
+            <span>Real-time SIEM Alert Ingestion & Triage Workspace</span>
+          </li>
+          <li class="auth-trust-item">
+            <span class="auth-trust-icon">✓</span>
+            <span>Role-Segregated Auditing for ISO 27001 & SOC 2 Type II</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="auth-quote-box" data-animate="zoom-in">
+        <p class="auth-quote-text">
+          "Stackly's role-based portal gives our executive committee instant visibility into active threats without getting bogged down in noise."
+        </p>
+        <span class="auth-quote-author">Elena Rostova — Chief Information Security Officer</span>
+      </div>
+    </div>
+
+    <!-- Right Form Side: Split Layout Form with Strict Validation -->
+    <div class="auth-form-side" id="signin-main">
+      <div class="auth-nav-top">
+        <a href="../index.html" style="display: flex; align-items: center; gap: 0.5rem; color: var(--text-muted); font-size: 0.875rem;">
+          <span>←</span> Back to Home
+        </a>
+        <span style="font-size: 0.875rem; color: var(--text-muted);">
+          Need access? <a href="sign-up.html" style="color: var(--primary); font-weight: 600;">Create Account</a>
+        </span>
+      </div>
+
+      <div style="margin-bottom: 2rem;" data-animate="fade-up">
+        <h2 style="font-size: 2rem; margin-bottom: 0.5rem;">Operator Sign In</h2>
+        <p style="font-size: 0.95rem; color: var(--text-secondary);">
+          Enter your authorized credentials to access your defense dashboard.
+        </p>
+      </div>
+
+      <form id="signin-form" novalidate data-animate="zoom-in">
+        <!-- 1. Email Address (Mandatory) -->
+        <div class="form-group">
+          <label for="signin-email" class="form-label">
+            <span>Corporate Email Address <span class="required-mark" aria-hidden="true">*</span></span>
+            <span class="optional-mark">Mandatory</span>
+          </label>
+          <input
+            type="email"
+            id="signin-email"
+            name="email"
+            class="form-control"
+            placeholder="e.g. admin@stackly.security"
+            value="admin@stackly.security"
+            required
+            autocomplete="email"
+            aria-required="true"
+            aria-describedby="signin-email-error"
+          >
+          <div id="signin-email-error" class="error-message" role="alert">
+            <span>❌</span> Please enter a valid corporate email format (e.g. name@domain.com).
+          </div>
+        </div>
+
+        <!-- 2. Password (Mandatory, with show/hide toggle) -->
+        <div class="form-group">
+          <div class="form-label">
+            <label for="signin-password">Password <span class="required-mark" aria-hidden="true">*</span></label>
+            <a href="404.html" style="font-size: 0.8rem; color: var(--text-muted);">Forgot Password?</a>
+          </div>
+          <div class="input-wrapper">
+            <input
+              type="password"
+              id="signin-password"
+              name="password"
+              class="form-control"
+              placeholder="••••••••••••"
+              value="Password@123"
+              required
+              autocomplete="current-password"
+              aria-required="true"
+              aria-describedby="signin-password-error"
+            >
+            <button
+              type="button"
+              class="password-toggle-btn"
+              data-target-input="signin-password"
+              aria-label="Toggle password visibility"
+            >
+              🔒
+            </button>
+          </div>
+          <div id="signin-password-error" class="error-message" role="alert">
+            <span>❌</span> Password must contain at least 6 characters.
+          </div>
+        </div>
+
+        <!-- 3. Role Selector (Mandatory) -->
+        <div class="form-group">
+          <label for="signin-role" class="form-label">
+            <span>Login As / Target Security Role <span class="required-mark" aria-hidden="true">*</span></span>
+            <span class="optional-mark">Role Clearance</span>
+          </label>
+          <select id="signin-role" name="role" class="form-control" required aria-required="true">
+            <option value="Security Administrator" selected>🛡️ Security Administrator / CISO</option>
+            <option value="SOC Analyst / Manager">⚡ SOC Analyst / Shift Commander</option>
+            <option value="Enterprise Client">🏢 Enterprise Client / CTO</option>
+            <option value="Compliance Auditor">📜 Compliance Auditor (Read-Only)</option>
+          </select>
+          <span class="hint-text" style="margin-top: 0.35rem;">
+            Dashboard views and telemetry widgets will automatically adapt to your selected role.
+          </span>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="btn btn-primary btn-block btn-lg" style="margin-top: 1.5rem;">
+          <span>🔒</span> Authenticate & Launch Dashboard
+        </button>
+
+        <!-- Social Sign In Section (Redirects to 404 as requested) -->
+        <div class="auth-divider">
+          <span>Or Single Sign-On (SSO)</span>
+        </div>
+
+        <div class="social-buttons-grid">
+          <a href="404.html" class="btn-social" aria-label="Sign in with Microsoft Entra">
+            <span>🔷</span> Microsoft SSO
+          </a>
+          <a href="404.html" class="btn-social" aria-label="Sign in with Google Workspace">
+            <span>🔴</span> Google Workspace
+          </a>
+          <a href="404.html" class="btn-social" aria-label="Sign in with LinkedIn">
+            <span>💼</span> LinkedIn SSO
+          </a>
+          <a href="404.html" class="btn-social" aria-label="Sign in with GitHub Enterprise">
+            <span>💻</span> GitHub Enterprise
+          </a>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/auth.js"></script>
+</body>
+</html>
+

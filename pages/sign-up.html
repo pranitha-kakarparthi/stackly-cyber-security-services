@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Account | Stackly Cyber Security Services</title>
+  <meta name="description" content="Register an authorized enterprise defense account. Provision 24/7 SOC sensor feeds, offensive penetration testing, and Zero-Trust cloud controls.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/animations.css">
+</head>
+<body>
+  <!-- Accessibility Skip Link -->
+  <a href="#signup-main" class="skip-link">Skip to registration form</a>
+
+  <!-- Modern Viewport Loader -->
+  <div id="page-loader" aria-live="polite" role="status">
+    <div class="loader-content">
+      <div class="loader-brand">
+        <img src="../assets/images/logoStackly.webp" alt="Stackly Cyber Security Services" width="160" height="42">
+      </div>
+      <div class="loader-spinner-wrap">
+        <div class="loader-spinner"></div>
+        <div class="loader-pulse-ring"></div>
+      </div>
+      <div class="loader-text">
+        <span class="loader-status-dot"></span>
+        <span>Provisioning Cryptographic Identity...</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Registration Split Layout (NO Navbar as required by specifications) -->
+  <div class="auth-wrapper">
+    <!-- Left Banner Side: Hero Content, Benefits, Trust Indicators & Testimonial -->
+    <div class="auth-banner-side">
+      <div class="auth-banner-header">
+        <a href="../index.html" aria-label="Return to Stackly Home">
+          <img src="../assets/images/logoStackly.webp" alt="Stackly Logo" height="38" width="auto">
+        </a>
+        <a href="../index.html" class="btn btn-outline btn-sm">
+          <span>←</span> Back to Home
+        </a>
+      </div>
+
+      <div class="auth-banner-content" data-animate="fade-up">
+        <div class="badge-tag">
+          <span class="badge-dot"></span>
+          Enterprise Identity Provisioning
+        </div>
+        <h1>Deploy Military-Grade Cyber Resilience</h1>
+        <p style="font-size: 1.05rem; color: var(--text-secondary); margin-bottom: 1.5rem;">
+          Join over 350+ enterprises defending their hybrid environments with Stackly 24/7 Managed SOC, Red Team adversary emulation, and automated containment.
+        </p>
+
+        <ul class="auth-trust-list">
+          <li class="auth-trust-item">
+            <span class="auth-trust-icon">✓</span>
+            <span>Sub-15 Minute Threat Mitigation Guarantee</span>
+          </li>
+          <li class="auth-trust-item">
+            <span class="auth-trust-icon">✓</span>
+            <span>Zero Data Exfiltration SLA Backed by Financial Warranty</span>
+          </li>
+          <li class="auth-trust-item">
+            <span class="auth-trust-icon">✓</span>
+            <span>Unified Multi-Cloud Telemetry (AWS, Azure, GCP, On-Prem)</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="auth-quote-box" data-animate="zoom-in">
+        <p class="auth-quote-text">
+          "Onboarding our multi-cloud environment to Stackly took less than 48 hours. The visibility into shadow IT was immediate."
+        </p>
+        <span class="auth-quote-author">Marcus Vance — Principal Security Strategist</span>
+      </div>
+    </div>
+
+    <!-- Right Form Side: Split Layout Registration Form with Strict Validation -->
+    <div class="auth-form-side" id="signup-main" style="padding-top: 2.5rem; padding-bottom: 2.5rem;">
+      <div class="auth-nav-top">
+        <a href="../index.html" style="display: flex; align-items: center; gap: 0.5rem; color: var(--text-muted); font-size: 0.875rem;">
+          <span>←</span> Back to Home
+        </a>
+        <span style="font-size: 0.875rem; color: var(--text-muted);">
+          Already registered? <a href="sign-in.html" style="color: var(--primary); font-weight: 600;">Sign In</a>
+        </span>
+      </div>
+
+      <div style="margin-bottom: 1.75rem;" data-animate="fade-up">
+        <h2 style="font-size: 2rem; margin-bottom: 0.35rem;">Create Security Account</h2>
+        <p style="font-size: 0.95rem; color: var(--text-secondary);">
+          Complete the credential verification to provision your organization's portal.
+        </p>
+      </div>
+
+      <!-- Success Toast -->
+      <div id="signup-success-toast" style="display: none; padding: 1.25rem; background: rgba(16, 185, 129, 0.15); border: 1px solid var(--accent); border-radius: var(--radius-md); margin-bottom: 1.5rem; text-align: center;">
+        <strong style="color: var(--accent); font-size: 1rem; display: flex; align-items: center; justify-content: center; gap: 0.5rem;">
+          <span>🛡️</span> Account Provisioned Successfully!
+        </strong>
+        <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 0.35rem;">
+          Redirecting to Sign In portal...
+        </p>
+      </div>
+
+      <form id="signup-form" novalidate data-animate="zoom-in">
+        <!-- Name Fields (Alphabets Only, Mandatory) -->
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+          <div class="form-group">
+            <label for="signup-firstname" class="form-label">
+              <span>First Name <span class="required-mark" aria-hidden="true">*</span></span>
+              <span class="optional-mark">Letters only</span>
+            </label>
+            <input
+              type="text"
+              id="signup-firstname"
+              name="firstName"
+              class="form-control"
+              placeholder="e.g. Elena"
+              value="Elena"
+              required
+              pattern="^[A-Za-z\s]+$"
+              aria-required="true"
+              aria-describedby="signup-firstname-error"
+            >
+            <div id="signup-firstname-error" class="error-message" role="alert">
+              <span>❌</span> Letters only (no digits).
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="signup-lastname" class="form-label">
+              <span>Last Name <span class="required-mark" aria-hidden="true">*</span></span>
+              <span class="optional-mark">Letters only</span>
+            </label>
+            <input
+              type="text"
+              id="signup-lastname"
+              name="lastName"
+              class="form-control"
+              placeholder="e.g. Rostova"
+              value="Rostova"
+              required
+              pattern="^[A-Za-z\s]+$"
+              aria-required="true"
+              aria-describedby="signup-lastname-error"
+            >
+            <div id="signup-lastname-error" class="error-message" role="alert">
+              <span>❌</span> Letters only (no digits).
+            </div>
+          </div>
+        </div>
+
+        <!-- Username (Optional) & Email (Mandatory) -->
+        <div style="display: grid; grid-template-columns: 1fr 1.25fr; gap: 1rem;">
+          <div class="form-group">
+            <label for="signup-username" class="form-label">
+              <span>Username</span>
+              <span class="optional-mark">Optional</span>
+            </label>
+            <input
+              type="text"
+              id="signup-username"
+              name="username"
+              class="form-control"
+              placeholder="e.g. elena_ciso"
+              value="elena_ciso"
+              minlength="3"
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="signup-email" class="form-label">
+              <span>Corporate Email <span class="required-mark" aria-hidden="true">*</span></span>
+              <span class="optional-mark">Mandatory</span>
+            </label>
+            <input
+              type="email"
+              id="signup-email"
+              name="email"
+              class="form-control"
+              placeholder="e.g. elena@defense.corp"
+              value="elena@defense.corp"
+              required
+              autocomplete="email"
+              aria-required="true"
+              aria-describedby="signup-email-error"
+            >
+            <div id="signup-email-error" class="error-message" role="alert">
+              <span>❌</span> Valid email format required.
+            </div>
+          </div>
+        </div>
+
+        <!-- Mobile Number with Country Code Dropdown (Mandatory, Exact 10 Digits) -->
+        <div class="form-group">
+          <label for="signup-mobile" class="form-label">
+            <span>Mobile Contact Number <span class="required-mark" aria-hidden="true">*</span></span>
+            <span class="optional-mark">Exact 10 digits</span>
+          </label>
+          <div class="phone-input-group">
+            <select id="signup-country-code" class="form-control" aria-label="Select Country Code">
+              <option value="+91" selected>🇮🇳 +91</option>
+              <option value="+1">🇺🇸 +1</option>
+              <option value="+44">🇬🇧 +44</option>
+              <option value="+65">🇸🇬 +65</option>
+              <option value="+61">🇦🇺 +61</option>
+              <option value="+49">🇩🇪 +49</option>
+            </select>
+            <input
+              type="tel"
+              id="signup-mobile"
+              name="mobile"
+              class="form-control"
+              placeholder="9876543210"
+              value="9876543210"
+              required
+              maxlength="10"
+              pattern="^\d{10}$"
+              aria-required="true"
+              aria-describedby="signup-mobile-error"
+            >
+          </div>
+          <div id="signup-mobile-error" class="error-message" role="alert">
+            <span>❌</span> Mobile must be exactly 10 numerical digits.
+          </div>
+        </div>
+
+        <!-- Security Role / Account Type (Mandatory) -->
+        <div class="form-group">
+          <label for="signup-role" class="form-label">
+            <span>Security Role Clearance <span class="required-mark" aria-hidden="true">*</span></span>
+          </label>
+          <select id="signup-role" name="role" class="form-control" required aria-required="true">
+            <option value="Security Administrator" selected>🛡️ Security Administrator / CISO</option>
+            <option value="SOC Analyst / Manager">⚡ SOC Analyst / Shift Commander</option>
+            <option value="Enterprise Client">🏢 Enterprise Client / CTO</option>
+            <option value="Compliance Auditor">📜 Compliance Auditor</option>
+          </select>
+          <div id="signup-role-error" class="error-message" role="alert">
+            <span>❌</span> Please select a role clearance.
+          </div>
+        </div>
+
+        <!-- Optional Address & Country -->
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+          <div class="form-group">
+            <label for="signup-country" class="form-label">
+              <span>Country</span>
+              <span class="optional-mark">Optional</span>
+            </label>
+            <input
+              type="text"
+              id="signup-country"
+              name="country"
+              class="form-control"
+              placeholder="e.g. India"
+              value="India"
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="signup-address" class="form-label">
+              <span>Corporate Address</span>
+              <span class="optional-mark">Optional</span>
+            </label>
+            <input
+              type="text"
+              id="signup-address"
+              name="address"
+              class="form-control"
+              placeholder="e.g. Chinna Thirupathi, Salem"
+              value="Chinna Thirupathi, Salem"
+            >
+          </div>
+        </div>
+
+        <!-- Password (Mandatory with Strength Meter) -->
+        <div class="form-group">
+          <label for="signup-password" class="form-label">
+            <span>Defense Master Password <span class="required-mark" aria-hidden="true">*</span></span>
+          </label>
+          <div class="input-wrapper">
+            <input
+              type="password"
+              id="signup-password"
+              name="password"
+              class="form-control"
+              placeholder="••••••••••••"
+              value="Password@123"
+              required
+              autocomplete="new-password"
+              aria-required="true"
+              aria-describedby="signup-password-error"
+            >
+            <button
+              type="button"
+              class="password-toggle-btn"
+              data-target-input="signup-password"
+              aria-label="Toggle password visibility"
+            >
+              🔒
+            </button>
+          </div>
+
+          <!-- Real-Time Password Strength Meter -->
+          <div class="password-strength-wrap">
+            <div class="strength-bar-track">
+              <div id="password-strength-bar" class="strength-bar-fill"></div>
+            </div>
+            <div id="password-strength-label" class="strength-label">Enter a strong password</div>
+            <ul class="password-rules">
+              <li id="rule-length" class="rule-item"><span>•</span> Minimum 8 characters</li>
+              <li id="rule-uppercase" class="rule-item"><span>•</span> One uppercase letter</li>
+              <li id="rule-lowercase" class="rule-item"><span>•</span> One lowercase letter</li>
+              <li id="rule-number" class="rule-item"><span>•</span> One number</li>
+              <li id="rule-special" class="rule-item"><span>•</span> One special symbol (@$!%*#)</li>
+            </ul>
+          </div>
+          <div id="signup-password-error" class="error-message" role="alert">
+            <span>❌</span> Password does not meet security requirements.
+          </div>
+        </div>
+
+        <!-- Confirm Password (Mandatory) -->
+        <div class="form-group">
+          <label for="signup-confirm-password" class="form-label">
+            <span>Confirm Password <span class="required-mark" aria-hidden="true">*</span></span>
+          </label>
+          <div class="input-wrapper">
+            <input
+              type="password"
+              id="signup-confirm-password"
+              name="confirmPassword"
+              class="form-control"
+              placeholder="••••••••••••"
+              value="Password@123"
+              required
+              autocomplete="new-password"
+              aria-required="true"
+              aria-describedby="signup-confirm-error"
+            >
+            <button
+              type="button"
+              class="password-toggle-btn"
+              data-target-input="signup-confirm-password"
+              aria-label="Toggle confirm password visibility"
+            >
+              🔒
+            </button>
+          </div>
+          <div id="signup-confirm-error" class="error-message" role="alert">
+            <span>❌</span> Passwords do not match.
+          </div>
+        </div>
+
+        <!-- Profile Avatar Upload (UI Only, Optional) -->
+        <div class="form-group">
+          <label for="signup-avatar" class="form-label">
+            <span>Profile Avatar (Optional)</span>
+            <span class="optional-mark">UI Demonstration</span>
+          </label>
+          <input type="file" id="signup-avatar" class="form-control" accept="image/*">
+        </div>
+
+        <!-- Terms and Conditions Checkbox (Mandatory, Links to 404 as requested) -->
+        <div class="form-check">
+          <input type="checkbox" id="signup-terms" class="form-check-input" required checked aria-required="true">
+          <label for="signup-terms" class="form-check-label">
+            I agree to the <a href="404.html" style="color: var(--primary);">Terms of Use</a> and <a href="404.html" style="color: var(--primary);">Privacy Policy</a>. <span class="required-mark">*</span>
+          </label>
+        </div>
+        <div id="signup-terms-error" class="error-message" role="alert" style="margin-top: -0.75rem; margin-bottom: 1rem;">
+          <span>❌</span> You must accept the Terms of Use to create an account.
+        </div>
+
+        <!-- Newsletter Opt-In (Optional, Links to 404 as requested) -->
+        <div class="form-check">
+          <input type="checkbox" id="signup-newsletter" class="form-check-input">
+          <label for="signup-newsletter" class="form-check-label">
+            I would like to receive threat intelligence bulletins, product announcements, and zero-day advisory alerts. <a href="404.html" style="color: var(--text-muted); font-size: 0.8rem;">Read More</a>
+          </label>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="btn btn-primary btn-block btn-lg" style="margin-top: 1.5rem;">
+          <span>🛡️</span> Complete Account Registration
+        </button>
+
+        <!-- Social Registration Section (Redirects to 404 as requested) -->
+        <div class="auth-divider">
+          <span>Or Register with SSO</span>
+        </div>
+
+        <div class="social-buttons-grid">
+          <a href="404.html" class="btn-social" aria-label="Register with Microsoft Entra">
+            <span>🔷</span> Microsoft SSO
+          </a>
+          <a href="404.html" class="btn-social" aria-label="Register with Google Workspace">
+            <span>🔴</span> Google Workspace
+          </a>
+          <a href="404.html" class="btn-social" aria-label="Register with LinkedIn">
+            <span>💼</span> LinkedIn SSO
+          </a>
+          <a href="404.html" class="btn-social" aria-label="Register with GitHub Enterprise">
+            <span>💻</span> GitHub Enterprise
+          </a>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/auth.js"></script>
+</body>
+</html>
+

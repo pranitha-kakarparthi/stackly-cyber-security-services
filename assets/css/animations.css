@@ -1,0 +1,208 @@
+/* ==========================================================================
+   STACKLY CYBER SECURITY SERVICES - ANIMATION SYSTEM
+   Tilt, Zoom-in, Zoom-out, Scroll Reveals, Cyber Pulses & Motion Controls
+   ========================================================================== */
+
+/* 1. SCROLL REVEAL ANIMATIONS (AOS Style via IntersectionObserver) */
+[data-animate] {
+  opacity: 0;
+  transition-property: opacity, transform;
+  transition-duration: 0.65s;
+  transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+/* Fade Up */
+[data-animate="fade-up"] {
+  transform: translateY(32px);
+}
+
+[data-animate="fade-up"].in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Fade Down */
+[data-animate="fade-down"] {
+  transform: translateY(-32px);
+}
+
+[data-animate="fade-down"].in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Zoom In */
+[data-animate="zoom-in"] {
+  transform: scale(0.88);
+}
+
+[data-animate="zoom-in"].in-view {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Zoom Out */
+[data-animate="zoom-out"] {
+  transform: scale(1.12);
+}
+
+[data-animate="zoom-out"].in-view {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Fade In Left & Right */
+[data-animate="fade-left"] {
+  transform: translateX(-36px);
+}
+
+[data-animate="fade-left"].in-view {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+[data-animate="fade-right"] {
+  transform: translateX(36px);
+}
+
+[data-animate="fade-right"].in-view {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Delays */
+[data-delay="100"] { transition-delay: 0.1s; }
+[data-delay="200"] { transition-delay: 0.2s; }
+[data-delay="300"] { transition-delay: 0.3s; }
+[data-delay="400"] { transition-delay: 0.4s; }
+[data-delay="500"] { transition-delay: 0.5s; }
+
+/* 2. INTERACTIVE 3D TILT EFFECT */
+.js-tilt {
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  will-change: transform;
+  transition: transform 0.15s ease-out, box-shadow 0.25s ease-out;
+}
+
+.js-tilt-inner {
+  transform: translateZ(28px);
+  transform-style: preserve-3d;
+}
+
+.js-tilt-deep {
+  transform: translateZ(42px);
+}
+
+/* 3. HOVER ZOOM-IN & ZOOM-OUT EFFECTS */
+.hover-zoom-in {
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease;
+}
+
+.hover-zoom-in:hover {
+  transform: scale(1.035);
+}
+
+.hover-zoom-out {
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hover-zoom-out:hover {
+  transform: scale(0.97);
+}
+
+.hover-zoom-image {
+  overflow: hidden;
+}
+
+.hover-zoom-image img {
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hover-zoom-image:hover img {
+  transform: scale(1.1);
+}
+
+/* 4. CYBER PULSE & GLOW ANIMATIONS */
+@keyframes cyberGlowPulse {
+  0% {
+    box-shadow: 0 0 15px rgba(0, 240, 118, 0.2), inset 0 0 10px rgba(0, 240, 118, 0.1);
+  }
+  50% {
+    box-shadow: 0 0 32px rgba(0, 240, 118, 0.48), inset 0 0 18px rgba(0, 240, 118, 0.22);
+  }
+  100% {
+    box-shadow: 0 0 15px rgba(0, 240, 118, 0.2), inset 0 0 10px rgba(0, 240, 118, 0.1);
+  }
+}
+
+.cyber-glow-pulse {
+  animation: cyberGlowPulse 3s infinite ease-in-out;
+}
+
+@keyframes shieldGlow {
+  0% {
+    filter: drop-shadow(0 0 8px rgba(0, 240, 118, 0.4));
+  }
+  50% {
+    filter: drop-shadow(0 0 22px rgba(0, 240, 118, 0.85));
+  }
+  100% {
+    filter: drop-shadow(0 0 8px rgba(0, 240, 118, 0.4));
+  }
+}
+
+.shield-pulse {
+  animation: shieldGlow 2.5s infinite ease-in-out;
+}
+
+/* Radar Sweep Keyframe */
+@keyframes radarSweep {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.radar-sweep-beam {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50%;
+  height: 2px;
+  background: linear-gradient(90deg, rgba(0, 240, 118, 0) 0%, rgba(0, 240, 118, 0.9) 100%);
+  transform-origin: 0 0;
+  animation: radarSweep 4s linear infinite;
+  pointer-events: none;
+}
+
+/* 5. PREFERS-REDUCED-MOTION SUPPORT (ACCESSIBILITY MANDATORY) */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  [data-animate] {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .js-tilt {
+    transform: none !important;
+  }
+
+  .hover-zoom-in:hover,
+  .hover-zoom-out:hover,
+  .hover-zoom-image:hover img {
+    transform: none !important;
+  }
+}
+

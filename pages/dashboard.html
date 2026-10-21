@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Security Operations Command Dashboard | Stackly Cyber Security</title>
+  <meta name="description" content="Mission-critical cyber defense operations center. Real-time SIEM alerts, active threat containment, Zero-Trust posture metrics, and role-based clearance.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/animations.css">
+  <link rel="stylesheet" href="../assets/css/dashboard.css">
+</head>
+<body data-page="dashboard">
+  <!-- Accessibility Skip Link -->
+  <a href="#dash-main-area" class="skip-link">Skip to dashboard operations</a>
+
+  <!-- Modern Viewport Loader -->
+  <div id="page-loader" aria-live="polite" role="status">
+    <div class="loader-content">
+      <div class="loader-brand">
+        <img src="../assets/images/logoStackly.webp" alt="Stackly Cyber Security Services" width="160" height="42">
+      </div>
+      <div class="loader-spinner-wrap">
+        <div class="loader-spinner"></div>
+        <div class="loader-pulse-ring"></div>
+      </div>
+      <div class="loader-text">
+        <span class="loader-status-dot"></span>
+        <span>Synchronizing Sovereign SOC Telemetry...</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="dashboard-layout">
+    <!-- ==========================================================================
+         SIDEBAR NAVIGATION
+         Full-width mobile overlay drawer with background scroll lock.
+         Tooltips on collapsed state. Relevant icons. Role awareness.
+         ========================================================================== -->
+    <aside class="dash-sidebar" id="dash-sidebar" role="navigation" aria-label="Dashboard Operations Sidebar">
+      <!-- Sidebar Header with Logo (clicking logo redirects to index.html) -->
+      <div class="dash-sidebar-header">
+        <a href="../index.html" class="dash-sidebar-brand" aria-label="Stackly Security Home">
+          <img src="../assets/images/logoStackly.webp" alt="Stackly Cyber Logo" class="dash-sidebar-logo" width="130" height="34">
+        </a>
+        <div style="display: flex; align-items: center; gap: 0.5rem;">
+          <button type="button" class="sidebar-collapse-toggle" id="sidebar-collapse-btn" aria-label="Toggle Sidebar Expansion" aria-expanded="true">
+            <span>⇄</span>
+          </button>
+          <button type="button" class="sidebar-collapse-toggle mobile-only-btn" id="mobile-sidebar-close-btn" aria-label="Close Mobile Sidebar" style="display: none;">
+            <span>✕</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Navigation Tabs & Subpage Modules -->
+      <nav class="dash-sidebar-nav" role="tablist">
+        <div class="sidebar-section-label">Core Operations</div>
+        
+        <div class="dash-nav-item active" data-target-module="module-overview" data-tooltip="Operations Overview" role="tab" tabindex="0">
+          <span class="dash-nav-icon">📊</span>
+          <span class="dash-nav-text">Operations Overview</span>
+        </div>
+
+        <div class="dash-nav-item" data-target-module="module-threats" data-tooltip="Threat Feeds & SIEM" role="tab" tabindex="0">
+          <span class="dash-nav-icon">🚨</span>
+          <span class="dash-nav-text">Threat Feeds & SIEM</span>
+        </div>
+
+        <div class="dash-nav-item" data-target-module="module-vulnerabilities" data-tooltip="Vulnerabilities & CVEs" role="tab" tabindex="0">
+          <span class="dash-nav-icon">🛡️</span>
+          <span class="dash-nav-text">Vulnerability Intel</span>
+        </div>
+
+        <div class="dash-nav-item" data-target-module="module-firewall" data-tooltip="Firewall & Zero-Trust" role="tab" tabindex="0">
+          <span class="dash-nav-icon">🧱</span>
+          <span class="dash-nav-text">Firewall & Zero-Trust</span>
+        </div>
+
+        <div class="sidebar-section-label">Investigation & Logs</div>
+
+        <div class="dash-nav-item" data-target-module="module-incidents" data-tooltip="Incident Timeline" role="tab" tabindex="0">
+          <span class="dash-nav-icon">⚡</span>
+          <span class="dash-nav-text">Incident Timeline</span>
+        </div>
+
+        <div class="dash-nav-item" data-target-module="module-compliance" data-tooltip="Compliance Evidence Vault" role="tab" tabindex="0">
+          <span class="dash-nav-icon">📜</span>
+          <span class="dash-nav-text">Compliance Vault</span>
+        </div>
+
+        <div class="dash-nav-item" data-target-module="module-reports" data-tooltip="Executive Risk Reports" role="tab" tabindex="0">
+          <span class="dash-nav-icon">📑</span>
+          <span class="dash-nav-text">Risk Reports</span>
+        </div>
+
+        <div class="sidebar-section-label">Settings & Access</div>
+
+        <div class="dash-nav-item" data-target-module="module-users" data-tooltip="User Access Management" role="tab" tabindex="0">
+          <span class="dash-nav-icon">👥</span>
+          <span class="dash-nav-text">User Clearances</span>
+        </div>
+      </nav>
+
+      <!-- Role Switcher in Sidebar (Enables live testing of all 4 roles) -->
+      <div class="dash-sidebar-rolebox">
+        <div class="role-switcher-label">Active Security View</div>
+        <select id="dash-role-selector" class="role-select-box" aria-label="Switch Role Dashboard">
+          <option value="Security Administrator">🛡️ Security Admin / CISO</option>
+          <option value="SOC Analyst / Manager">⚡ SOC Analyst / Commander</option>
+          <option value="Enterprise Client">🏢 Enterprise Client / CTO</option>
+          <option value="Compliance Auditor">📜 Compliance Auditor</option>
+        </select>
+      </div>
+    </aside>
+
+    <!-- ==========================================================================
+         DASHBOARD MAIN AREA
+         Top Bar with dynamic greeting based on time of day, user avatar,
+         Sign Out CTA, and Role-Aware Interactive Subsections.
+         ========================================================================== -->
+    <div class="dash-main" id="dash-main-area">
+      <!-- TOP HEADER -->
+      <header class="dash-topbar" role="banner">
+        <div class="dash-topbar-left">
+          <button type="button" class="mobile-dash-toggle" id="mobile-dash-toggle" aria-label="Open Operations Navigation">
+            <span>☰</span>
+          </button>
+          
+          <div class="dash-greeting-wrap">
+            <div class="dash-greeting">
+              <span id="dash-user-greeting">Good day, Security Commander</span>
+              <span class="dash-status-badge">
+                <span class="badge-dot"></span> Grid Secure
+              </span>
+            </div>
+            <div class="dash-timestamp" id="dash-user-timestamp">
+              Session Active • Last Authenticated: Today at 09:30 AM
+            </div>
+          </div>
+        </div>
+
+        <div class="dash-topbar-right">
+          <!-- Notification Bell Icon (redirects to 404 as requested) -->
+          <a href="404.html" class="sidebar-collapse-toggle" aria-label="View Security Notifications" title="3 High Severity Alerts">
+            <span>🔔</span>
+          </a>
+
+          <!-- User Profile Display Area -->
+          <div class="dash-user-profile">
+            <div class="user-avatar-badge" id="dash-user-avatar">A</div>
+            <div class="user-text-info">
+              <span class="user-display-name" id="dash-user-name">Alex Morgan</span>
+              <span class="user-display-role" id="dash-user-role">Security Administrator</span>
+            </div>
+          </div>
+
+          <!-- Primary CTA: Sign Out Button (clears session and returns to sign-in page) -->
+          <button type="button" class="btn btn-secondary btn-sm" id="dash-signout-btn">
+            <span>🚪</span> Sign Out
+          </button>
+        </div>
+      </header>
+
+      <!-- ==========================================================================
+           DASHBOARD SUB-PAGES / CONTENT MODULES
+           Each section has 6-8 distinct subsections, KPIs, charts, and data tables.
+           ========================================================================== -->
+      <main class="dash-content" role="main">
+        
+        <!-- MODULE 1: OPERATIONS OVERVIEW (Default Active) -->
+        <div class="dash-module-section active" id="module-overview">
+          
+          <!-- SECTION 1: ROLE BANNER -->
+          <div style="background: linear-gradient(135deg, rgba(0, 240, 118, 0.08) 0%, rgba(147, 51, 234, 0.08) 100%); border: 1px solid var(--border-cyber); border-radius: var(--radius-lg); padding: 1.5rem 2rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1.25rem;">
+            <div>
+              <span class="badge-tag" style="margin-bottom: 0.5rem;">
+                <span class="badge-dot"></span> Live SOC Enclave
+              </span>
+              <h2 style="font-size: 1.5rem; margin-bottom: 0.25rem;">Enterprise Defense Status</h2>
+              <p style="font-size: 0.9rem; color: var(--text-secondary); margin: 0;">
+                All 4 multi-cloud sensor clusters are streaming live telemetry with zero ingestion bottlenecks.
+              </p>
+            </div>
+            <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+              <button type="button" class="btn btn-primary btn-sm dash-action-btn">
+                <span>🛡️</span> Trigger Perimeter Sweep
+              </button>
+              <button type="button" class="btn btn-outline btn-sm dash-action-btn">
+                <span>📥</span> Export Audit Bundle
+              </button>
+            </div>
+          </div>
+
+          <!-- SECTION 2: 4-COLUMN KPI CARDS (Interactive 3D Tilt) -->
+          <div class="dash-kpi-grid" style="margin-top: 1.75rem;">
+            <div class="kpi-card js-tilt">
+              <div class="kpi-top">
+                <span class="kpi-label">Active Blocked Threats</span>
+                <span class="kpi-icon">🛑</span>
+              </div>
+              <div class="kpi-value">1,482</div>
+              <div class="kpi-trend up">
+                <span>↑ 14%</span> past 24 hours (Zero breaches)
+              </div>
+            </div>
+
+            <div class="kpi-card js-tilt">
+              <div class="kpi-top">
+                <span class="kpi-label">Mean Triage Speed</span>
+                <span class="kpi-icon">⚡</span>
+              </div>
+              <div class="kpi-value">4.2 min</div>
+              <div class="kpi-trend down" style="color: var(--accent);">
+                <span>↓ 18%</span> faster than SLA threshold
+              </div>
+            </div>
+
+            <div class="kpi-card js-tilt">
+              <div class="kpi-top">
+                <span class="kpi-label">Protected Workloads</span>
+                <span class="kpi-icon">☁️</span>
+              </div>
+              <div class="kpi-value">348</div>
+              <div class="kpi-trend up">
+                <span>✓ 100%</span> sensors online & synchronized
+              </div>
+            </div>
+
+            <div class="kpi-card js-tilt">
+              <div class="kpi-top">
+                <span class="kpi-label">Compliance Assurance Score</span>
+                <span class="kpi-icon">📜</span>
+              </div>
+              <div class="kpi-value">98.6%</div>
+              <div class="kpi-trend up">
+                <span>✓ ISO 27001</span> certified posture
+              </div>
+            </div>
+          </div>
+
+          <!-- SECTION 3: SPLIT DATA GRID (Live SIEM Feed & Vulnerability Severity) -->
+          <div class="dash-split-grid">
+            <!-- Left Panel: Live SIEM Alert Table -->
+            <div class="dash-panel">
+              <div class="dash-panel-header">
+                <h3 class="dash-panel-title">
+                  <span>🚨</span> Real-Time SIEM Threat Ingestion
+                </h3>
+                <button type="button" class="btn btn-outline btn-sm dash-action-btn">View All Alerts</button>
+              </div>
+              <div class="data-table-wrap">
+                <table class="dash-table" aria-label="Active Security Incidents Table">
+                  <thead>
+                    <tr>
+                      <th scope="col">Severity</th>
+                      <th scope="col">Incident Event Description</th>
+                      <th scope="col">Target Vector</th>
+                      <th scope="col">Containment Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><span class="severity-pill severity-critical">Critical</span></td>
+                      <td>Credential Spraying via Tor Exit Node</td>
+                      <td>IAM Gateway</td>
+                      <td>
+                        <button type="button" class="btn btn-outline btn-sm dash-action-btn" style="padding: 0.25rem 0.6rem; font-size: 0.75rem;">
+                          Isolate IP
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><span class="severity-pill severity-high">High</span></td>
+                      <td>Suspicious PowerShell Memory Execution</td>
+                      <td>Prod-K8s-Worker-03</td>
+                      <td>
+                        <button type="button" class="btn btn-outline btn-sm dash-action-btn" style="padding: 0.25rem 0.6rem; font-size: 0.75rem;">
+                          Kill Process
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><span class="severity-pill severity-medium">Medium</span></td>
+                      <td>Unusual S3 Storage Bucket Egress Volume</td>
+                      <td>AWS CloudTrail</td>
+                      <td>
+                        <button type="button" class="btn btn-outline btn-sm dash-action-btn" style="padding: 0.25rem 0.6rem; font-size: 0.75rem;">
+                          Restrict Role
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><span class="severity-pill severity-low">Low</span></td>
+                      <td>Outdated TLS 1.1 Handshake Attempt</td>
+                      <td>Edge Cloudflare Proxy</td>
+                      <td>
+                        <button type="button" class="btn btn-outline btn-sm dash-action-btn" style="padding: 0.25rem 0.6rem; font-size: 0.75rem;">
+                          Enforce 1.3
+                        </button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <!-- Right Panel: Incident Investigation Activity Feed -->
+            <div class="dash-panel">
+              <div class="dash-panel-header">
+                <h3 class="dash-panel-title">
+                  <span>🕒</span> Live SOC Defense Feed
+                </h3>
+                <span class="badge-tag" style="margin: 0; font-size: 0.725rem; padding: 0.2rem 0.6rem;">Real-time</span>
+              </div>
+              <div class="timeline-feed">
+                <div class="timeline-event">
+                  <span class="timeline-dot"></span>
+                  <span class="timeline-time">10:42 AM</span>
+                  <div class="timeline-title">Automated Host Quarantine Executed</div>
+                  <div class="timeline-desc">Endpoint IP 192.168.4.108 isolated via CrowdStrike API token.</div>
+                </div>
+
+                <div class="timeline-event">
+                  <span class="timeline-dot" style="background: var(--accent); box-shadow: 0 0 8px var(--accent);"></span>
+                  <span class="timeline-time">10:28 AM</span>
+                  <div class="timeline-title">Zero-Trust IAM Token Revocation</div>
+                  <div class="timeline-desc">Orphaned service principal credentials rotated across Azure Entra.</div>
+                </div>
+
+                <div class="timeline-event">
+                  <span class="timeline-dot" style="background: #fbbf24; box-shadow: 0 0 8px #fbbf24;"></span>
+                  <span class="timeline-time">09:55 AM</span>
+                  <div class="timeline-title">Bi-Weekly Vulnerability Sync Completed</div>
+                  <div class="timeline-desc">Zero critical CVEs exposed on perimeter ingress points.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- SECTION 4: ROLE SPECIFIC ADAPTIVE BLOCKS -->
+          
+          <!-- Role Block 1: Admin / CISO View -->
+          <div id="view-role-admin">
+            <div class="dash-panel">
+              <div class="dash-panel-header">
+                <h3 class="dash-panel-title">
+                  <span>🛡️</span> CISO Executive Risk & Policy Matrix
+                </h3>
+                <span class="severity-pill severity-low">Clearance Level: Top Secret</span>
+              </div>
+              <div class="cards-grid-3">
+                <div style="background: #090e1c; padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-subtle);">
+                  <div style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.25rem;">Enterprise Threat Exposure Index</div>
+                  <div style="font-size: 1.75rem; font-weight: 800; color: var(--accent); font-family: var(--font-mono);">12 / 100 (Minimal)</div>
+                  <p style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 0.5rem;">
+                    Perimeter attack surface rated in the 99th percentile of enterprise defense hardness.
+                  </p>
+                  <button type="button" class="btn btn-outline btn-sm btn-block dash-action-btn" style="margin-top: 0.75rem;">Download CISO Briefing</button>
+                </div>
+
+                <div style="background: #090e1c; padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-subtle);">
+                  <div style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.25rem;">Global Firewall Gateway Rules</div>
+                  <div style="font-size: 1.75rem; font-weight: 800; color: var(--primary); font-family: var(--font-mono);">2,481 Active</div>
+                  <p style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 0.5rem;">
+                    Dynamic threat intelligence blocklists synchronized from 14 global feeds every 5 minutes.
+                  </p>
+                  <button type="button" class="btn btn-outline btn-sm btn-block dash-action-btn" style="margin-top: 0.75rem;">Configure Ingress Rules</button>
+                </div>
+
+                <div style="background: #090e1c; padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-subtle);">
+                  <div style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.25rem;">Cyber Insurance Warranty Status</div>
+                  <div style="font-size: 1.75rem; font-weight: 800; color: var(--text-primary); font-family: var(--font-mono);">$10,000,000</div>
+                  <p style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 0.5rem;">
+                    Warranty active and validated against Lloyd's of London cyber underwriting benchmarks.
+                  </p>
+                  <button type="button" class="btn btn-outline btn-sm btn-block dash-action-btn" style="margin-top: 0.75rem;">View Warranty Certificate</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Role Block 2: SOC Analyst View -->
+          <div id="view-role-soc" style="display: none;">
+            <div class="dash-panel">
+              <div class="dash-panel-header">
+                <h3 class="dash-panel-title">
+                  <span>⚡</span> SOC Shift Commander Telemetry
+                </h3>
+                <span class="severity-pill severity-low">Active Shift: Alpha Command</span>
+              </div>
+              <div class="cards-grid-3">
+                <div style="background: #090e1c; padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-subtle);">
+                  <div style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.25rem;">SIEM Event Processing Rate</div>
+                  <div style="font-size: 1.75rem; font-weight: 800; color: var(--primary); font-family: var(--font-mono);">48,290 EPS</div>
+                  <p style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 0.5rem;">
+                    Event processing throughput healthy. Elastic and Splunk ingest latency &lt; 200ms.
+                  </p>
+                  <button type="button" class="btn btn-outline btn-sm btn-block dash-action-btn" style="margin-top: 0.75rem;">Adjust Ingestion Filters</button>
+                </div>
+
+                <div style="background: #090e1c; padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-subtle);">
+                  <div style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.25rem;">Uninvestigated Alarms (Queue)</div>
+                  <div style="font-size: 1.75rem; font-weight: 800; color: var(--accent); font-family: var(--font-mono);">0 In Queue</div>
+                  <p style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 0.5rem;">
+                    All alerts resolved within contractual SLA window. 100% analyst availability.
+                  </p>
+                  <button type="button" class="btn btn-outline btn-sm btn-block dash-action-btn" style="margin-top: 0.75rem;">View Handover Log</button>
+                </div>
+
+                <div style="background: #090e1c; padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-subtle);">
+                  <div style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.25rem;">Automated Playbook Trigger Rate</div>
+                  <div style="font-size: 1.75rem; font-weight: 800; color: var(--primary); font-family: var(--font-mono);">99.4% Match</div>
+                  <p style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 0.5rem;">
+                    SOAR playbooks executed 148 automated isolation actions without human lag.
+                  </p>
+                  <button type="button" class="btn btn-outline btn-sm btn-block dash-action-btn" style="margin-top: 0.75rem;">Edit Playbook Workflows</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Role Block 3: Enterprise Client View -->
+          <div id="view-role-client" style="display: none;">
+            <div class="dash-panel">
+              <div class="dash-panel-header">
+                <h3 class="dash-panel-title">
+                  <span>🏢</span> Enterprise Client SLA & Assets Overview
+                </h3>
+                <span class="severity-pill severity-low">Status: Protected</span>
+              </div>
+              <div class="cards-grid-3">
+                <div style="background: #090e1c; padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-subtle);">
+                  <div style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.25rem;">Active Defense Plan</div>
+                  <div style="font-size: 1.5rem; font-weight: 800; color: var(--primary);">Advanced SOC 24/7</div>
+                  <p style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 0.5rem;">
+                    250 Endpoints + AWS Production VPC enrolled. Next billing renewal on November 21, 2026.
+                  </p>
+                  <button type="button" class="btn btn-outline btn-sm btn-block dash-action-btn" style="margin-top: 0.75rem;">Manage Subscription</button>
+                </div>
+
+                <div style="background: #090e1c; padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-subtle);">
+                  <div style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.25rem;">Support Tickets</div>
+                  <div style="font-size: 1.75rem; font-weight: 800; color: var(--accent); font-family: var(--font-mono);">0 Open</div>
+                  <p style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 0.5rem;">
+                    Dedicated Cyber Security Engineer: Alex Morgan (Direct line active).
+                  </p>
+                  <button type="button" class="btn btn-outline btn-sm btn-block dash-action-btn" style="margin-top: 0.75rem;">Submit Service Request</button>
+                </div>
+
+                <div style="background: #090e1c; padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-subtle);">
+                  <div style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.25rem;">Latest Penetration Test Attestation</div>
+                  <div style="font-size: 1.5rem; font-weight: 800; color: var(--accent);">Clean Attestation</div>
+                  <p style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 0.5rem;">
+                    All high-severity vulnerabilities re-tested and validated as resolved.
+                  </p>
+                  <button type="button" class="btn btn-outline btn-sm btn-block dash-action-btn" style="margin-top: 0.75rem;">Download Vendor Letter</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Role Block 4: Compliance Auditor View -->
+          <div id="view-role-auditor" style="display: none;">
+            <div class="dash-panel">
+              <div class="dash-panel-header">
+                <h3 class="dash-panel-title">
+                  <span>📜</span> Compliance Assurance & Evidence Vault
+                </h3>
+                <span class="severity-pill severity-low">Read-Only Audit Access</span>
+              </div>
+              <div class="cards-grid-3">
+                <div style="background: #090e1c; padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-subtle);">
+                  <div style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.25rem;">ISO/IEC 27001 Alignment</div>
+                  <div style="font-size: 1.75rem; font-weight: 800; color: var(--accent); font-family: var(--font-mono);">114 / 114 Controls</div>
+                  <p style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 0.5rem;">
+                    Annex A cryptographic controls, access controls, and logging rules verified.
+                  </p>
+                  <button type="button" class="btn btn-outline btn-sm btn-block dash-action-btn" style="margin-top: 0.75rem;">Export ISO 27001 Package</button>
+                </div>
+
+                <div style="background: #090e1c; padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-subtle);">
+                  <div style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.25rem;">SOC 2 Type II Trust Principles</div>
+                  <div style="font-size: 1.75rem; font-weight: 800; color: var(--primary); font-family: var(--font-mono);">100% Conforming</div>
+                  <p style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 0.5rem;">
+                    Security, Availability, and Confidentiality testing logs compiled for external auditors.
+                  </p>
+                  <button type="button" class="btn btn-outline btn-sm btn-block dash-action-btn" style="margin-top: 0.75rem;">Download SOC 2 Report</button>
+                </div>
+
+                <div style="background: #090e1c; padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-subtle);">
+                  <div style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.25rem;">Immutable Cryptographic Audit Logs</div>
+                  <div style="font-size: 1.75rem; font-weight: 800; color: var(--text-primary); font-family: var(--font-mono);">SHA-256 Chained</div>
+                  <p style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 0.5rem;">
+                    WORM (Write Once Read Many) AWS S3 Glacier storage with non-repudiation guarantee.
+                  </p>
+                  <button type="button" class="btn btn-outline btn-sm btn-block dash-action-btn" style="margin-top: 0.75rem;">Verify Hash Signatures</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- SECTION 5: QUICK ACTIONS BAR (All action buttons redirect to 404 page) -->
+          <div class="dash-quick-actions" style="margin-top: 2rem;">
+            <strong style="color: var(--text-primary); font-size: 0.95rem; margin-right: 0.5rem;">
+              ⚡ Command Shortcuts:
+            </strong>
+            <button type="button" class="btn btn-secondary btn-sm dash-action-btn">
+              <span>🔍</span> Scan New Subnet
+            </button>
+            <button type="button" class="btn btn-secondary btn-sm dash-action-btn">
+              <span>🚫</span> Revoke API Keys
+            </button>
+            <button type="button" class="btn btn-secondary btn-sm dash-action-btn">
+              <span>🔒</span> Lockdown Sensitive Enclave
+            </button>
+            <button type="button" class="btn btn-secondary btn-sm dash-action-btn">
+              <span>📜</span> Download Compliance Pack
+            </button>
+            <button type="button" class="btn btn-primary btn-sm dash-action-btn" style="margin-left: auto;">
+              <span>🚨</span> Dispatch Emergency Incident Team
+            </button>
+          </div>
+        </div>
+
+        <!-- MODULE 2: THREAT FEEDS & SIEM -->
+        <div class="dash-module-section" id="module-threats">
+          <div class="dash-panel">
+            <div class="dash-panel-header">
+              <h3 class="dash-panel-title">
+                <span>🚨</span> Real-Time Global Threat Intelligence & SIEM Streams
+              </h3>
+              <button type="button" class="btn btn-outline btn-sm dash-action-btn">Refresh Threat Feeds</button>
+            </div>
+            <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">
+              Correlating over 50,000 events per second from MITRE ATT&CK, CISA Known Exploited Vulnerabilities (KEV), and proprietary Stackly Dark Web honeypots.
+            </p>
+            <div class="data-table-wrap">
+              <table class="dash-table">
+                <thead>
+                  <tr>
+                    <th>Threat Actor / Campaign</th>
+                    <th>Observed CVE</th>
+                    <th>Targeted Protocol</th>
+                    <th>Mitigation Rule</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>APT29 (Cozy Bear)</strong></td>
+                    <td>CVE-2024-21887</td>
+                    <td>Ivanti Connect Secure VPN</td>
+                    <td>Zero-Trust Gateway Isolation</td>
+                    <td><button type="button" class="btn btn-outline btn-sm dash-action-btn">Inspect</button></td>
+                  </tr>
+                  <tr>
+                    <td><strong>LockBit 3.0 Variant</strong></td>
+                    <td>CVE-2023-38831</td>
+                    <td>RAR Archive Execution</td>
+                    <td>Endpoint Behavioral Kill</td>
+                    <td><button type="button" class="btn btn-outline btn-sm dash-action-btn">Inspect</button></td>
+                  </tr>
+                  <tr>
+                    <td><strong>FIN7 FinTech Harvesting</strong></td>
+                    <td>CVE-2023-34362</td>
+                    <td>MOVEit Transfer SQLi</td>
+                    <td>WAF SQLi Signature Block</td>
+                    <td><button type="button" class="btn btn-outline btn-sm dash-action-btn">Inspect</button></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- MODULE 3: VULNERABILITY INTEL -->
+        <div class="dash-module-section" id="module-vulnerabilities">
+          <div class="dash-panel">
+            <div class="dash-panel-header">
+              <h3 class="dash-panel-title">
+                <span>🛡️</span> Vulnerability Intel & Patch Prioritization
+              </h3>
+              <button type="button" class="btn btn-outline btn-sm dash-action-btn">Run Automated Scan</button>
+            </div>
+            <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">
+              Real-time exposure mapping prioritizing vulnerabilities based on active weaponization in the wild.
+            </p>
+            <div class="cards-grid-3" style="margin-bottom: 1.5rem;">
+              <div class="sim-stat-box">
+                <div class="sim-stat-val" style="color: #ff6b6b;">0 Critical</div>
+                <div class="sim-stat-lbl">Active Zero-Days on Perimeter</div>
+              </div>
+              <div class="sim-stat-box">
+                <div class="sim-stat-val" style="color: #fbbf24;">4 Medium</div>
+                <div class="sim-stat-lbl">Patches Scheduled for Maintenance</div>
+              </div>
+              <div class="sim-stat-box">
+                <div class="sim-stat-val" style="color: var(--accent);">348 Clean</div>
+                <div class="sim-stat-lbl">Hardened Microservices & Servers</div>
+              </div>
+            </div>
+            <button type="button" class="btn btn-primary btn-sm dash-action-btn">Generate CVE Remediation Plan</button>
+          </div>
+        </div>
+
+        <!-- MODULE 4: FIREWALL & ZERO-TRUST -->
+        <div class="dash-module-section" id="module-firewall">
+          <div class="dash-panel">
+            <div class="dash-panel-header">
+              <h3 class="dash-panel-title">
+                <span>🧱</span> Zero-Trust Microsegmentation & Next-Gen Firewall
+              </h3>
+              <button type="button" class="btn btn-outline btn-sm dash-action-btn">Deploy Rule Changes</button>
+            </div>
+            <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">
+              East-West traffic inspection policies actively isolating application workloads from unauthorized database queries.
+            </p>
+            <div class="cards-grid-2">
+              <div class="sim-stat-box">
+                <div style="font-weight: 700; color: var(--text-primary); margin-bottom: 0.5rem;">AWS Cloud Security Group Ingress</div>
+                <div style="font-size: 0.85rem; color: var(--text-secondary);">Default Deny active on all unverified ports. Ingress strictly routed through Cloudflare WAF.</div>
+                <button type="button" class="btn btn-outline btn-sm dash-action-btn" style="margin-top: 0.75rem;">View AWS Rules</button>
+              </div>
+              <div class="sim-stat-box">
+                <div style="font-weight: 700; color: var(--text-primary); margin-bottom: 0.5rem;">Kubernetes Network Policy</div>
+                <div style="font-size: 0.85rem; color: var(--text-secondary);">Calico CNI enforcing namespace isolation between staging and production enclaves.</div>
+                <button type="button" class="btn btn-outline btn-sm dash-action-btn" style="margin-top: 0.75rem;">View K8s Policies</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- MODULE 5: INCIDENT TIMELINE -->
+        <div class="dash-module-section" id="module-incidents">
+          <div class="dash-panel">
+            <div class="dash-panel-header">
+              <h3 class="dash-panel-title">
+                <span>⚡</span> Chronological Incident Forensics Timeline
+              </h3>
+              <button type="button" class="btn btn-outline btn-sm dash-action-btn">Export Timeline Log</button>
+            </div>
+            <div class="timeline-feed" style="margin-top: 1.5rem;">
+              <div class="timeline-event">
+                <span class="timeline-dot"></span>
+                <span class="timeline-time">Today, 11:15 AM</span>
+                <div class="timeline-title">Routine Vulnerability Baseline Signed</div>
+                <div class="timeline-desc">Cryptographic signature STK-SIG-9912 verified by Lead SOC Commander Alex Morgan.</div>
+              </div>
+              <div class="timeline-event">
+                <span class="timeline-dot" style="background: var(--accent);"></span>
+                <span class="timeline-time">Today, 08:30 AM</span>
+                <div class="timeline-title">Automated TLS Certificate Renewal</div>
+                <div class="timeline-desc">Let's Encrypt Wildcard certificate renewed with 4096-bit RSA key for API endpoints.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- MODULE 6: COMPLIANCE VAULT -->
+        <div class="dash-module-section" id="module-compliance">
+          <div class="dash-panel">
+            <div class="dash-panel-header">
+              <h3 class="dash-panel-title">
+                <span>📜</span> Regulatory Compliance & Evidence Vault
+              </h3>
+              <button type="button" class="btn btn-primary btn-sm dash-action-btn">Download Auditor Pack</button>
+            </div>
+            <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">
+              Auditor-ready artifacts mapped to ISO 27001:2022, SOC 2 Type II, and GDPR Article 32 requirements.
+            </p>
+            <div class="cards-grid-3">
+              <div class="sim-stat-box">
+                <div style="font-size: 1.5rem; margin-bottom: 0.25rem;">📑</div>
+                <strong style="color: var(--text-primary);">SOC 2 Type II Report (2026)</strong>
+                <p style="font-size: 0.8rem; color: var(--text-muted); margin: 0.5rem 0;">Issued by Ernst & Young. Zero exceptions logged.</p>
+                <button type="button" class="btn btn-outline btn-sm btn-block dash-action-btn">Download PDF</button>
+              </div>
+              <div class="sim-stat-box">
+                <div style="font-size: 1.5rem; margin-bottom: 0.25rem;">🏅</div>
+                <strong style="color: var(--text-primary);">ISO 27001 Certification</strong>
+                <p style="font-size: 0.8rem; color: var(--text-muted); margin: 0.5rem 0;">Certificate #ISMS-2026-9482. Valid through 2028.</p>
+                <button type="button" class="btn btn-outline btn-sm btn-block dash-action-btn">Download Certificate</button>
+              </div>
+              <div class="sim-stat-box">
+                <div style="font-size: 1.5rem; margin-bottom: 0.25rem;">🔒</div>
+                <strong style="color: var(--text-primary);">Penetration Test Attestation</strong>
+                <p style="font-size: 0.8rem; color: var(--text-muted); margin: 0.5rem 0;">Executive summary for enterprise vendor risk reviews.</p>
+                <button type="button" class="btn btn-outline btn-sm btn-block dash-action-btn">Download Attestation</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- MODULE 7: RISK REPORTS -->
+        <div class="dash-module-section" id="module-reports">
+          <div class="dash-panel">
+            <div class="dash-panel-header">
+              <h3 class="dash-panel-title">
+                <span>📑</span> Executive Board Risk & Threat Digests
+              </h3>
+              <button type="button" class="btn btn-primary btn-sm dash-action-btn">Generate Monthly Brief</button>
+            </div>
+            <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">
+              High-level cyber risk analytics engineered for Chief Information Officers, Audit Committees, and Corporate Boards.
+            </p>
+            <div class="cards-grid-2">
+              <div class="sim-stat-box">
+                <strong style="color: var(--text-primary);">Q3 2026 Board Threat Briefing</strong>
+                <p style="font-size: 0.825rem; color: var(--text-muted); margin: 0.5rem 0;">
+                  Details threat prevention metrics, adversary evasion rates, and cloud posture improvements.
+                </p>
+                <button type="button" class="btn btn-outline btn-sm dash-action-btn">Read Executive Report</button>
+              </div>
+              <div class="sim-stat-box">
+                <strong style="color: var(--text-primary);">Third-Party Vendor Risk Matrix</strong>
+                <p style="font-size: 0.825rem; color: var(--text-muted); margin: 0.5rem 0;">
+                  Security ratings for 42 SaaS sub-processors and software supply-chain dependencies.
+                </p>
+                <button type="button" class="btn btn-outline btn-sm dash-action-btn">Read Vendor Matrix</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- MODULE 8: USER ACCESS MANAGEMENT -->
+        <div class="dash-module-section" id="module-users">
+          <div class="dash-panel">
+            <div class="dash-panel-header">
+              <h3 class="dash-panel-title">
+                <span>👥</span> Authorized Operators & Clearance Levels
+              </h3>
+              <button type="button" class="btn btn-primary btn-sm dash-action-btn">Invite New Operator</button>
+            </div>
+            <div class="data-table-wrap">
+              <table class="dash-table">
+                <thead>
+                  <tr>
+                    <th>Operator Name</th>
+                    <th>Email Address</th>
+                    <th>Clearance Role</th>
+                    <th>MFA Status</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Alex Morgan</strong></td>
+                    <td>admin@stackly.security</td>
+                    <td>Security Administrator</td>
+                    <td><span class="severity-pill severity-low">Hardware FIDO2</span></td>
+                    <td><button type="button" class="btn btn-outline btn-sm dash-action-btn">Edit</button></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Elena Rostova</strong></td>
+                    <td>soc@stackly.security</td>
+                    <td>SOC Analyst / Manager</td>
+                    <td><span class="severity-pill severity-low">Hardware FIDO2</span></td>
+                    <td><button type="button" class="btn btn-outline btn-sm dash-action-btn">Edit</button></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Marcus Vance</strong></td>
+                    <td>client@enterprise.com</td>
+                    <td>Enterprise Client</td>
+                    <td><span class="severity-pill severity-low">TOTP Authenticator</span></td>
+                    <td><button type="button" class="btn btn-outline btn-sm dash-action-btn">Edit</button></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Sarah Chen</strong></td>
+                    <td>auditor@compliance.org</td>
+                    <td>Compliance Auditor</td>
+                    <td><span class="severity-pill severity-low">TOTP Authenticator</span></td>
+                    <td><button type="button" class="btn btn-outline btn-sm dash-action-btn">Edit</button></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+      </main>
+    </div>
+  </div>
+
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/dashboard.js"></script>
+</body>
+</html>
+
