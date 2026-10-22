@@ -17,55 +17,42 @@ const STORAGE_KEYS = {
 // Seed default users for instant production demo
 const DEFAULT_DEMO_USERS = [
   {
-    firstName: 'Alex',
-    lastName: 'Morgan',
-    username: 'alex_ciso',
-    email: 'admin@stackly.security',
+    firstName: 'Elena',
+    lastName: 'Rostova',
+    username: 'elena_ciso',
+    email: 'ciso@stackly.security',
     password: 'Password@123',
-    role: 'Security Administrator',
+    role: 'Chief Information Security Officer (CISO)',
     mobile: '9876543210',
+    countryCode: '+1',
+    country: 'United States',
+    address: 'Global Cyber Command Station 1',
+    avatar: 'E'
+  },
+  {
+    firstName: 'Alex',
+    lastName: 'Vance',
+    username: 'alex_soc',
+    email: 'soc@stackly.security',
+    password: 'Password@123',
+    role: 'Lead SOC Operations Commander',
+    mobile: '9876543211',
     countryCode: '+91',
     country: 'India',
     address: 'MMR Complex, Chinna Thirupathi, Salem',
     avatar: 'A'
   },
   {
-    firstName: 'Elena',
-    lastName: 'Rostova',
-    username: 'elena_soc',
-    email: 'soc@stackly.security',
-    password: 'Password@123',
-    role: 'SOC Analyst / Manager',
-    mobile: '9876543211',
-    countryCode: '+1',
-    country: 'United States',
-    address: 'Cyber Defense Command Station 4',
-    avatar: 'E'
-  },
-  {
-    firstName: 'Marcus',
-    lastName: 'Vance',
-    username: 'marcus_client',
+    firstName: 'Sarah',
+    lastName: 'Jenkins',
+    username: 'sarah_client',
     email: 'client@enterprise.com',
     password: 'Password@123',
-    role: 'Enterprise Client',
+    role: 'Enterprise Client IT Director',
     mobile: '9876543212',
     countryCode: '+44',
     country: 'United Kingdom',
-    address: 'FinTech Tower, London',
-    avatar: 'M'
-  },
-  {
-    firstName: 'Sarah',
-    lastName: 'Chen',
-    username: 'sarah_auditor',
-    email: 'auditor@compliance.org',
-    password: 'Password@123',
-    role: 'Compliance Auditor',
-    mobile: '9876543213',
-    countryCode: '+65',
-    country: 'Singapore',
-    address: 'ISO Assurance Hub',
+    address: 'FinTech Enclave, London',
     avatar: 'S'
   }
 ];
@@ -107,7 +94,7 @@ class AuthManager {
   }
 
   login(user, rememberRole = null) {
-    const role = rememberRole || user.role || 'Security Administrator';
+    const role = rememberRole || user.role || 'Chief Information Security Officer (CISO)';
     const session = {
       isLoggedIn: true,
       email: user.email,
@@ -177,16 +164,17 @@ function initSignInForm() {
   const form = document.getElementById('signin-form');
   if (!form) return;
 
-  // Auto fill default test values if empty for effortless demonstration
   const emailInput = document.getElementById('signin-email');
   const passwordInput = document.getElementById('signin-password');
   const roleSelect = document.getElementById('signin-role');
 
-  if (emailInput && !emailInput.value) {
-    emailInput.value = 'admin@stackly.security';
+  // Strict: Empty form initially and autofocus first input field
+  if (emailInput) {
+    emailInput.value = '';
+    setTimeout(() => { emailInput.focus(); }, 100);
   }
-  if (passwordInput && !passwordInput.value) {
-    passwordInput.value = 'Password@123';
+  if (passwordInput) {
+    passwordInput.value = '';
   }
 
   form.addEventListener('submit', (e) => {
@@ -222,28 +210,45 @@ function initSignInForm() {
       if (passwordError) passwordError.style.display = 'none';
     }
 
-    // Role validation
-    const selectedRole = roleSelect ? roleSelect.value : 'Security Administrator';
+    // Role validation (Strict: require user to select one)
+    const selectedRole = roleSelect ? roleSelect.value : '';
+    const roleError = document.getElementById('signin-role-error');
+    if (!selectedRole) {
+      isValid = false;
+      if (roleSelect) roleSelect.classList.add('has-error');
+      if (roleError) roleError.style.display = 'block';
+      if (!firstInvalidField) firstInvalidField = roleSelect;
+    } else {
+      if (roleSelect) roleSelect.classList.remove('has-error');
+      if (roleError) roleError.style.display = 'none';
+    }
 
     if (!isValid) {
       if (firstInvalidField) firstInvalidField.focus();
       return;
     }
 
-    // Successful login simulation (Accepts any valid formatted credentials or matching demo user)
+    // Successful login: Name is derived directly from user login credentials
     const users = auth.getUsers();
     let matchedUser = users.find(u => u.email.toLowerCase() === emailVal.toLowerCase());
 
     if (!matchedUser) {
-      // Create user profile for arbitrary valid credentials
+      // Format username nicely from email: e.g. "john.doe" -> "John Doe"
+      const rawUserPart = emailVal.split('@')[0];
+      const cleanName = rawUserPart.split(/[._-]/).map(part => part.charAt(0).toUpperCase() + part.slice(1).toLowerCase()).join(' ') || 'Security Commander';
+      
       matchedUser = {
-        firstName: emailVal.split('@')[0],
-        lastName: 'Officer',
+        firstName: cleanName.split(' ')[0] || cleanName,
+        lastName: cleanName.split(' ').slice(1).join(' ') || 'Officer',
+        name: cleanName,
         email: emailVal,
         role: selectedRole
       };
     } else {
-      matchedUser.role = selectedRole; // Update with selected role
+      matchedUser.role = selectedRole;
+      if (!matchedUser.name) {
+        matchedUser.name = `${matchedUser.firstName || ''} ${matchedUser.lastName || ''}`.trim() || matchedUser.username || emailVal.split('@')[0];
+      }
     }
 
     auth.login(matchedUser, selectedRole);
@@ -267,6 +272,10 @@ function initSignUpForm() {
   if (!form) return;
 
   const firstNameInput = document.getElementById('signup-firstname');
+  if (firstNameInput) {
+    firstNameInput.value = '';
+    setTimeout(() => { firstNameInput.focus(); }, 100);
+  }
   const lastNameInput = document.getElementById('signup-lastname');
   const usernameInput = document.getElementById('signup-username');
   const emailInput = document.getElementById('signup-email');

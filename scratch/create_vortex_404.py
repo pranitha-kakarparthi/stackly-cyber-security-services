@@ -1,0 +1,272 @@
+import os
+
+# Root 404.html
+root_404_html = '''<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 - Page Not Found | Stackly Cyber Security Services</title>
+  <meta name="description" content="The requested page could not be located on the Stackly Zero-Trust network grid.">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+</head>
+<body style="margin: 0; min-height: 100vh; background-color: #030508;">
+  <!-- Accessibility Skip Link -->
+  <a href="#vortex-stage" class="skip-link">Skip to main content</a>
+
+  <!-- Modern Viewport Loader (Pure CSS rotation, DOMContentLoaded removal) -->
+  <div id="page-loader" aria-live="polite" role="status">
+    <div class="loader-content">
+      <div class="loader-brand">
+        <img src="assets/images/logoStackly.webp" alt="Stackly Cyber Security Services" width="160" height="42">
+      </div>
+      <div class="loader-spinner-wrap">
+        <div class="loader-spinner"></div>
+        <div class="loader-pulse-ring"></div>
+      </div>
+      <div class="loader-text">
+        <span class="loader-status-dot"></span>
+        <span>Scanning Node Telemetry...</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Perfectly Centered Main 404 Vortex Stage (NO NAVBAR, NO FOOTER) -->
+  <main class="vortex-page-wrap" role="main">
+    <!-- Minimal Top Corner Bar -->
+    <div class="vortex-top-bar">
+      <a href="index.html" class="vortex-brand" aria-label="Return to Stackly Home">
+        <img src="assets/images/logoStackly.webp" alt="Stackly Cyber Defense Logo" class="vortex-brand-logo" width="140" height="36">
+      </a>
+      <div class="vortex-top-links">
+        <a href="pages/services.html" class="vortex-top-link">Services</a>
+        <a href="pages/contact.html" class="vortex-top-link">Contact</a>
+      </div>
+    </div>
+
+    <!-- Center Cosmic Particle Vortex Stage -->
+    <div class="vortex-portal-stage" id="vortex-stage">
+      <div class="vortex-canvas-wrap">
+        <img src="assets/images/vortex-404-cosmic.webp" alt="Cosmic particle vortex" class="vortex-bg-image" width="1376" height="768">
+        <canvas id="vortex-canvas" class="vortex-interactive-canvas" width="840" height="420" aria-hidden="true"></canvas>
+      </div>
+
+      <!-- Center Typography inside Clearing -->
+      <div class="vortex-center-content js-tilt" data-tilt-max="5">
+        <div class="vortex-code" data-animate="zoom-in">404</div>
+        <div class="vortex-subtitle" data-animate="fade-up" data-delay="100">Page not found</div>
+      </div>
+    </div>
+
+    <!-- Bottom Content: Quote & Action Buttons -->
+    <div class="vortex-bottom-content" data-animate="fade-up" data-delay="200">
+      <div class="vortex-prompt-label">While you're here</div>
+      <blockquote class="vortex-quote">
+        “There is a beauty and clarity that comes from simplicity that we sometimes do not appreciate in our thirst for intricate solutions”
+        <cite class="vortex-cite">— Dieter F. Uchtdorf</cite>
+      </blockquote>
+
+      <div class="vortex-action-group">
+        <a href="index.html" class="btn btn-pill-iridescent btn-md">
+          <span>🛡️</span> Return to Secure Home
+        </a>
+        <button type="button" onclick="history.back()" class="btn btn-pill-glass btn-md">
+          <span>↩️</span> Back to Previous View
+        </button>
+        <a href="pages/contact.html" class="btn btn-outline btn-md">
+          <span>💬</span> Report Security Anomaly
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <script src="assets/js/main.js"></script>
+  <script>
+    // Lightweight Ethereal Particle Swirl Engine
+    (function() {
+      const canvas = document.getElementById('vortex-canvas');
+      if (!canvas || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      const ctx = canvas.getContext('2d');
+      if (!ctx) return;
+
+      const particles = [];
+      const particleCount = 85;
+      const width = canvas.width;
+      const height = canvas.height;
+      const centerX = width / 2;
+      const centerY = height / 2;
+
+      for (let i = 0; i < particleCount; i++) {
+        particles.push({
+          radiusX: 110 + Math.random() * 220,
+          radiusY: 45 + Math.random() * 95,
+          angle: Math.random() * Math.PI * 2,
+          speed: 0.003 + Math.random() * 0.006,
+          size: 1 + Math.random() * 2,
+          color: Math.random() > 0.4 ? 'rgba(167, 139, 250, ' : 'rgba(94, 234, 212, ',
+          alpha: 0.2 + Math.random() * 0.6
+        });
+      }
+
+      function render() {
+        ctx.clearRect(0, 0, width, height);
+        particles.forEach(p => {
+          p.angle += p.speed;
+          const x = centerX + Math.cos(p.angle) * p.radiusX;
+          const y = centerY + Math.sin(p.angle) * p.radiusY;
+
+          ctx.beginPath();
+          ctx.arc(x, y, p.size, 0, Math.PI * 2);
+          ctx.fillStyle = p.color + p.alpha + ')';
+          ctx.shadowBlur = 8;
+          ctx.shadowColor = p.color + '0.8)';
+          ctx.fill();
+        });
+        requestAnimationFrame(render);
+      }
+      render();
+    })();
+  </script>
+</body>
+</html>'''
+
+with open('404.html', 'w', encoding='utf-8') as f:
+    f.write(root_404_html)
+print('404.html updated successfully!')
+
+# Subpage pages/404.html
+subpage_404_html = '''<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 - Page Not Found | Stackly Cyber Security Services</title>
+  <meta name="description" content="The requested page could not be located on the Stackly Zero-Trust network grid.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/animations.css">
+</head>
+<body style="margin: 0; min-height: 100vh; background-color: #030508;">
+  <!-- Accessibility Skip Link -->
+  <a href="#vortex-stage" class="skip-link">Skip to main content</a>
+
+  <!-- Modern Viewport Loader (Pure CSS rotation, DOMContentLoaded removal) -->
+  <div id="page-loader" aria-live="polite" role="status">
+    <div class="loader-content">
+      <div class="loader-brand">
+        <img src="../assets/images/logoStackly.webp" alt="Stackly Cyber Security Services" width="160" height="42">
+      </div>
+      <div class="loader-spinner-wrap">
+        <div class="loader-spinner"></div>
+        <div class="loader-pulse-ring"></div>
+      </div>
+      <div class="loader-text">
+        <span class="loader-status-dot"></span>
+        <span>Scanning Node Telemetry...</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Perfectly Centered Main 404 Vortex Stage (NO NAVBAR, NO FOOTER) -->
+  <main class="vortex-page-wrap" role="main">
+    <!-- Minimal Top Corner Bar -->
+    <div class="vortex-top-bar">
+      <a href="../index.html" class="vortex-brand" aria-label="Return to Stackly Home">
+        <img src="../assets/images/logoStackly.webp" alt="Stackly Cyber Defense Logo" class="vortex-brand-logo" width="140" height="36">
+      </a>
+      <div class="vortex-top-links">
+        <a href="services.html" class="vortex-top-link">Services</a>
+        <a href="contact.html" class="vortex-top-link">Contact</a>
+      </div>
+    </div>
+
+    <!-- Center Cosmic Particle Vortex Stage -->
+    <div class="vortex-portal-stage" id="vortex-stage">
+      <div class="vortex-canvas-wrap">
+        <img src="../assets/images/vortex-404-cosmic.webp" alt="Cosmic particle vortex" class="vortex-bg-image" width="1376" height="768">
+        <canvas id="vortex-canvas" class="vortex-interactive-canvas" width="840" height="420" aria-hidden="true"></canvas>
+      </div>
+
+      <!-- Center Typography inside Clearing -->
+      <div class="vortex-center-content js-tilt" data-tilt-max="5">
+        <div class="vortex-code" data-animate="zoom-in">404</div>
+        <div class="vortex-subtitle" data-animate="fade-up" data-delay="100">Page not found</div>
+      </div>
+    </div>
+
+    <!-- Bottom Content: Quote & Action Buttons -->
+    <div class="vortex-bottom-content" data-animate="fade-up" data-delay="200">
+      <div class="vortex-prompt-label">While you're here</div>
+      <blockquote class="vortex-quote">
+        “There is a beauty and clarity that comes from simplicity that we sometimes do not appreciate in our thirst for intricate solutions”
+        <cite class="vortex-cite">— Dieter F. Uchtdorf</cite>
+      </blockquote>
+
+      <div class="vortex-action-group">
+        <a href="../index.html" class="btn btn-pill-iridescent btn-md">
+          <span>🛡️</span> Return to Secure Home
+        </a>
+        <button type="button" onclick="history.back()" class="btn btn-pill-glass btn-md">
+          <span>↩️</span> Back to Previous View
+        </button>
+        <a href="contact.html" class="btn btn-outline btn-md">
+          <span>💬</span> Report Security Anomaly
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <script src="../assets/js/main.js"></script>
+  <script>
+    // Lightweight Ethereal Particle Swirl Engine
+    (function() {
+      const canvas = document.getElementById('vortex-canvas');
+      if (!canvas || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      const ctx = canvas.getContext('2d');
+      if (!ctx) return;
+
+      const particles = [];
+      const particleCount = 85;
+      const width = canvas.width;
+      const height = canvas.height;
+      const centerX = width / 2;
+      const centerY = height / 2;
+
+      for (let i = 0; i < particleCount; i++) {
+        particles.push({
+          radiusX: 110 + Math.random() * 220,
+          radiusY: 45 + Math.random() * 95,
+          angle: Math.random() * Math.PI * 2,
+          speed: 0.003 + Math.random() * 0.006,
+          size: 1 + Math.random() * 2,
+          color: Math.random() > 0.4 ? 'rgba(167, 139, 250, ' : 'rgba(94, 234, 212, ',
+          alpha: 0.2 + Math.random() * 0.6
+        });
+      }
+
+      function render() {
+        ctx.clearRect(0, 0, width, height);
+        particles.forEach(p => {
+          p.angle += p.speed;
+          const x = centerX + Math.cos(p.angle) * p.radiusX;
+          const y = centerY + Math.sin(p.angle) * p.radiusY;
+
+          ctx.beginPath();
+          ctx.arc(x, y, p.size, 0, Math.PI * 2);
+          ctx.fillStyle = p.color + p.alpha + ')';
+          ctx.shadowBlur = 8;
+          ctx.shadowColor = p.color + '0.8)';
+          ctx.fill();
+        });
+        requestAnimationFrame(render);
+      }
+      render();
+    })();
+  </script>
+</body>
+</html>'''
+
+with open('pages/404.html', 'w', encoding='utf-8') as f:
+    f.write(subpage_404_html)
+print('pages/404.html updated successfully!')
+

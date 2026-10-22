@@ -5,10 +5,11 @@
 
 .dashboard-layout {
   display: flex;
+  height: 100vh;
   min-height: 100vh;
+  overflow: hidden;
   background: var(--bg-primary);
   position: relative;
-  overflow-x: hidden;
 }
 
 /* ==========================================================================
@@ -17,6 +18,11 @@
    ========================================================================== */
 .dash-sidebar {
   width: 270px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
   background: var(--bg-secondary);
   border-right: 1px solid var(--border-cyber);
   display: flex;
@@ -24,7 +30,7 @@
   flex-shrink: 0;
   transition: width var(--transition-normal), transform var(--transition-normal);
   z-index: 1050;
-  position: relative;
+  overflow-y: auto;
 }
 
 .dash-sidebar.collapsed {
@@ -208,11 +214,33 @@
    DASHBOARD MAIN CONTAINER & TOP BAR
    ========================================================================== */
 .dash-main {
-  flex-grow: 1;
+  margin-left: 270px;
+  width: calc(100% - 270px);
+  height: 100vh;
   display: flex;
   flex-direction: column;
   min-width: 0;
   overflow-y: auto;
+  overflow-x: hidden;
+  background: var(--bg-primary);
+  transition: margin-left var(--transition-normal), width var(--transition-normal);
+}
+
+.dashboard-layout.sidebar-collapsed .dash-main {
+  margin-left: 76px;
+  width: calc(100% - 76px);
+}
+
+.signout-svg-icon {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 0.35rem;
+  transition: transform var(--transition-fast), stroke var(--transition-fast);
+}
+
+#dash-signout-btn:hover .signout-svg-icon {
+  transform: translateX(2px);
+  stroke: var(--primary);
 }
 
 .dash-topbar {
