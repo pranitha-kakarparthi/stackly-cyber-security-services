@@ -1,0 +1,101 @@
+
+==================== 404.html (3 images) ====================
+  <img src="assets/images/logoStackly.webp" alt="Stackly Cyber Security Services" width="160" height="42">
+  <img src="assets/images/logoStackly.webp" alt="Stackly Cyber Defense Logo" class="vortex-brand-logo" width="160" height="42">
+  <img src="assets/images/vortex-404-cosmic.webp" alt="Cosmic particle vortex" class="vortex-bg-image" width="1376" height="768">
+
+==================== index.html (12 images) ====================
+  <img src="assets/images/logoStackly.webp" alt="Stackly Cyber Security Services" width="160" height="42">
+  <img src="assets/images/logoStackly.webp" alt="Stackly Logo" class="nav-brand-logo" width="145" height="38">
+  <img src="assets/images/cyber-sentinel-chains.webp" 
+                 alt="Stackly Cyber Sentinel neutralizing breaches and breaking threat chains" 
+                 class="hero-sentinel-img"
+                 width="1376" 
+                 height="768"
+                 fetchpriority="high">
+  <img src="assets/images/cyber-defense-command-center.webp" alt="Stackly Distributed SOC Operations Network" width="800" height="533" loading="lazy">
+  <img src="assets/images/chief-information-security-officer-elena-rostova.webp" alt="Elena Rostova, Chief Information Security Officer at Stackly" width="500" height="500" loading="lazy">
+  <img src="assets/images/cyber-security-analyst-alex-morgan.webp" alt="Alex Morgan, Lead SOC Operations Commander at Stackly" width="500" height="500" loading="lazy">
+  <img src="assets/images/penetration-tester-marcus-vance.webp" alt="Marcus Vance, Principal Penetration Tester and Offensive Security Lead" width="500" height="500" loading="lazy">
+  <img src="assets/images/enterprise-client-sarah-jenkins.webp" alt="Sarah Jenkins, Chief Technology Officer at FinTech Global" class="testimonial-avatar" width="52" height="52" loading="lazy">
+  <img src="assets/images/enterprise-client-michael-chang.webp" alt="Michael Chang, VP of Infrastructure at HealthSystems Cloud" class="testimonial-avatar" width="52" height="52" loading="lazy">
+  <img src="assets/images/enterprise-client-amira-patel.webp" alt="Amira Patel, Head of Information Security at Apex Banking" class="testimonial-avatar" width="52" height="52" loading="lazy">
+  <img src="assets/images/enterprise-client-robert-taylor.webp" alt="Robert Taylor, Director of Engineering at NexaLogistics" class="testimonial-avatar" width="52" height="52" loading="lazy">
+  <img src="assets/images/logoStackly.webp" alt="Stackly Cyber Security Services" class="footer-logo" width="150" height="39">
+
+==================== pages\404.html (3 images) ====================
+  <img src="../assets/images/logoStackly.webp" alt="Stackly Cyber Security Services" width="160" height="42">
+  <img src="../assets/images/logoStackly.webp" alt="Stackly Cyber Defense Logo" class="vortex-brand-logo" width="160" height="42">
+  <img src="../assets/images/vortex-404-cosmic.webp" alt="Cosmic particle vortex" class="vortex-bg-image" width="1376" height="768">
+
+==================== pages\about.html (8 images) ====================
+  <img src="../assets/images/logoStackly.webp" alt="Stackly Cyber Security Services" width="160" height="42">
+  <img src="../assets/images/logoStackly.webp" alt="Stackly Logo" class="nav-brand-logo" width="145" height="38">
+  <img src="../assets/images/cyber-defense-command-center.webp" alt="Stackly Cyber Command Operations Center displaying real-time telemetry" width="800" height="533" loading="lazy">
+  <img src="../assets/images/chief-information-security-officer-elena-rostova.webp" alt="Elena Rostova, Chief Information Security Officer" width="500" height="500" loading="lazy">
+  <img src="../assets/images/cyber-security-analyst-alex-morgan.webp" alt="Alex Morgan, Lead SOC Operations Commander" width="500" height="500" loading="lazy">
+  <img src="../assets/images/penetration-tester-marcus-vance.webp" alt="Marcus Vance, Principal Red Team Lead" width="500" height="500" loading="lazy">
+  <img src="../assets/images/cloud-security-architect-david-kim.webp" alt="David Kim, Cloud Security Architect" width="500" height="500" loading="lazy">
+  <img src="../assets/images/logoStackly.webp" alt="Stackly Cyber Defense" class="footer-logo" width="150" height="39">
+
+==================== pages\contact.html (3 images) ====================
+  <img src="../assets/images/logoStackly.webp" alt="Stackly Cyber Security Services" width="160" height="42">
+  <img src="../assets/images/logoStackly.webp" alt="Stackly Logo" class="nav-brand-logo" width="145" height="38">
+  <img src="../assets/images/logoStackly.webp" alt="Stackly Cyber Defense" class="footer-logo" width="150" height="39">
+
+==================== pages\dashboard.html (2 images) ====================
+  <img src="../assets/images/logoStackly.webp" alt="Stackly Cyber Security Services" width="160" height="42">
+  <img src="../assets/images/logoStackly.webp" alt="Stackly Cyber Logo" class="dash-sidebar-logo" width="130" height="34">
+
+==================== pages\pricing.html (3 images) ====================
+  <img src="../assets/images/logoStackly.webp" alt="Stackly Cyber Security Services" width="160" height="42">
+  <img src="../assets/images/logoStackly.webp" alt="Stackly Logo" class="nav-brand-logo" width="145" height="38">
+  <img src="../assets/images/logoStackly.webp" alt="Stackly Cyber Defense" class="footer-logo" width="150" height="39">
+
+==================== pages\service-cloud-security.html (6 images) ====================
+  <img src="../assets/images/logoStackly.webp" alt="Stackly Cyber Security Services" width="160" height="42">
+  <img src="../assets/images/logoStackly.webp" alt="Stackly Logo" class="nav-brand-logo" width="145" height="38">
+  <img src="../assets/images/cloud-security-architect-david-kim.webp" alt="David Kim, Principal Cloud Security Architect" width="500" height="500" loading="lazy">
+  <img src="../assets/images/security-compliance-auditor.webp" alt="Sarah Chen, Cloud Governance Specialist" width="500" height="500" loading="lazy">
+  <img src="../assets/images/chief-information-security-officer-elena-rostova.webp" alt="Elena Rostova, Executive CISO" width="500" height="500" loading="lazy">
+  <img src="../assets/images/logoStackly.webp" alt="Stackly Cyber Defense" class="footer-logo" width="150" height="39">
+
+==================== pages\service-incident-response.html (7 images) ====================
+  <img src="../assets/images/logoStackly.webp" alt="Stackly Cyber Security Services" width="160" height="42">
+  <img src="../assets/images/logoStackly.webp" alt="Stackly Logo" class="nav-brand-logo" width="145" height="38">
+  <img src="../assets/images/cyber-defense-command-center.webp" alt="Incident Response team containing an active intrusion" width="800" height="533" loading="lazy">
+  <img src="../assets/images/incident-response-commander-rachel-adams.webp" alt="Rachel Adams, Lead Incident Commander" width="500" height="500" loading="lazy">
+  <img src="../assets/images/cyber-security-analyst-alex-morgan.webp" alt="Alex Morgan, Lead Telemetry Triage Commander" width="500" height="500" loading="lazy">
+  <img src="../assets/images/threat-intelligence-specialist-sarah-chen.webp" alt="Sarah Chen, Threat Intelligence & Attribution" width="500" height="500" loading="lazy">
+  <img src="../assets/images/logoStackly.webp" alt="Stackly Cyber Defense" class="footer-logo" width="150" height="39">
+
+==================== pages\service-pentest.html (6 images) ====================
+  <img src="../assets/images/logoStackly.webp" alt="Stackly Cyber Security Services" width="160" height="42">
+  <img src="../assets/images/logoStackly.webp" alt="Stackly Logo" class="nav-brand-logo" width="145" height="38">
+  <img src="../assets/images/penetration-tester-marcus-vance.webp" alt="Marcus Vance, Principal Penetration Tester" width="500" height="500" loading="lazy">
+  <img src="../assets/images/vulnerability-assessment-engineer.webp" alt="Nathan Brooks, Senior Exploit Researcher" width="500" height="500" loading="lazy">
+  <img src="../assets/images/cloud-security-architect-david-kim.webp" alt="David Kim, Cloud Penetration Tester" width="500" height="500" loading="lazy">
+  <img src="../assets/images/logoStackly.webp" alt="Stackly Cyber Defense" class="footer-logo" width="150" height="39">
+
+==================== pages\service-soc.html (7 images) ====================
+  <img src="../assets/images/logoStackly.webp" alt="Stackly Cyber Security Services" width="160" height="42">
+  <img src="../assets/images/logoStackly.webp" alt="Stackly Logo" class="nav-brand-logo" width="145" height="38">
+  <img src="../assets/images/soc-team-monitoring-center.webp" alt="Stackly SOC Analysts reviewing live threat vectors" width="800" height="533" loading="lazy">
+  <img src="../assets/images/cyber-security-analyst-alex-morgan.webp" alt="Alex Morgan, Lead SOC Commander" width="500" height="500" loading="lazy">
+  <img src="../assets/images/threat-intelligence-specialist-sarah-chen.webp" alt="Sarah Chen, Threat Intelligence Lead" width="500" height="500" loading="lazy">
+  <img src="../assets/images/incident-response-commander-rachel-adams.webp" alt="Rachel Adams, SOC Response Director" width="500" height="500" loading="lazy">
+  <img src="../assets/images/logoStackly.webp" alt="Stackly Cyber Defense" class="footer-logo" width="150" height="39">
+
+==================== pages\services.html (4 images) ====================
+  <img src="../assets/images/logoStackly.webp" alt="Stackly Cyber Security Services" width="160" height="42">
+  <img src="../assets/images/logoStackly.webp" alt="Stackly Logo" class="nav-brand-logo" width="145" height="38">
+  <img src="../assets/images/cyber-security-defense-operations.webp" alt="Cyber Security defense engineers configuring layered defense" width="800" height="533" loading="lazy">
+  <img src="../assets/images/logoStackly.webp" alt="Stackly Cyber Defense" class="footer-logo" width="150" height="39">
+
+==================== pages\sign-in.html (2 images) ====================
+  <img src="../assets/images/logoStackly.webp" alt="Stackly Cyber Security Services" width="160" height="42">
+  <img src="../assets/images/logoStackly.webp" alt="Stackly Cyber Defense Logo" class="auth-brand-logo" width="160" height="40">
+
+==================== pages\sign-up.html (2 images) ====================
+  <img src="../assets/images/logoStackly.webp" alt="Stackly Cyber Security Services" width="160" height="42">
+  <img src="../assets/images/logoStackly.webp" alt="Stackly Cyber Defense Logo" class="auth-brand-logo" width="160" height="40">

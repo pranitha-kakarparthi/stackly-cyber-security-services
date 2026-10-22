@@ -41,6 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initSidebarControls();
   initDashboardModules(currentUser.role);
   initDashboardActionButtons();
+  initDashboardBackToTop();
 });
 
 /* Normalize any legacy role into the 3 official roles */
@@ -169,6 +170,14 @@ function initSidebarControls() {
       document.body.classList.remove('drawer-open');
     };
   }
+
+  const backdrop = document.getElementById('dash-drawer-backdrop');
+  if (backdrop && sidebar) {
+    backdrop.onclick = () => {
+      sidebar.classList.remove('mobile-open');
+      document.body.classList.remove('drawer-open');
+    };
+  }
 }
 
 /* Show Role-Specific Dedicated Dashboard & Sidebar Tab Switching */
@@ -208,6 +217,13 @@ function initDashboardModules(role) {
         if (targetSec) targetSec.classList.add('active');
       }
 
+      // Automatically scroll page to top upon clicking sidebar menu option
+      const dashMainArea = document.getElementById('dash-main-area') || document.querySelector('.dash-main');
+      if (dashMainArea) {
+        dashMainArea.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+
       // Close mobile drawer on item click
       const sidebar = document.getElementById('dash-sidebar');
       if (sidebar && sidebar.classList.contains('mobile-open')) {
@@ -226,5 +242,38 @@ function initDashboardActionButtons() {
       e.preventDefault();
       window.location.href = '404.html';
     };
+  });
+}
+
+/* ==========================================================================
+   DASHBOARD BACK TO TOP CONTROLLER
+   Scrolls .dash-main and window to top smoothly
+   ========================================================================== */
+function initDashboardBackToTop() {
+  const btn = document.getElementById('back-to-top');
+  const dashMain = document.getElementById('dash-main-area') || document.querySelector('.dash-main');
+  if (!btn) return;
+
+  const checkScroll = () => {
+    const scrollPos = (dashMain ? dashMain.scrollTop : 0) || window.scrollY || 0;
+    if (scrollPos > 250) {
+      btn.classList.add('visible');
+    } else {
+      btn.classList.remove('visible');
+    }
+  };
+
+  if (dashMain) {
+    dashMain.addEventListener('scroll', checkScroll, { passive: true });
+  }
+  window.addEventListener('scroll', checkScroll, { passive: true });
+  checkScroll();
+
+  btn.addEventListener('click', (e) => {
+    e.preventDefault();
+    if (dashMain) {
+      dashMain.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 }

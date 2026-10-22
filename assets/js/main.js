@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
   init3DTilt();
   initInteractivePerimeterScanner();
   initCharacterCounters();
+  initBackToTop();
 });
 
 /* ==========================================================================
@@ -28,17 +29,27 @@ function initLoader() {
   const dismissLoader = () => {
     loader.classList.add('loaded');
     setTimeout(() => {
-      loader.remove();
-    }, 450);
+      try {
+        loader.remove();
+      } catch (e) {
+        loader.style.display = 'none';
+      }
+    }, 400);
   };
 
   // Immediate dismiss if interactive, plus fallback
   if (document.readyState === 'complete' || document.readyState === 'interactive') {
-    setTimeout(dismissLoader, 300);
+    setTimeout(dismissLoader, 100);
   } else {
-    window.addEventListener('load', dismissLoader);
-    setTimeout(dismissLoader, 1500); // 1.5s max fallback prevention
+    window.addEventListener('DOMContentLoaded', dismissLoader, { once: true });
+    window.addEventListener('load', dismissLoader, { once: true });
+    setTimeout(dismissLoader, 800);
   }
+}
+
+// Immediately trigger if script evaluates after DOM ready
+if (document.readyState === 'complete' || document.readyState === 'interactive') {
+  initLoader();
 }
 
 /* ==========================================================================
@@ -269,3 +280,31 @@ function initCharacterCounters() {
   });
 }
 
+
+/* ==========================================================================
+   10. BACK TO TOP CONTROLLER
+   Smoothly scrolls page to the top when button is clicked; shows after scrolling
+   ========================================================================== */
+function initBackToTop() {
+  const btn = document.getElementById('back-to-top');
+  if (!btn) return;
+
+  const handleScroll = () => {
+    if (window.scrollY > 280) {
+      btn.classList.add('visible');
+    } else {
+      btn.classList.remove('visible');
+    }
+  };
+
+  window.addEventListener('scroll', handleScroll, { passive: true });
+  handleScroll();
+
+  btn.addEventListener('click', (e) => {
+    e.preventDefault();
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+}
