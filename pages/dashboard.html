@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Security Operations Command Dashboard | Stackly Cyber Security</title>
   <meta name="description" content="Mission-critical cyber defense operations center. Real-time SIEM alerts, active threat containment, Zero-Trust posture metrics, and role-based clearance.">
+    <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono (Unified Design System) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/style.css">
   <link rel="stylesheet" href="../assets/css/animations.css">
   <link rel="stylesheet" href="../assets/css/dashboard.css">
@@ -1327,8 +1331,8 @@
           <section class="dash-section" aria-label="SIEM Status Header">
             <div style="background: linear-gradient(135deg, rgba(122, 16, 40, 0.05) 0%, rgba(217, 119, 6, 0.08) 100%); border: 1px solid var(--border-cyber); border-radius: var(--radius-lg); padding: clamp(1.25rem, 2vw, 1.75rem); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
               <div>
-                <span class="badge-tag" style="background: rgba(239, 68, 68, 0.15); border-color: rgba(239, 68, 68, 0.35); color: #ff6b6b; margin-bottom: 0.35rem;">
-                  <span class="badge-dot" style="background: #ff6b6b;"></span> DEFCON 2 • Active Ingestion Stream (48,200 EPS)
+                <span class="badge-tag" style="background: rgba(239, 68, 68, 0.15); border-color: rgba(239, 68, 68, 0.35); color: var(--danger); font-weight: 700; margin-bottom: 0.35rem;">
+                  <span class="badge-dot" style="background: var(--danger);"></span> DEFCON 2 • Active Ingestion Stream (48,200 EPS)
                 </span>
                 <h2 style="font-size: clamp(1.3rem, 1.8vw, 1.6rem); margin: 0.25rem 0; font-weight: 800; color: var(--text-primary);">
                   Real-Time Global Threat Intelligence & SIEM Streams
@@ -1647,8 +1651,8 @@
           <section class="dash-section" aria-label="Vulnerability Engine Header">
             <div style="background: linear-gradient(135deg, rgba(122, 16, 40, 0.05) 0%, rgba(217, 119, 6, 0.08) 100%); border: 1px solid var(--border-cyber); border-radius: var(--radius-lg); padding: clamp(1.25rem, 2vw, 1.75rem); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
               <div>
-                <span class="badge-tag" style="background: rgba(245, 158, 11, 0.15); border-color: rgba(245, 158, 11, 0.35); color: #fbbf24; margin-bottom: 0.35rem;">
-                  <span class="badge-dot" style="background: #fbbf24;"></span> Continuous Vulnerability Harvester Active • 680 Nodes Scanned
+                <span class="badge-tag" style="background: rgba(245, 158, 11, 0.15); border-color: rgba(245, 158, 11, 0.35); color: var(--warning); font-weight: 700; margin-bottom: 0.35rem;">
+                  <span class="badge-dot" style="background: var(--warning);"></span> Continuous Vulnerability Harvester Active • 680 Nodes Scanned
                 </span>
                 <h2 style="font-size: clamp(1.3rem, 1.8vw, 1.6rem); margin: 0.25rem 0; font-weight: 800; color: var(--text-primary);">
                   Vulnerability Intel & Automated Patch Prioritization
@@ -1680,7 +1684,7 @@
                   <span class="kpi-label">High Severity Pending</span>
                   <span class="kpi-icon">⚡</span>
                 </div>
-                <div class="kpi-value" style="color: #fbbf24;">4 High</div>
+                <div class="kpi-value" style="color: var(--warning);">4 High</div>
                 <div class="kpi-trend up"><span>✓ In-SLA</span> Scheduled for maintenance</div>
               </div>
               <div class="kpi-card js-tilt">
@@ -2245,8 +2249,8 @@
           <section class="dash-section" aria-label="Forensics Header">
             <div style="background: linear-gradient(135deg, rgba(122, 16, 40, 0.05) 0%, rgba(217, 119, 6, 0.08) 100%); border: 1px solid var(--border-cyber); border-radius: var(--radius-lg); padding: clamp(1.25rem, 2vw, 1.75rem); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
               <div>
-                <span class="badge-tag" style="background: rgba(239, 68, 68, 0.15); border-color: rgba(239, 68, 68, 0.35); color: #ff6b6b; margin-bottom: 0.35rem;">
-                  <span class="badge-dot" style="background: #ff6b6b;"></span> 1-Hour Emergency Retainer Active • Digital Forensics Lead On-Call
+                <span class="badge-tag" style="background: rgba(239, 68, 68, 0.15); border-color: rgba(239, 68, 68, 0.35); color: var(--danger); font-weight: 700; margin-bottom: 0.35rem;">
+                  <span class="badge-dot" style="background: var(--danger);"></span> 1-Hour Emergency Retainer Active • Digital Forensics Lead On-Call
                 </span>
                 <h2 style="font-size: clamp(1.3rem, 1.8vw, 1.6rem); margin: 0.25rem 0; font-weight: 800; color: var(--text-primary);">
                   Chronological Incident Timeline & Digital Forensics Command

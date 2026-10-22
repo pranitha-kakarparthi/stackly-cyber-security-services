@@ -8,7 +8,7 @@ target = '''      <div class="container" style="position: relative; z-index: 2;"
             World-Leading
           </div>
           <div class="kinetic-line-giant" data-animate="zoom-in" data-delay="100">
-            CYBERSECURITY
+            CYBER SECURITY
           </div>
           <div class="kinetic-line-split" data-animate="fade-up" data-delay="200">
             <span class="kinetic-split-left">Powered</span>
@@ -42,14 +42,14 @@ replacement = '''      <div class="container hero-stage-container">
           </div>
 
           <!-- Foreground Kinetic Typography Overlay (Layer 5 - 100% Visible & Readable Over & Framing Image) -->
-          <div class="hero-typography-overlay" aria-label="World-Leading CYBERSECURITY Powered by AI">
+          <div class="hero-typography-overlay" aria-label="World-Leading CYBER SECURITY Powered by AI">
             <!-- Row 1: World-Leading -->
             <div class="kinetic-line-row row-top" data-animate="fade-down">
               <span class="kinetic-word left-word">World-</span>
               <span class="kinetic-word right-word">Leading</span>
             </div>
 
-            <!-- Row 2: CYBERSECURITY -->
+            <!-- Row 2: CYBER SECURITY -->
             <div class="kinetic-line-row row-middle" data-animate="zoom-in" data-delay="100">
               <span class="kinetic-word left-word gradient-mint">CYBER</span>
               <span class="kinetic-word right-word gradient-lavender">SECURITY</span>

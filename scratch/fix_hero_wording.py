@@ -122,7 +122,7 @@ hero_css_end = css.find('/* Legacy & Subpage Hero Sections */')
 
 new_hero_css = '''/* ==========================================================================
    UNIFIED REFERENCE-INSPIRED KINETIC CYBER HERO STAGE
-   Seamless, cohesive typography: World-Leading CYBERSECURITY Powered by AI,
+   Seamless, cohesive typography: World-Leading CYBER SECURITY Powered by AI,
    centered cyber sentinel holding chains, pill CTAs, subtext, metrics.
    ========================================================================== */
 .hero-stage {

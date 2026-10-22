@@ -65,9 +65,9 @@ with open('assets/css/style.css', 'r', encoding='utf-8') as f:
 with open('assets/css/dashboard.css', 'r', encoding='utf-8') as f:
     dash_css = f.read()
 
-if '#FAF7EE' not in style_css or '#7A1028' not in style_css:
+if '#FAF7EE' not in style_css.upper() or '#7A1028' not in style_css.upper():
     errors.append("style.css does not have SHIELDA palette tokens")
-if '#2A010A' not in dash_css or '#FAF7EE' not in dash_css:
+if '#2A010A' not in dash_css.upper() or '#FAF7EE' not in dash_css.upper():
     errors.append("dashboard.css does not have SHIELDA palette tokens")
 print("   CSS files verified with SHIELDA warm ivory and velvet wine tokens.")
 

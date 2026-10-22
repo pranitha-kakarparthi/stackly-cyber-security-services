@@ -69,7 +69,7 @@ new_hero = '''<!-- 2. REFERENCE-INSPIRED KINETIC CYBER HERO STAGE -->
             World-Leading
           </div>
           <div class="kinetic-line-giant" data-animate="zoom-in" data-delay="100">
-            CYBERSECURITY
+            CYBER SECURITY
           </div>
           <div class="kinetic-line-split" data-animate="fade-up" data-delay="200">
             <span class="kinetic-split-left">Powered</span>

@@ -363,7 +363,7 @@ pentest_sections_7_8 = '''    <!-- SECTION 7: TESTING METHODOLOGIES & BENCHMARKS
           <div class="section-subtitle">Rigorous Standards</div>
           <h2 class="section-title">International Penetration Testing Methodologies</h2>
           <p style="max-width: 680px; margin: 0 auto;">
-            Our offensive assessments strictly follow global institutional cybersecurity testing frameworks to guarantee repeatability and depth.
+            Our offensive assessments strictly follow global institutional cyber security testing frameworks to guarantee repeatability and depth.
           </p>
         </div>
 

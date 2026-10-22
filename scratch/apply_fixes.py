@@ -58,7 +58,7 @@ new_hero = '''<!-- 2. UNIFIED REFERENCE-INSPIRED KINETIC CYBER HERO STAGE -->
           </div>
 
           <!-- Foreground Kinetic Typography (Layer 20 - ALWAYS VISIBLE OVER THE IMAGE) -->
-          <div class="hero-title-overlay" aria-label="World-Leading CYBERSECURITY Powered by AI">
+          <div class="hero-title-overlay" aria-label="World-Leading CYBER SECURITY Powered by AI">
             <div class="kinetic-line-lead" data-animate="fade-down">World-Leading</div>
             <h1 class="hero-title-giant" data-animate="zoom-in" data-delay="100">
               <span class="gradient-mint">CYBER</span><span class="gradient-lavender">SECURITY</span>
@@ -134,7 +134,7 @@ h_end = css.find('/* Legacy & Subpage Hero Sections */')
 new_hero_css = '''/* ==========================================================================
    UNIFIED REFERENCE-INSPIRED KINETIC CYBER HERO STAGE
    Text is positioned DIRECTLY OVER the image with z-index: 20
-   Seamless, cohesive typography: World-Leading CYBERSECURITY Powered by AI
+   Seamless, cohesive typography: World-Leading CYBER SECURITY Powered by AI
    ========================================================================== */
 .hero-stage {
   position: relative;

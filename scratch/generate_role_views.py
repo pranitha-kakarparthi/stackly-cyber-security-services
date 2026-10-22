@@ -5,7 +5,7 @@ Generates the fully expanded, multi-section, responsive dashboard with:
 - Drawer backdrop for seamless mobile interaction
 - 3 independent role dashboards in module-overview, EACH with 8-9 rich domain-specific sections
 - Modules 2 through 8 (Threats, Vulnerabilities, Firewall, Incidents, Compliance, Reports, Users),
-  EACH with 8 distinct, non-repeated, deeply relevant cybersecurity sections.
+  EACH with 8 distinct, non-repeated, deeply relevant cyber security sections.
 """
 
 # Let's write the module generators
