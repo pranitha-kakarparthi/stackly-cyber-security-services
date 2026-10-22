@@ -379,7 +379,7 @@
   width: 42px;
   height: 42px;
   border-radius: var(--radius-sm);
-  background: rgba(0, 229, 255, 0.1);
+  background: rgba(0, 240, 118, 0.1);
   color: var(--primary);
   display: flex;
   align-items: center;
@@ -477,7 +477,7 @@
 }
 
 .dash-table tr:hover td {
-  background: rgba(0, 229, 255, 0.03);
+  background: rgba(0, 240, 118, 0.03);
   color: var(--text-primary);
 }
 
@@ -506,15 +506,15 @@
 }
 
 .severity-medium {
-  background: rgba(59, 130, 246, 0.2);
+  background: rgba(147, 51, 234, 0.2);
   color: #60a5fa;
-  border: 1px solid rgba(59, 130, 246, 0.4);
+  border: 1px solid rgba(147, 51, 234, 0.4);
 }
 
 .severity-low {
-  background: rgba(16, 185, 129, 0.2);
+  background: rgba(0, 240, 118, 0.2);
   color: #34d399;
-  border: 1px solid rgba(16, 185, 129, 0.4);
+  border: 1px solid rgba(0, 240, 118, 0.4);
 }
 
 /* Incident Activity Timeline */
