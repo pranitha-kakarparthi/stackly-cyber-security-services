@@ -1,0 +1,511 @@
+
+==================== 404.html (2 icons total, 2 unique) ====================
+Unique icons: 💬 🛡
+
+  L  59: <span>🛡️</span> Return to Secure Home
+  L  65: <span>💬</span> Report Security Anomaly
+
+==================== index.html (93 icons total, 26 unique) ====================
+Unique icons: ☁ ★ ⚖ ⚙ ⚡ ✉ ✓ 🇩 🇪 🇮 🇳 🌐 🎯 👨 💻 📍 📜 📞 🔍 🔎 🔐 🔑 🚨 🛑 🛡 🤖
+
+  L  58: <span class="dropdown-icon">🛡️</span>
+  L  67: <span class="dropdown-icon">🎯</span>
+  L  76: <span class="dropdown-info">☁️</span>
+  L  85: <span class="dropdown-icon">🚨</span>
+  L 267: <span>🔍</span> Run Security Scan
+  L 311: <div class="card-icon-wrap" style="color: var(--primary);">🎯</div>
+  L 315: <li class="card-meta-item"><span class="card-meta-icon">✓</span> T1190 Exploit Prevention</li>
+  L 316: <li class="card-meta-item"><span class="card-meta-icon">✓</span> T1566 Phishing Shield</li>
+  L 322: <div class="card-icon-wrap" style="color: var(--secondary);">⚙️</div>
+  L 326: <li class="card-meta-item"><span class="card-meta-icon">✓</span> T1059 Command Intercept</li>
+  L 327: <li class="card-meta-item"><span class="card-meta-icon">✓</span> T1204 User Execution Guard</li>
+  L 333: <div class="card-icon-wrap" style="color: var(--accent);">🔑</div>
+  L 337: <li class="card-meta-item"><span class="card-meta-icon">✓</span> T1003 OS Credential Dumping</li>
+  L 338: <li class="card-meta-item"><span class="card-meta-icon">✓</span> T1558 Ticket Request Alerts</li>
+  L 344: <div class="card-icon-wrap" style="color: var(--warning);">🛑</div>
+  L 348: <li class="card-meta-item"><span class="card-meta-icon">✓</span> T1021 Remote Service Pivot</li>
+  L 349: <li class="card-meta-item"><span class="card-meta-icon">✓</span> T1080 Shared Drive Isolation</li>
+  L 372: <strong style="color: var(--primary); display: block; font-size: 1.1rem;">🇮🇳 Salem Command</strong>
+  L 376: <strong style="color: var(--secondary); display: block; font-size: 1.1rem;">🇩🇪 Frankfurt Node</stron
+  L 381: <span>📍</span> Inquire Sovereign Deployment
+  L 413: <div class="card-icon-wrap">🎯</div>
+  L 419: <li class="card-meta-item"><span class="card-meta-icon">✓</span> Zero unauthorized compromises</li>
+  L 420: <li class="card-meta-item"><span class="card-meta-icon">✓</span> Proactive threat discovery</li>
+  L 426: <div class="card-icon-wrap">🌐</div>
+  L 432: <li class="card-meta-item"><span class="card-meta-icon">✓</span> Zero Trust by default</li>
+  L 433: <li class="card-meta-item"><span class="card-meta-icon">✓</span> Resilient autonomous recovery</li>
+  L 439: <div class="card-icon-wrap">⚖️</div>
+  L 445: <li class="card-meta-item"><span class="card-meta-icon">✓</span> Strict non-disclosure protocols</li
+  L 446: <li class="card-meta-item"><span class="card-meta-icon">✓</span> Ethical disclosure standards</li>
+  L 513: <div class="card-icon-wrap">🛡️</div>
+  L 519: <li class="card-meta-item"><span class="card-meta-icon">✓</span> Multi-cloud SIEM & EDR integration<
+  L 520: <li class="card-meta-item"><span class="card-meta-icon">✓</span> Guaranteed 15-minute SLA on alerts<
+  L 527: <div class="card-icon-wrap">🎯</div>
+  L 533: <li class="card-meta-item"><span class="card-meta-icon">✓</span> Black, Grey, and White-Box scenario
+  L 534: <li class="card-meta-item"><span class="card-meta-icon">✓</span> Executive remediation roadmaps</li>
+  L 541: <div class="card-icon-wrap">☁️</div>
+  L 547: <li class="card-meta-item"><span class="card-meta-icon">✓</span> CSPM & CIEM posture management</li>
+  L 548: <li class="card-meta-item"><span class="card-meta-icon">✓</span> Micro-segmentation strategies</li>
+  L 555: <div class="card-icon-wrap">🚨</div>
+  L 561: <li class="card-meta-item"><span class="card-meta-icon">✓</span> 1-hour emergency response SLA</li>
+  L 562: <li class="card-meta-item"><span class="card-meta-icon">✓</span> Ransomware containment & forensics<
+  L 569: <div class="card-icon-wrap">🔎</div>
+  L 575: <li class="card-meta-item"><span class="card-meta-icon">✓</span> MITRE ATT&CK mapping</li>
+  L 576: <li class="card-meta-item"><span class="card-meta-icon">✓</span> Deep memory & kernel forensics</li>
+  L 583: <div class="card-icon-wrap">📜</div>
+  L 589: <li class="card-meta-item"><span class="card-meta-icon">✓</span> Automated compliance reporting</li>
+  L 590: <li class="card-meta-item"><span class="card-meta-icon">✓</span> Vendor risk assessments</li>
+  L 611: <div class="card-icon-wrap">⚡</div>
+  L 618: <div class="card-icon-wrap">🔐</div>
+  L 625: <div class="card-icon-wrap">🤖</div>
+  L 632: <div class="card-icon-wrap">👨‍💻</div>
+  L 656: <div class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
+  L 673: <div class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
+  L 690: <div class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
+  L 707: <div class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
+  L 746: <li class="pricing-feature-item"><span class="feature-check">✓</span> 8x5 SOC Monitoring Coverage</l
+  L 747: <li class="pricing-feature-item"><span class="feature-check">✓</span> Up to 50 Monitored Endpoints</
+  L 748: <li class="pricing-feature-item"><span class="feature-check">✓</span> Monthly Vulnerability Scans</l
+  L 749: <li class="pricing-feature-item"><span class="feature-check">✓</span> Standard 2-Hour Response SLA</
+  L 765: <li class="pricing-feature-item"><span class="feature-check">✓</span> 24/7/365 Dedicated SOC Operati
+  L 766: <li class="pricing-feature-item"><span class="feature-check">✓</span> Up to 250 Monitored Endpoints<
+  L 767: <li class="pricing-feature-item"><span class="feature-check">✓</span> Bi-Weekly Red Team Assessments
+  L 768: <li class="pricing-feature-item"><span class="feature-check">✓</span> Guaranteed 15-Minute Response 
+  L 769: <li class="pricing-feature-item"><span class="feature-check">✓</span> Cloud Security Posture (AWS/Az
+  L 784: <li class="pricing-feature-item"><span class="feature-check">✓</span> Unlimited Endpoints & Cloud Wo
+  L 785: <li class="pricing-feature-item"><span class="feature-check">✓</span> Dedicated Cyber Commander & CI
+  L 786: <li class="pricing-feature-item"><span class="feature-check">✓</span> Continuous Red Team Emulation<
+  L 787: <li class="pricing-feature-item"><span class="feature-check">✓</span> 1-Hour Digital Forensics Retai
+  L 788: <li class="pricing-feature-item"><span class="feature-check">✓</span> Executive Board Risk Reports</
+  L 851: <span>🛡️</span> Book Security Audit Session
+  L 854: <span>✉️</span> Contact Defense Team
+  L 929: <span class="footer-contact-icon">📍</span>
+  L 933: <span class="footer-contact-icon">📞</span>
+  L 937: <span class="footer-contact-icon">✉️</span>
+
+==================== pages\404.html (2 icons total, 2 unique) ====================
+Unique icons: 💬 🛡
+
+  L  59: <span>🛡️</span> Return to Secure Home
+  L  65: <span>💬</span> Report Security Anomaly
+
+==================== pages\about.html (31 icons total, 18 unique) ====================
+Unique icons: ☁ ✉ ✓ 🌐 🎯 🏅 🏛 💳 📍 📑 📜 📞 📡 🔒 🔮 🚨 🛡 🤝
+
+  L  57: <span class="dropdown-icon">🛡️</span>
+  L  66: <span class="dropdown-icon">🎯</span>
+  L  75: <span class="dropdown-icon">☁️</span>
+  L  84: <span class="dropdown-icon">🚨</span>
+  L 174: <span>📑</span> Download Executive Capability Deck
+  L 177: <span>📍</span> Visit Our SOC Command
+  L 208: <div class="card-icon-wrap">🛡️</div>
+  L 214: <li class="card-meta-item"><span class="card-meta-icon">✓</span> Rapid zero-hour mitigation</li>
+  L 215: <li class="card-meta-item"><span class="card-meta-icon">✓</span> Strict contractual confidentiality<
+  L 221: <div class="card-icon-wrap">🔮</div>
+  L 227: <li class="card-meta-item"><span class="card-meta-icon">✓</span> Predictive vulnerability analysis</
+  L 228: <li class="card-meta-item"><span class="card-meta-icon">✓</span> Quantum-resistant encryption resear
+  L 234: <div class="card-icon-wrap">🤝</div>
+  L 240: <li class="card-meta-item"><span class="card-meta-icon">✓</span> CREST & GIAC adherence</li>
+  L 241: <li class="card-meta-item"><span class="card-meta-icon">✓</span> Responsible CVE disclosure policy</
+  L 329: <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">🏅</div>
+  L 336: <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">🔒</div>
+  L 343: <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">🏛️</div>
+  L 350: <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">🛡️</div>
+  L 373: <span>✉️</span> Contact Our Security Specialists
+  L 376: <span>💳</span> View Service Plans
+  L 395: <div style="font-size: 2.25rem; margin-bottom: 0.75rem;">🛡️</div>
+  L 404: <div style="font-size: 2.25rem; margin-bottom: 0.75rem;">📜</div>
+  L 413: <div style="font-size: 2.25rem; margin-bottom: 0.75rem;">🎯</div>
+  L 422: <div style="font-size: 2.25rem; margin-bottom: 0.75rem;">🔒</div>
+  L 448: <span>🌐</span> Tour Virtual SOC Grid
+  L 451: <span>📑</span> SLA Performance Metrics
+  L 459: <span>📡</span> Active SOC Node Status
+  L 558: <span class="footer-contact-icon">📍</span>
+  L 562: <span class="footer-contact-icon">📞</span>
+  L 566: <span class="footer-contact-icon">✉️</span>
+
+==================== pages\contact.html (35 icons total, 22 unique) ====================
+Unique icons: ☁ ✉ ✓ ❌ 🇦 🇧 🇩 🇪 🇬 🇮 🇳 🇸 🇺 🎯 🐦 💻 💼 📍 📞 🔒 🚨 🛡
+
+  L  57: <span class="dropdown-icon">🛡️</span>
+  L  66: <span class="dropdown-icon">🎯</span>
+  L  75: <span class="dropdown-icon">☁️</span>
+  L  84: <span class="dropdown-icon">🚨</span>
+  L 165: <div class="card-icon-wrap">📍</div>
+  L 178: <div class="card-icon-wrap">📞</div>
+  L 193: <div class="card-icon-wrap">✉️</div>
+  L 214: <span>💼</span> LinkedIn Official
+  L 217: <span>🐦</span> Twitter / X Dispatch
+  L 220: <span>💻</span> GitHub Research
+  L 244: <span>🛡️</span> Transmission Successfully Encrypted & Dispatched!
+  L 271: <span>❌</span> Please enter a valid name containing only alphabets.
+  L 293: <span>❌</span> Please provide a valid email address (e.g. user@domain.com).
+  L 306: <option value="+91">🇮🇳 India (+91)</option>
+  L 307: <option value="+1">🇺🇸 USA (+1)</option>
+  L 308: <option value="+44">🇬🇧 UK (+44)</option>
+  L 309: <option value="+65">🇸🇬 Singapore (+65)</option>
+  L 310: <option value="+61">🇦🇺 Australia (+61)</option>
+  L 311: <option value="+49">🇩🇪 Germany (+49)</option>
+  L 312: <option value="+971">🇦🇪 UAE (+971)</option>
+  L 329: <span>❌</span> Mobile number must be exactly 10 numerical digits.
+  L 348: <span>❌</span> Please select a subject category.
+  L 373: <span>🔒</span> Encrypt & Transmit Message
+  L 505: <span class="footer-contact-icon">📍</span>
+  L 509: <span class="footer-contact-icon">📞</span>
+  L 513: <span class="footer-contact-icon">✉️</span>
+  L 627: submitBtn.innerHTML = '<span>✓</span> Transmission Successfully Dispatched!';
+  L 630: submitBtn.innerHTML = '<span>🔒</span> Encrypt & Transmit Message';
+
+==================== pages\dashboard.html (79 icons total, 29 unique) ====================
+Unique icons: ⏱ ☁ ☰ ⚡ ✍ ✓ ✕ 🎟 🏅 🏢 👥 💬 📈 📊 📑 📜 📞 📹 🔍 🔒 🔔 🔬 🖥 🚨 🚫 🛑 🛡 🤖 🧱
+
+  L  50: <span>✕</span>
+  L  60: <span class="dash-nav-icon">📊</span>
+  L  65: <span class="dash-nav-icon">🚨</span>
+  L  70: <span class="dash-nav-icon">🛡️</span>
+  L  75: <span class="dash-nav-icon">🧱</span>
+  L  82: <span class="dash-nav-icon">⚡</span>
+  L  87: <span class="dash-nav-icon">📜</span>
+  L  92: <span class="dash-nav-icon">📑</span>
+  L  99: <span class="dash-nav-icon">👥</span>
+  L 117: <span>☰</span>
+  L 136: <span>🔔</span>
+  L 187: <span>📑</span> Generate Board Briefing (PDF)
+  L 190: <span>🛡️</span> Authorize Security Policy
+  L 200: <span class="kpi-icon">🛡️</span>
+  L 211: <span class="kpi-icon">📈</span>
+  L 215: <span>✓ $14.2M</span> Estimated breach loss averted
+  L 222: <span class="kpi-icon">📜</span>
+  L 226: <span>✓ ISO 27001</span> SOC 2 Type II, HIPAA, GDPR
+  L 233: <span class="kpi-icon">🔒</span>
+  L 237: <span>✓ Underwritten</span> Active with Lloyd's syndicate
+  L 248: <span>📊</span> Enterprise Cyber Risk Heatmap (Q4 2026)
+  L 299: <span>✍️</span> CISO Executive Approvals Queue
+  L 340: 🛡️ CISO Executive Shortcuts:
+  L 343: <span>📑</span> Download Board Briefing
+  L 346: <span>📜</span> Export ISO 27001 Evidence
+  L 349: <span>🏢</span> Vendor Risk Ratings
+  L 352: <span>🔒</span> Underwriter Warranty Attestation
+  L 355: <span>🚨</span> Convene Emergency Security Committee
+  L 379: <span>⚡</span> Trigger Sensor Sweep
+  L 382: <span>🛑</span> Deploy Network Quarantine
+  L 392: <span class="kpi-icon">⚡</span>
+  L 396: <span>✓ 110ms</span> Cluster ingest latency
+  L 403: <span class="kpi-icon">🛑</span>
+  L 407: <span>✓ 100% SLA</span> 18 threats contained past 4h
+  L 414: <span class="kpi-icon">⏱️</span>
+  L 425: <span class="kpi-icon">🤖</span>
+  L 429: <span>✓ Zero</span> False positive escalations
+  L 440: <span>🚨</span> MITRE ATT&CK Real-Time Alert Stream
+  L 504: <span>🔬</span> Isolated Quarantine Sandbox
+  L 541: ⚡ SOC Command Shortcuts:
+  L 544: <span>🔍</span> Deep Packet Inspection
+  L 547: <span>🚫</span> Global IP Blacklist
+  L 550: <span>🔒</span> Enforce Honeypot Decoys
+  L 553: <span>🤖</span> Edit SOAR Playbooks
+  L 556: <span>🚨</span> Emergency Threat Lockdown
+  L 580: <span>📊</span> Download Monthly SLA Report
+  L 583: <span>💬</span> Contact Dedicated Analyst
+  L 593: <span class="kpi-icon">☁️</span>
+  L 597: <span>✓ 100%</span> 48 VPCs, 1,240 Pods, 680 Endpoints
+  L 604: <span class="kpi-icon">⚡</span>
+  L 608: <span>✓ 365 Days</span> Zero unscheduled downtime
+  L 615: <span class="kpi-icon">🛡️</span>
+  L 619: <span>✓ &lt;4 Hours</span> Turnaround (0 overdue CVEs)
+  L 626: <span class="kpi-icon">🏢</span>
+  L 630: <span>✓ Tier 1</span> Dedicated SOC Pod Assigned
+  L 641: <span>🖥️</span> Monitored Cloud Workload Health
+  L 660: <td><span style="color: var(--accent);">✓ 100% Healthy</span></td>
+  L 666: <td><span style="color: var(--accent);">✓ 100% Healthy</span></td>
+  L 672: <td><span style="color: var(--accent);">✓ 99.8% Patched</span></td>
+  L 678: <td><span style="color: var(--accent);">✓ 0 Ingress Drops</span></td>
+  L 689: <span>📞</span> Dedicated Security Engineer Hotline
+  L 708: <span>📹</span> Launch Encrypted Bridge
+  L 711: <span>🎟️</span> Submit Support Ticket
+  L 733: 🏢 Client Service Shortcuts:
+  L 736: <span>📊</span> Monthly SLA Review
+  L 739: <span>🛡️</span> Request Ad-Hoc PenTest
+  L 742: <span>☁️</span> Manage Cloud VPC Sensors
+  L 745: <span>📑</span> Vendor Security Questionnaire
+  L 748: <span>🚨</span> Direct Incident Hotline (24/7)
+  L 760: <span>🚨</span> Real-Time Global Threat Intelligence & SIEM Streams
+  L 811: <span>🛡️</span> Vulnerability Intel & Patch Prioritization
+  L 841: <span>🧱</span> Zero-Trust Microsegmentation & Next-Gen Firewall
+  L 868: <span>⚡</span> Chronological Incident Forensics Timeline
+  L 894: <span>📜</span> Regulatory Compliance & Evidence Vault
+  L 903: <div style="font-size: 1.5rem; margin-bottom: 0.25rem;">📑</div>
+  L 909: <div style="font-size: 1.5rem; margin-bottom: 0.25rem;">🏅</div>
+  L 915: <div style="font-size: 1.5rem; margin-bottom: 0.25rem;">🔒</div>
+  L 929: <span>📑</span> Executive Board Risk & Threat Digests
+  L 960: <span>👥</span> Authorized Operators & Clearance Levels
+
+==================== pages\pricing.html (40 icons total, 16 unique) ====================
+Unique icons: ☁ ⚡ ✉ ✓ 🎯 💬 💳 📄 📊 📍 📜 📞 🔒 🕵 🚨 🛡
+
+  L  57: <span class="dropdown-icon">🛡️</span>
+  L  66: <span class="dropdown-icon">🎯</span>
+  L  75: <span class="dropdown-icon">☁️</span>
+  L  84: <span class="dropdown-icon">🚨</span>
+  L 173: <li class="pricing-feature-item"><span class="feature-check">✓</span> 8x5 Business Hours SOC Monitor
+  L 174: <li class="pricing-feature-item"><span class="feature-check">✓</span> Up to 50 Monitored Endpoints &
+  L 175: <li class="pricing-feature-item"><span class="feature-check">✓</span> Monthly Automated Vulnerabilit
+  L 176: <li class="pricing-feature-item"><span class="feature-check">✓</span> 2-Hour Response Time for Criti
+  L 177: <li class="pricing-feature-item"><span class="feature-check">✓</span> Email & Slack Webhook Notifica
+  L 178: <li class="pricing-feature-item"><span class="feature-check">✓</span> Monthly Security Posture Diges
+  L 194: <li class="pricing-feature-item"><span class="feature-check">✓</span> 24/7/365 Continuous Eyes-on-Gl
+  L 195: <li class="pricing-feature-item"><span class="feature-check">✓</span> Up to 250 Endpoints + Multi-Cl
+  L 196: <li class="pricing-feature-item"><span class="feature-check">✓</span> Bi-Weekly Penetration Test Val
+  L 197: <li class="pricing-feature-item"><span class="feature-check">✓</span> 15-Minute Guaranteed Critical 
+  L 198: <li class="pricing-feature-item"><span class="feature-check">✓</span> Cloud Posture Management (AWS 
+  L 199: <li class="pricing-feature-item"><span class="feature-check">✓</span> Automated Endpoint Isolation P
+  L 200: <li class="pricing-feature-item"><span class="feature-check">✓</span> Dedicated Security Operations 
+  L 215: <li class="pricing-feature-item"><span class="feature-check">✓</span> Unlimited Endpoints, Cloud & H
+  L 216: <li class="pricing-feature-item"><span class="feature-check">✓</span> Dedicated Chief Information Se
+  L 217: <li class="pricing-feature-item"><span class="feature-check">✓</span> Continuous Red Team Adversary 
+  L 218: <li class="pricing-feature-item"><span class="feature-check">✓</span> 1-Hour Retainer Forensics SLA 
+  L 219: <li class="pricing-feature-item"><span class="feature-check">✓</span> Tailored Zero-Trust Architectu
+  L 220: <li class="pricing-feature-item"><span class="feature-check">✓</span> Executive Board Risk Presentat
+  L 221: <li class="pricing-feature-item"><span class="feature-check">✓</span> Custom SIEM Parser & API Devel
+  L 345: <span>📊</span> Generate Custom Board ROI Model
+  L 348: <span>💬</span> Consult Cyber Economist
+  L 431: <span>💳</span> Request Custom Quote
+  L 434: <span>📞</span> Contact Sales Engineering
+  L 453: <div class="card-icon">⚡</div>
+  L 463: <div class="card-icon">🕵️</div>
+  L 473: <div class="card-icon">📜</div>
+  L 497: <span style="color: var(--accent); font-weight: 800;">✓</span>
+  L 501: <span style="color: var(--accent); font-weight: 800;">✓</span>
+  L 505: <span style="color: var(--accent); font-weight: 800;">✓</span>
+  L 511: <span>📄</span> Download Master Services Agreement (MSA)
+  L 514: <span>🔒</span> Security Whitepaper
+  L 522: <span>🛡️</span> Sovereign Security Warranties
+  L 618: <span class="footer-contact-icon">📍</span>
+  L 622: <span class="footer-contact-icon">📞</span>
+  L 626: <span class="footer-contact-icon">✉️</span>
+
+==================== pages\service-cloud-security.html (38 icons total, 22 unique) ====================
+Unique icons: ☁ ⚙ ⚡ ✉ ✓ 🌐 🎯 💬 📊 📍 📑 📜 📞 📡 🔐 🔑 🔒 🔷 🚢 🚨 🛡 🧱
+
+  L  57: <span class="dropdown-icon">🛡️</span>
+  L  66: <span class="dropdown-icon">🎯</span>
+  L  75: <span class="dropdown-icon">☁️</span>
+  L  84: <span class="dropdown-icon">🚨</span>
+  L 174: <div class="card-icon-wrap">🔒</div>
+  L 180: <li class="card-meta-item"><span class="card-meta-icon">✓</span> Continuous risk-based evaluation</l
+  L 181: <li class="card-meta-item"><span class="card-meta-icon">✓</span> Multi-factor authentication everywh
+  L 187: <div class="card-icon-wrap">🔑</div>
+  L 193: <li class="card-meta-item"><span class="card-meta-icon">✓</span> Ephemeral cloud tokens</li>
+  L 194: <li class="card-meta-item"><span class="card-meta-icon">✓</span> CIEM entitlement pruning</li>
+  L 200: <div class="card-icon-wrap">🧱</div>
+  L 206: <li class="card-meta-item"><span class="card-meta-icon">✓</span> Microsegmentation policies</li>
+  L 207: <li class="card-meta-item"><span class="card-meta-icon">✓</span> Blast-radius minimization</li>
+  L 229: <div class="card-icon-wrap">☁️</div>
+  L 235: <li class="card-meta-item"><span class="card-meta-icon">✓</span> AWS Security Hub alignment</li>
+  L 236: <li class="card-meta-item"><span class="card-meta-icon">✓</span> SCP boundary enforcement</li>
+  L 243: <div class="card-icon-wrap">🔷</div>
+  L 249: <li class="card-meta-item"><span class="card-meta-icon">✓</span> Entra ID security baselines</li>
+  L 250: <li class="card-meta-item"><span class="card-meta-icon">✓</span> Azure Key Vault policy guards</li>
+  L 257: <div class="card-icon-wrap">🌐</div>
+  L 263: <li class="card-meta-item"><span class="card-meta-icon">✓</span> BeyondCorp implementation</li>
+  L 264: <li class="card-meta-item"><span class="card-meta-icon">✓</span> GKE cluster workload identity</li>
+  L 336: <div class="card-icon-wrap">📡</div>
+  L 343: <div class="card-icon-wrap">🛡️</div>
+  L 350: <div class="card-icon-wrap">🚢</div>
+  L 357: <div class="card-icon-wrap">📜</div>
+  L 380: <span>☁️</span> Request Cloud Posture Audit
+  L 383: <span>💬</span> Schedule Architecture Review
+  L 402: <div style="font-size: 2rem; margin-bottom: 0.5rem;">🔐</div>
+  L 410: <div style="font-size: 2rem; margin-bottom: 0.5rem;">🧱</div>
+  L 418: <div style="font-size: 2rem; margin-bottom: 0.5rem;">⚡</div>
+  L 426: <div style="font-size: 2rem; margin-bottom: 0.5rem;">📊</div>
+  L 451: <span>🛡️</span> Request Cloud Architecture Review
+  L 454: <span>📑</span> CIS Benchmark Scoring Guide
+  L 462: <span>⚙️</span> Automated CI/CD Safeguards
+  L 552: <span class="footer-contact-icon">📍</span>
+  L 556: <span class="footer-contact-icon">📞</span>
+  L 560: <span class="footer-contact-icon">✉️</span>
+
+==================== pages\service-incident-response.html (28 icons total, 20 unique) ====================
+Unique icons: ☁ ⚖ ✉ 🎯 💾 💿 📋 📍 📑 📜 📞 🔄 🔍 🔐 🔬 🚨 🛑 🛡 🧠 🧹
+
+  L  57: <span class="dropdown-icon">🛡️</span>
+  L  66: <span class="dropdown-icon">🎯</span>
+  L  75: <span class="dropdown-icon">☁️</span>
+  L  84: <span class="dropdown-icon">🚨</span>
+  L 176: <span>🚨</span> Establish IR Retainer Agreement
+  L 179: <span>📋</span> Review Retainer Hours Policy
+  L 210: <div class="card-icon-wrap">📋</div>
+  L 217: <div class="card-icon-wrap">🔍</div>
+  L 224: <div class="card-icon-wrap">🛑</div>
+  L 231: <div class="card-icon-wrap">🧹</div>
+  L 238: <div class="card-icon-wrap">🔄</div>
+  L 245: <div class="card-icon-wrap">📑</div>
+  L 267: <div class="card-icon-wrap">🧠</div>
+  L 274: <div class="card-icon-wrap">🔬</div>
+  L 281: <div class="card-icon-wrap">☁️</div>
+  L 288: <div class="card-icon-wrap">⚖️</div>
+  L 362: <span>🚨</span> Connect to Emergency Triage
+  L 365: <span>📞</span> Call +91 9876543210
+  L 384: <div style="font-size: 2rem; margin-bottom: 0.5rem;">💾</div>
+  L 390: <div style="font-size: 2rem; margin-bottom: 0.5rem;">💿</div>
+  L 396: <div style="font-size: 2rem; margin-bottom: 0.5rem;">🔐</div>
+  L 402: <div style="font-size: 2rem; margin-bottom: 0.5rem;">📜</div>
+  L 425: <span>🚨</span> Dispatch Rapid Incident Commander
+  L 428: <span>📑</span> Post-Incident Hardening Roadmap
+  L 436: <span>🛡️</span> Retainer SLA Guarantees
+  L 526: <span class="footer-contact-icon">📍</span>
+  L 530: <span class="footer-contact-icon">📞</span>
+  L 534: <span class="footer-contact-icon">✉️</span>
+
+==================== pages\service-pentest.html (30 icons total, 21 unique) ====================
+Unique icons: ☁ ⚔ ✉ ✓ 🌐 🎯 🏢 👔 📄 📍 📘 📜 📞 🔄 🔌 🔒 🔘 🔬 🚨 🛠 🛡
+
+  L  57: <span class="dropdown-icon">🛡️</span>
+  L  66: <span class="dropdown-icon">🎯</span>
+  L  75: <span class="dropdown-icon">☁️</span>
+  L  84: <span class="dropdown-icon">🚨</span>
+  L 180: <li class="card-meta-item"><span class="card-meta-icon">✓</span> OSINT reconnaissance sweeps</li>
+  L 181: <li class="card-meta-item"><span class="card-meta-icon">✓</span> Unauthenticated exploit attempts</l
+  L 187: <div class="card-icon-wrap">🔘</div>
+  L 193: <li class="card-meta-item"><span class="card-meta-icon">✓</span> Role-based access control (RBAC) te
+  L 194: <li class="card-meta-item"><span class="card-meta-icon">✓</span> BOLA / IDOR vulnerability hunting</
+  L 206: <li class="card-meta-item"><span class="card-meta-icon">✓</span> Static + Dynamic SAST/DAST verifica
+  L 207: <li class="card-meta-item"><span class="card-meta-icon">✓</span> Comprehensive attack chain modeling
+  L 228: <div class="card-icon-wrap">🌐</div>
+  L 235: <div class="card-icon-wrap">🔌</div>
+  L 242: <div class="card-icon-wrap">☁️</div>
+  L 249: <div class="card-icon-wrap">🏢</div>
+  L 322: <div class="card-icon-wrap">👔</div>
+  L 329: <div class="card-icon-wrap">🛠️</div>
+  L 336: <div class="card-icon-wrap">🔄</div>
+  L 359: <span>🎯</span> Request Scope & Proposal
+  L 362: <span>✉️</span> Speak with a Lead Tester
+  L 381: <div style="font-size: 2rem; margin-bottom: 0.5rem;">📘</div>
+  L 388: <div style="font-size: 2rem; margin-bottom: 0.5rem;">⚔️</div>
+  L 395: <div style="font-size: 2rem; margin-bottom: 0.5rem;">📜</div>
+  L 402: <div style="font-size: 2rem; margin-bottom: 0.5rem;">🔬</div>
+  L 426: <span>📄</span> Sample Executive Attestation Letter
+  L 429: <span>🔒</span> Red Team Playbook Guide
+  L 437: <span>🛡️</span> Deliverables Guarantee
+  L 527: <span class="footer-contact-icon">📍</span>
+  L 531: <span class="footer-contact-icon">📞</span>
+  L 535: <span class="footer-contact-icon">✉️</span>
+
+==================== pages\service-soc.html (28 icons total, 19 unique) ====================
+Unique icons: ☁ ✉ ✓ 🌐 🎯 👨 💻 📋 📍 📞 📡 🔴 🔷 🚨 🛑 🛡 🟡 🟢 🧠
+
+  L  57: <span class="dropdown-icon">🛡️</span>
+  L  66: <span class="dropdown-icon">🎯</span>
+  L  75: <span class="dropdown-icon">☁️</span>
+  L  84: <span class="dropdown-icon">🚨</span>
+  L 176: <span>🛡️</span> Onboard Your Environment
+  L 179: <span>📋</span> Read SOC Service SLA
+  L 210: <div class="card-icon-wrap">📡</div>
+  L 217: <div class="card-icon-wrap">🧠</div>
+  L 224: <div class="card-icon-wrap">👨‍💻</div>
+  L 231: <div class="card-icon-wrap">🛑</div>
+  L 253: <div class="card-icon-wrap">🟢</div>
+  L 259: <li class="card-meta-item"><span class="card-meta-icon">✓</span> Average response time: &lt; 3 minut
+  L 260: <li class="card-meta-item"><span class="card-meta-icon">✓</span> Initial false-positive filtering</l
+  L 266: <div class="card-icon-wrap">🟡</div>
+  L 272: <li class="card-meta-item"><span class="card-meta-icon">✓</span> Root cause timeline reconstruction<
+  L 273: <li class="card-meta-item"><span class="card-meta-icon">✓</span> Live memory and process inspection<
+  L 279: <div class="card-icon-wrap">🔴</div>
+  L 285: <li class="card-meta-item"><span class="card-meta-icon">✓</span> Direct executive briefing channel</
+  L 286: <li class="card-meta-item"><span class="card-meta-icon">✓</span> Advanced malware sandboxing</li>
+  L 395: <span>🛡️</span> Request Managed SOC Trial
+  L 398: <span>📞</span> Contact SOC Engineering
+  L 417: <div class="card-icon">☁️</div>
+  L 426: <div class="card-icon">🔷</div>
+  L 435: <div class="card-icon">🌐</div>
+  L 514: <span class="footer-contact-icon">📍</span>
+  L 518: <span class="footer-contact-icon">📞</span>
+  L 522: <span class="footer-contact-icon">✉️</span>
+
+==================== pages\services.html (41 icons total, 20 unique) ====================
+Unique icons: ☁ ⚡ ✉ ✓ 🎯 💰 💻 📊 📍 📑 📞 📦 🔄 🔍 🔐 🔑 🚀 🚨 🛑 🛡
+
+  L  57: <span class="dropdown-icon">🛡️</span>
+  L  66: <span class="dropdown-icon">🎯</span>
+  L  75: <span class="dropdown-icon">☁️</span>
+  L  84: <span class="dropdown-icon">🚨</span>
+  L 173: <div class="card-icon-wrap">🛡️</div>
+  L 179: <li class="card-meta-item"><span class="card-meta-icon">✓</span> Multi-cloud SIEM, EDR & XDR managem
+  L 180: <li class="card-meta-item"><span class="card-meta-icon">✓</span> Real-time behavioral anomaly tracki
+  L 181: <li class="card-meta-item"><span class="card-meta-icon">✓</span> Dedicated Threat Hunting unit</li>
+  L 191: <div class="card-icon-wrap">🎯</div>
+  L 197: <li class="card-meta-item"><span class="card-meta-icon">✓</span> Full OWASP Top 10 Web & API testing
+  L 198: <li class="card-meta-item"><span class="card-meta-icon">✓</span> Cloud container & Kubernetes escape
+  L 199: <li class="card-meta-item"><span class="card-meta-icon">✓</span> Comprehensive executive report & Po
+  L 209: <div class="card-icon-wrap">☁️</div>
+  L 215: <li class="card-meta-item"><span class="card-meta-icon">✓</span> AWS, Azure, Google Cloud posture au
+  L 216: <li class="card-meta-item"><span class="card-meta-icon">✓</span> Least-privilege IAM entitlement enf
+  L 217: <li class="card-meta-item"><span class="card-meta-icon">✓</span> Zero Trust network access (ZTNA) ga
+  L 227: <div class="card-icon-wrap">🚨</div>
+  L 233: <li class="card-meta-item"><span class="card-meta-icon">✓</span> Emergency containment & ransomware 
+  L 234: <li class="card-meta-item"><span class="card-meta-icon">✓</span> Court-admissible forensic evidence 
+  L 235: <li class="card-meta-item"><span class="card-meta-icon">✓</span> Regulatory breach notification guid
+  L 259: <div class="card-icon-wrap">🔍</div>
+  L 266: <div class="card-icon-wrap">🛡️</div>
+  L 273: <div class="card-icon-wrap">⚡</div>
+  L 280: <div class="card-icon-wrap">🛑</div>
+  L 287: <div class="card-icon-wrap">🔄</div>
+  L 294: <div class="card-icon-wrap">📊</div>
+  L 318: <span>🔐</span> Request Defense Architecture Review
+  L 321: <span>💰</span> Compare Service Tiers
+  L 355: <span>🚀</span> Start 14-Day Pilot Assessment
+  L 358: <span>📞</span> Speak to a CISO
+  L 377: <div style="font-size: 2rem; margin-bottom: 0.5rem;">☁️</div>
+  L 384: <div style="font-size: 2rem; margin-bottom: 0.5rem;">💻</div>
+  L 391: <div style="font-size: 2rem; margin-bottom: 0.5rem;">📦</div>
+  L 398: <div style="font-size: 2rem; margin-bottom: 0.5rem;">🔑</div>
+  L 422: <span>🔍</span> Sample Threat Intelligence Bulletin
+  L 425: <span>📑</span> Honeypot Methodology
+  L 433: <span>⚡</span> Ingested Threat Feed Feats
+  L 513: <span>🛡️</span> Schedule Scoping Consultation
+  L 587: <span class="footer-contact-icon">📍</span>
+  L 591: <span class="footer-contact-icon">📞</span>
+  L 595: <span class="footer-contact-icon">✉️</span>
+
+==================== pages\sign-in.html (11 icons total, 6 unique) ====================
+Unique icons: ⚡ ✓ ❌ 🏢 🔒 🛡
+
+  L  54: <span class="auth-trust-icon">✓</span>
+  L  58: <span class="auth-trust-icon">✓</span>
+  L  62: <span class="auth-trust-icon">✓</span>
+  L 114: <span>❌</span> Please enter a valid corporate email format (e.g. name@domain.com).
+  L 143: 🔒
+  L 147: <span>❌</span> Password must contain at least 6 characters.
+  L 159: <option value="Chief Information Security Officer (CISO)">🛡️ Chief Information Security Officer (CIS
+  L 160: <option value="Lead SOC Operations Commander">⚡ Lead SOC Operations Commander</option>
+  L 161: <option value="Enterprise Client IT Director">🏢 Enterprise Client IT Director</option>
+  L 164: <span>❌</span> Please select a security clearance role.
+  L 173: <span>🔒</span> Authenticate & Launch Dashboard
+
+==================== pages\sign-up.html (30 icons total, 15 unique) ====================
+Unique icons: ⚡ ✓ ❌ 🇦 🇧 🇩 🇪 🇬 🇮 🇳 🇸 🇺 🏢 🔒 🛡
+
+  L  54: <span class="auth-trust-icon">✓</span>
+  L  58: <span class="auth-trust-icon">✓</span>
+  L  62: <span class="auth-trust-icon">✓</span>
+  L  97: <span>🛡️</span> Account Provisioned Successfully!
+  L 125: <span>❌</span> Letters only (no digits).
+  L 147: <span>❌</span> Letters only (no digits).
+  L 188: <span>❌</span> Valid email format required.
+  L 202: <option value="+91">🇮🇳 +91 (India)</option>
+  L 203: <option value="+1">🇺🇸 +1 (USA)</option>
+  L 204: <option value="+44">🇬🇧 +44 (UK)</option>
+  L 205: <option value="+65">🇸🇬 +65 (Singapore)</option>
+  L 206: <option value="+61">🇦🇺 +61 (Australia)</option>
+  L 207: <option value="+49">🇩🇪 +49 (Germany)</option>
+  L 224: <span>❌</span> Mobile must be exactly 10 numerical digits.
+  L 235: <option value="Chief Information Security Officer (CISO)">🛡️ Chief Information Security Officer (CIS
+  L 236: <option value="Lead SOC Operations Commander">⚡ Lead SOC Operations Commander</option>
+  L 237: <option value="Enterprise Client IT Director">🏢 Enterprise Client IT Director</option>
+  L 240: <span>❌</span> Please select a role clearance.
+  L 301: 🔒
+  L 320: <span>❌</span> Password does not meet security requirements.
+  L 348: 🔒
+  L 352: <span>❌</span> Passwords do not match.
+  L 366: <span>❌</span> You must accept the Terms of Use to create an account.
+  L 379: <span>🛡️</span> Complete Account Registration

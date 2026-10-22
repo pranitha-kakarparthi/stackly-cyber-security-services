@@ -1,0 +1,485 @@
+
+============================== 404.html ==============================
+Line   59 | Emojis: 🛡          | <span>🛡️</span> Return to Secure Home
+Line   65 | Emojis: 💬          | <span>💬</span> Report Security Anomaly
+
+============================== index.html ==============================
+Line   58 | Emojis: 🛡          | <span class="dropdown-icon">🛡️</span>
+Line   67 | Emojis: 🎯          | <span class="dropdown-icon">🎯</span>
+Line   76 | Emojis: ☁          | <span class="dropdown-info">☁️</span>
+Line   85 | Emojis: 🚨          | <span class="dropdown-icon">🚨</span>
+Line  267 | Emojis: 🔍          | <span>🔍</span> Run Security Scan
+Line  311 | Emojis: 🎯          | <div class="card-icon-wrap" style="color: var(--primary);">🎯</div>
+Line  315 | Emojis: ✓          | <li class="card-meta-item"><span class="card-meta-icon">✓</span> T1190 Exploit Prevention</li>
+Line  316 | Emojis: ✓          | <li class="card-meta-item"><span class="card-meta-icon">✓</span> T1566 Phishing Shield</li>
+Line  322 | Emojis: ⚙          | <div class="card-icon-wrap" style="color: var(--secondary);">⚙️</div>
+Line  326 | Emojis: ✓          | <li class="card-meta-item"><span class="card-meta-icon">✓</span> T1059 Command Intercept</li>
+Line  327 | Emojis: ✓          | <li class="card-meta-item"><span class="card-meta-icon">✓</span> T1204 User Execution Guard</li>
+Line  333 | Emojis: 🔑          | <div class="card-icon-wrap" style="color: var(--accent);">🔑</div>
+Line  337 | Emojis: ✓          | <li class="card-meta-item"><span class="card-meta-icon">✓</span> T1003 OS Credential Dumping</li>
+Line  338 | Emojis: ✓          | <li class="card-meta-item"><span class="card-meta-icon">✓</span> T1558 Ticket Request Alerts</li>
+Line  344 | Emojis: 🛑          | <div class="card-icon-wrap" style="color: var(--warning);">🛑</div>
+Line  348 | Emojis: ✓          | <li class="card-meta-item"><span class="card-meta-icon">✓</span> T1021 Remote Service Pivot</li>
+Line  349 | Emojis: ✓          | <li class="card-meta-item"><span class="card-meta-icon">✓</span> T1080 Shared Drive Isolation</li>
+Line  372 | Emojis: 🇮🇳         | <strong style="color: var(--primary); display: block; font-size: 1.1rem;">🇮🇳 Salem Command</strong>
+Line  376 | Emojis: 🇩🇪         | <strong style="color: var(--secondary); display: block; font-size: 1.1rem;">🇩🇪 Frankfurt Node</strong>
+Line  381 | Emojis: 📍          | <span>📍</span> Inquire Sovereign Deployment
+Line  413 | Emojis: 🎯          | <div class="card-icon-wrap">🎯</div>
+Line  419 | Emojis: ✓          | <li class="card-meta-item"><span class="card-meta-icon">✓</span> Zero unauthorized compromises</li>
+Line  420 | Emojis: ✓          | <li class="card-meta-item"><span class="card-meta-icon">✓</span> Proactive threat discovery</li>
+Line  426 | Emojis: 🌐          | <div class="card-icon-wrap">🌐</div>
+Line  432 | Emojis: ✓          | <li class="card-meta-item"><span class="card-meta-icon">✓</span> Zero Trust by default</li>
+Line  433 | Emojis: ✓          | <li class="card-meta-item"><span class="card-meta-icon">✓</span> Resilient autonomous recovery</li>
+Line  439 | Emojis: ⚖          | <div class="card-icon-wrap">⚖️</div>
+Line  445 | Emojis: ✓          | <li class="card-meta-item"><span class="card-meta-icon">✓</span> Strict non-disclosure protocols</li>
+Line  446 | Emojis: ✓          | <li class="card-meta-item"><span class="card-meta-icon">✓</span> Ethical disclosure standards</li>
+Line  513 | Emojis: 🛡          | <div class="card-icon-wrap">🛡️</div>
+Line  519 | Emojis: ✓          | <li class="card-meta-item"><span class="card-meta-icon">✓</span> Multi-cloud SIEM & EDR integration</li>
+Line  520 | Emojis: ✓          | <li class="card-meta-item"><span class="card-meta-icon">✓</span> Guaranteed 15-minute SLA on alerts</li>
+Line  527 | Emojis: 🎯          | <div class="card-icon-wrap">🎯</div>
+Line  533 | Emojis: ✓          | <li class="card-meta-item"><span class="card-meta-icon">✓</span> Black, Grey, and White-Box scenarios</li>
+Line  534 | Emojis: ✓          | <li class="card-meta-item"><span class="card-meta-icon">✓</span> Executive remediation roadmaps</li>
+Line  541 | Emojis: ☁          | <div class="card-icon-wrap">☁️</div>
+Line  547 | Emojis: ✓          | <li class="card-meta-item"><span class="card-meta-icon">✓</span> CSPM & CIEM posture management</li>
+Line  548 | Emojis: ✓          | <li class="card-meta-item"><span class="card-meta-icon">✓</span> Micro-segmentation strategies</li>
+Line  555 | Emojis: 🚨          | <div class="card-icon-wrap">🚨</div>
+Line  561 | Emojis: ✓          | <li class="card-meta-item"><span class="card-meta-icon">✓</span> 1-hour emergency response SLA</li>
+Line  562 | Emojis: ✓          | <li class="card-meta-item"><span class="card-meta-icon">✓</span> Ransomware containment & forensics</li>
+Line  569 | Emojis: 🔎          | <div class="card-icon-wrap">🔎</div>
+Line  575 | Emojis: ✓          | <li class="card-meta-item"><span class="card-meta-icon">✓</span> MITRE ATT&CK mapping</li>
+Line  576 | Emojis: ✓          | <li class="card-meta-item"><span class="card-meta-icon">✓</span> Deep memory & kernel forensics</li>
+Line  583 | Emojis: 📜          | <div class="card-icon-wrap">📜</div>
+Line  589 | Emojis: ✓          | <li class="card-meta-item"><span class="card-meta-icon">✓</span> Automated compliance reporting</li>
+Line  590 | Emojis: ✓          | <li class="card-meta-item"><span class="card-meta-icon">✓</span> Vendor risk assessments</li>
+Line  611 | Emojis: ⚡          | <div class="card-icon-wrap">⚡</div>
+Line  618 | Emojis: 🔐          | <div class="card-icon-wrap">🔐</div>
+Line  625 | Emojis: 🤖          | <div class="card-icon-wrap">🤖</div>
+Line  632 | Emojis: 👨💻         | <div class="card-icon-wrap">👨‍💻</div>
+Line  656 | Emojis: ★★★★★      | <div class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
+Line  673 | Emojis: ★★★★★      | <div class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
+Line  690 | Emojis: ★★★★★      | <div class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
+Line  707 | Emojis: ★★★★★      | <div class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
+Line  746 | Emojis: ✓          | <li class="pricing-feature-item"><span class="feature-check">✓</span> 8x5 SOC Monitoring Coverage</li>
+Line  747 | Emojis: ✓          | <li class="pricing-feature-item"><span class="feature-check">✓</span> Up to 50 Monitored Endpoints</li>
+Line  748 | Emojis: ✓          | <li class="pricing-feature-item"><span class="feature-check">✓</span> Monthly Vulnerability Scans</li>
+Line  749 | Emojis: ✓          | <li class="pricing-feature-item"><span class="feature-check">✓</span> Standard 2-Hour Response SLA</li>
+Line  765 | Emojis: ✓          | <li class="pricing-feature-item"><span class="feature-check">✓</span> 24/7/365 Dedicated SOC Operations</li>
+Line  766 | Emojis: ✓          | <li class="pricing-feature-item"><span class="feature-check">✓</span> Up to 250 Monitored Endpoints</li>
+Line  767 | Emojis: ✓          | <li class="pricing-feature-item"><span class="feature-check">✓</span> Bi-Weekly Red Team Assessments</li>
+Line  768 | Emojis: ✓          | <li class="pricing-feature-item"><span class="feature-check">✓</span> Guaranteed 15-Minute Response SLA</li>
+Line  769 | Emojis: ✓          | <li class="pricing-feature-item"><span class="feature-check">✓</span> Cloud Security Posture (AWS/Azure)</li>
+Line  784 | Emojis: ✓          | <li class="pricing-feature-item"><span class="feature-check">✓</span> Unlimited Endpoints & Cloud Workloads</li>
+Line  785 | Emojis: ✓          | <li class="pricing-feature-item"><span class="feature-check">✓</span> Dedicated Cyber Commander & CISO</li>
+Line  786 | Emojis: ✓          | <li class="pricing-feature-item"><span class="feature-check">✓</span> Continuous Red Team Emulation</li>
+Line  787 | Emojis: ✓          | <li class="pricing-feature-item"><span class="feature-check">✓</span> 1-Hour Digital Forensics Retainer SLA</li>
+Line  788 | Emojis: ✓          | <li class="pricing-feature-item"><span class="feature-check">✓</span> Executive Board Risk Reports</li>
+Line  851 | Emojis: 🛡          | <span>🛡️</span> Book Security Audit Session
+Line  854 | Emojis: ✉          | <span>✉️</span> Contact Defense Team
+Line  929 | Emojis: 📍          | <span class="footer-contact-icon">📍</span>
+Line  933 | Emojis: 📞          | <span class="footer-contact-icon">📞</span>
+Line  937 | Emojis: ✉          | <span class="footer-contact-icon">✉️</span>
+
+============================== pages\404.html ==============================
+Line   59 | Emojis: 🛡          | <span>🛡️</span> Return to Secure Home
+Line   65 | Emojis: 💬          | <span>💬</span> Report Security Anomaly
+
+============================== pages\about.html ==============================
+Line   57 | Emojis: 🛡          | <span class="dropdown-icon">🛡️</span>
+Line   66 | Emojis: 🎯          | <span class="dropdown-icon">🎯</span>
+Line   75 | Emojis: ☁          | <span class="dropdown-icon">☁️</span>
+Line   84 | Emojis: 🚨          | <span class="dropdown-icon">🚨</span>
+Line  174 | Emojis: 📑          | <span>📑</span> Download Executive Capability Deck
+Line  177 | Emojis: 📍          | <span>📍</span> Visit Our SOC Command
+Line  208 | Emojis: 🛡          | <div class="card-icon-wrap">🛡️</div>
+Line  214 | Emojis: ✓          | <li class="card-meta-item"><span class="card-meta-icon">✓</span> Rapid zero-hour mitigation</li>
+Line  215 | Emojis: ✓          | <li class="card-meta-item"><span class="card-meta-icon">✓</span> Strict contractual confidentiality</li>
+Line  221 | Emojis: 🔮          | <div class="card-icon-wrap">🔮</div>
+Line  227 | Emojis: ✓          | <li class="card-meta-item"><span class="card-meta-icon">✓</span> Predictive vulnerability analysis</li>
+Line  228 | Emojis: ✓          | <li class="card-meta-item"><span class="card-meta-icon">✓</span> Quantum-resistant encryption research</li>
+Line  234 | Emojis: 🤝          | <div class="card-icon-wrap">🤝</div>
+Line  240 | Emojis: ✓          | <li class="card-meta-item"><span class="card-meta-icon">✓</span> CREST & GIAC adherence</li>
+Line  241 | Emojis: ✓          | <li class="card-meta-item"><span class="card-meta-icon">✓</span> Responsible CVE disclosure policy</li>
+Line  329 | Emojis: 🏅          | <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">🏅</div>
+Line  336 | Emojis: 🔒          | <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">🔒</div>
+Line  343 | Emojis: 🏛          | <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">🏛️</div>
+Line  350 | Emojis: 🛡          | <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">🛡️</div>
+Line  373 | Emojis: ✉          | <span>✉️</span> Contact Our Security Specialists
+Line  376 | Emojis: 💳          | <span>💳</span> View Service Plans
+Line  395 | Emojis: 🛡          | <div style="font-size: 2.25rem; margin-bottom: 0.75rem;">🛡️</div>
+Line  404 | Emojis: 📜          | <div style="font-size: 2.25rem; margin-bottom: 0.75rem;">📜</div>
+Line  413 | Emojis: 🎯          | <div style="font-size: 2.25rem; margin-bottom: 0.75rem;">🎯</div>
+Line  422 | Emojis: 🔒          | <div style="font-size: 2.25rem; margin-bottom: 0.75rem;">🔒</div>
+Line  448 | Emojis: 🌐          | <span>🌐</span> Tour Virtual SOC Grid
+Line  451 | Emojis: 📑          | <span>📑</span> SLA Performance Metrics
+Line  459 | Emojis: 📡          | <span>📡</span> Active SOC Node Status
+Line  558 | Emojis: 📍          | <span class="footer-contact-icon">📍</span>
+Line  562 | Emojis: 📞          | <span class="footer-contact-icon">📞</span>
+Line  566 | Emojis: ✉          | <span class="footer-contact-icon">✉️</span>
+
+============================== pages\contact.html ==============================
+Line   57 | Emojis: 🛡          | <span class="dropdown-icon">🛡️</span>
+Line   66 | Emojis: 🎯          | <span class="dropdown-icon">🎯</span>
+Line   75 | Emojis: ☁          | <span class="dropdown-icon">☁️</span>
+Line   84 | Emojis: 🚨          | <span class="dropdown-icon">🚨</span>
+Line  165 | Emojis: 📍          | <div class="card-icon-wrap">📍</div>
+Line  178 | Emojis: 📞          | <div class="card-icon-wrap">📞</div>
+Line  193 | Emojis: ✉          | <div class="card-icon-wrap">✉️</div>
+Line  214 | Emojis: 💼          | <span>💼</span> LinkedIn Official
+Line  217 | Emojis: 🐦          | <span>🐦</span> Twitter / X Dispatch
+Line  220 | Emojis: 💻          | <span>💻</span> GitHub Research
+Line  244 | Emojis: 🛡          | <span>🛡️</span> Transmission Successfully Encrypted & Dispatched!
+Line  271 | Emojis: ❌          | <span>❌</span> Please enter a valid name containing only alphabets.
+Line  293 | Emojis: ❌          | <span>❌</span> Please provide a valid email address (e.g. user@domain.com).
+Line  306 | Emojis: 🇮🇳         | <option value="+91">🇮🇳 India (+91)</option>
+Line  307 | Emojis: 🇺🇸         | <option value="+1">🇺🇸 USA (+1)</option>
+Line  308 | Emojis: 🇬🇧         | <option value="+44">🇬🇧 UK (+44)</option>
+Line  309 | Emojis: 🇸🇬         | <option value="+65">🇸🇬 Singapore (+65)</option>
+Line  310 | Emojis: 🇦🇺         | <option value="+61">🇦🇺 Australia (+61)</option>
+Line  311 | Emojis: 🇩🇪         | <option value="+49">🇩🇪 Germany (+49)</option>
+Line  312 | Emojis: 🇦🇪         | <option value="+971">🇦🇪 UAE (+971)</option>
+Line  329 | Emojis: ❌          | <span>❌</span> Mobile number must be exactly 10 numerical digits.
+Line  348 | Emojis: ❌          | <span>❌</span> Please select a subject category.
+Line  373 | Emojis: 🔒          | <span>🔒</span> Encrypt & Transmit Message
+Line  505 | Emojis: 📍          | <span class="footer-contact-icon">📍</span>
+Line  509 | Emojis: 📞          | <span class="footer-contact-icon">📞</span>
+Line  513 | Emojis: ✉          | <span class="footer-contact-icon">✉️</span>
+Line  627 | Emojis: ✓          | submitBtn.innerHTML = '<span>✓</span> Transmission Successfully Dispatched!';
+Line  630 | Emojis: 🔒          | submitBtn.innerHTML = '<span>🔒</span> Encrypt & Transmit Message';
+
+============================== pages\dashboard.html ==============================
+Line   50 | Emojis: ✕          | <span>✕</span>
+Line   60 | Emojis: 📊          | <span class="dash-nav-icon">📊</span>
+Line   65 | Emojis: 🚨          | <span class="dash-nav-icon">🚨</span>
+Line   70 | Emojis: 🛡          | <span class="dash-nav-icon">🛡️</span>
+Line   75 | Emojis: 🧱          | <span class="dash-nav-icon">🧱</span>
+Line   82 | Emojis: ⚡          | <span class="dash-nav-icon">⚡</span>
+Line   87 | Emojis: 📜          | <span class="dash-nav-icon">📜</span>
+Line   92 | Emojis: 📑          | <span class="dash-nav-icon">📑</span>
+Line   99 | Emojis: 👥          | <span class="dash-nav-icon">👥</span>
+Line  117 | Emojis: ☰          | <span>☰</span>
+Line  136 | Emojis: 🔔          | <span>🔔</span>
+Line  187 | Emojis: 📑          | <span>📑</span> Generate Board Briefing (PDF)
+Line  190 | Emojis: 🛡          | <span>🛡️</span> Authorize Security Policy
+Line  200 | Emojis: 🛡          | <span class="kpi-icon">🛡️</span>
+Line  211 | Emojis: 📈          | <span class="kpi-icon">📈</span>
+Line  215 | Emojis: ✓          | <span>✓ $14.2M</span> Estimated breach loss averted
+Line  222 | Emojis: 📜          | <span class="kpi-icon">📜</span>
+Line  226 | Emojis: ✓          | <span>✓ ISO 27001</span> SOC 2 Type II, HIPAA, GDPR
+Line  233 | Emojis: 🔒          | <span class="kpi-icon">🔒</span>
+Line  237 | Emojis: ✓          | <span>✓ Underwritten</span> Active with Lloyd's syndicate
+Line  248 | Emojis: 📊          | <span>📊</span> Enterprise Cyber Risk Heatmap (Q4 2026)
+Line  299 | Emojis: ✍          | <span>✍️</span> CISO Executive Approvals Queue
+Line  340 | Emojis: 🛡          | 🛡️ CISO Executive Shortcuts:
+Line  343 | Emojis: 📑          | <span>📑</span> Download Board Briefing
+Line  346 | Emojis: 📜          | <span>📜</span> Export ISO 27001 Evidence
+Line  349 | Emojis: 🏢          | <span>🏢</span> Vendor Risk Ratings
+Line  352 | Emojis: 🔒          | <span>🔒</span> Underwriter Warranty Attestation
+Line  355 | Emojis: 🚨          | <span>🚨</span> Convene Emergency Security Committee
+Line  379 | Emojis: ⚡          | <span>⚡</span> Trigger Sensor Sweep
+Line  382 | Emojis: 🛑          | <span>🛑</span> Deploy Network Quarantine
+Line  392 | Emojis: ⚡          | <span class="kpi-icon">⚡</span>
+Line  396 | Emojis: ✓          | <span>✓ 110ms</span> Cluster ingest latency
+Line  403 | Emojis: 🛑          | <span class="kpi-icon">🛑</span>
+Line  407 | Emojis: ✓          | <span>✓ 100% SLA</span> 18 threats contained past 4h
+Line  414 | Emojis: ⏱          | <span class="kpi-icon">⏱️</span>
+Line  425 | Emojis: 🤖          | <span class="kpi-icon">🤖</span>
+Line  429 | Emojis: ✓          | <span>✓ Zero</span> False positive escalations
+Line  440 | Emojis: 🚨          | <span>🚨</span> MITRE ATT&CK Real-Time Alert Stream
+Line  504 | Emojis: 🔬          | <span>🔬</span> Isolated Quarantine Sandbox
+Line  541 | Emojis: ⚡          | ⚡ SOC Command Shortcuts:
+Line  544 | Emojis: 🔍          | <span>🔍</span> Deep Packet Inspection
+Line  547 | Emojis: 🚫          | <span>🚫</span> Global IP Blacklist
+Line  550 | Emojis: 🔒          | <span>🔒</span> Enforce Honeypot Decoys
+Line  553 | Emojis: 🤖          | <span>🤖</span> Edit SOAR Playbooks
+Line  556 | Emojis: 🚨          | <span>🚨</span> Emergency Threat Lockdown
+Line  580 | Emojis: 📊          | <span>📊</span> Download Monthly SLA Report
+Line  583 | Emojis: 💬          | <span>💬</span> Contact Dedicated Analyst
+Line  593 | Emojis: ☁          | <span class="kpi-icon">☁️</span>
+Line  597 | Emojis: ✓          | <span>✓ 100%</span> 48 VPCs, 1,240 Pods, 680 Endpoints
+Line  604 | Emojis: ⚡          | <span class="kpi-icon">⚡</span>
+Line  608 | Emojis: ✓          | <span>✓ 365 Days</span> Zero unscheduled downtime
+Line  615 | Emojis: 🛡          | <span class="kpi-icon">🛡️</span>
+Line  619 | Emojis: ✓          | <span>✓ &lt;4 Hours</span> Turnaround (0 overdue CVEs)
+Line  626 | Emojis: 🏢          | <span class="kpi-icon">🏢</span>
+Line  630 | Emojis: ✓          | <span>✓ Tier 1</span> Dedicated SOC Pod Assigned
+Line  641 | Emojis: 🖥          | <span>🖥️</span> Monitored Cloud Workload Health
+Line  660 | Emojis: ✓          | <td><span style="color: var(--accent);">✓ 100% Healthy</span></td>
+Line  666 | Emojis: ✓          | <td><span style="color: var(--accent);">✓ 100% Healthy</span></td>
+Line  672 | Emojis: ✓          | <td><span style="color: var(--accent);">✓ 99.8% Patched</span></td>
+Line  678 | Emojis: ✓          | <td><span style="color: var(--accent);">✓ 0 Ingress Drops</span></td>
+Line  689 | Emojis: 📞          | <span>📞</span> Dedicated Security Engineer Hotline
+Line  708 | Emojis: 📹          | <span>📹</span> Launch Encrypted Bridge
+Line  711 | Emojis: 🎟          | <span>🎟️</span> Submit Support Ticket
+Line  733 | Emojis: 🏢          | 🏢 Client Service Shortcuts:
+Line  736 | Emojis: 📊          | <span>📊</span> Monthly SLA Review
+Line  739 | Emojis: 🛡          | <span>🛡️</span> Request Ad-Hoc PenTest
+Line  742 | Emojis: ☁          | <span>☁️</span> Manage Cloud VPC Sensors
+Line  745 | Emojis: 📑          | <span>📑</span> Vendor Security Questionnaire
+Line  748 | Emojis: 🚨          | <span>🚨</span> Direct Incident Hotline (24/7)
+Line  760 | Emojis: 🚨          | <span>🚨</span> Real-Time Global Threat Intelligence & SIEM Streams
+Line  811 | Emojis: 🛡          | <span>🛡️</span> Vulnerability Intel & Patch Prioritization
+Line  841 | Emojis: 🧱          | <span>🧱</span> Zero-Trust Microsegmentation & Next-Gen Firewall
+Line  868 | Emojis: ⚡          | <span>⚡</span> Chronological Incident Forensics Timeline
+Line  894 | Emojis: 📜          | <span>📜</span> Regulatory Compliance & Evidence Vault
+Line  903 | Emojis: 📑          | <div style="font-size: 1.5rem; margin-bottom: 0.25rem;">📑</div>
+Line  909 | Emojis: 🏅          | <div style="font-size: 1.5rem; margin-bottom: 0.25rem;">🏅</div>
+Line  915 | Emojis: 🔒          | <div style="font-size: 1.5rem; margin-bottom: 0.25rem;">🔒</div>
+Line  929 | Emojis: 📑          | <span>📑</span> Executive Board Risk & Threat Digests
+Line  960 | Emojis: 👥          | <span>👥</span> Authorized Operators & Clearance Levels
+
+============================== pages\pricing.html ==============================
+Line   57 | Emojis: 🛡          | <span class="dropdown-icon">🛡️</span>
+Line   66 | Emojis: 🎯          | <span class="dropdown-icon">🎯</span>
+Line   75 | Emojis: ☁          | <span class="dropdown-icon">☁️</span>
+Line   84 | Emojis: 🚨          | <span class="dropdown-icon">🚨</span>
+Line  173 | Emojis: ✓          | <li class="pricing-feature-item"><span class="feature-check">✓</span> 8x5 Business Hours SOC Monitoring</li>
+Line  174 | Emojis: ✓          | <li class="pricing-feature-item"><span class="feature-check">✓</span> Up to 50 Monitored Endpoints & Hosts</li>
+Line  175 | Emojis: ✓          | <li class="pricing-feature-item"><span class="feature-check">✓</span> Monthly Automated Vulnerability Scans</li>
+Line  176 | Emojis: ✓          | <li class="pricing-feature-item"><span class="feature-check">✓</span> 2-Hour Response Time for Critical Alarms</li>
+Line  177 | Emojis: ✓          | <li class="pricing-feature-item"><span class="feature-check">✓</span> Email & Slack Webhook Notifications</li>
+Line  178 | Emojis: ✓          | <li class="pricing-feature-item"><span class="feature-check">✓</span> Monthly Security Posture Digest</li>
+Line  194 | Emojis: ✓          | <li class="pricing-feature-item"><span class="feature-check">✓</span> 24/7/365 Continuous Eyes-on-Glass SOC</li>
+Line  195 | Emojis: ✓          | <li class="pricing-feature-item"><span class="feature-check">✓</span> Up to 250 Endpoints + Multi-Cloud VPCs</li>
+Line  196 | Emojis: ✓          | <li class="pricing-feature-item"><span class="feature-check">✓</span> Bi-Weekly Penetration Test Validations</li>
+Line  197 | Emojis: ✓          | <li class="pricing-feature-item"><span class="feature-check">✓</span> 15-Minute Guaranteed Critical SLA</li>
+Line  198 | Emojis: ✓          | <li class="pricing-feature-item"><span class="feature-check">✓</span> Cloud Posture Management (AWS / Azure)</li>
+Line  199 | Emojis: ✓          | <li class="pricing-feature-item"><span class="feature-check">✓</span> Automated Endpoint Isolation Playbooks</li>
+Line  200 | Emojis: ✓          | <li class="pricing-feature-item"><span class="feature-check">✓</span> Dedicated Security Operations Lead</li>
+Line  215 | Emojis: ✓          | <li class="pricing-feature-item"><span class="feature-check">✓</span> Unlimited Endpoints, Cloud & Hybrid Fabrics</li>
+Line  216 | Emojis: ✓          | <li class="pricing-feature-item"><span class="feature-check">✓</span> Dedicated Chief Information Security Officer</li>
+Line  217 | Emojis: ✓          | <li class="pricing-feature-item"><span class="feature-check">✓</span> Continuous Red Team Adversary Emulation</li>
+Line  218 | Emojis: ✓          | <li class="pricing-feature-item"><span class="feature-check">✓</span> 1-Hour Retainer Forensics SLA Included</li>
+Line  219 | Emojis: ✓          | <li class="pricing-feature-item"><span class="feature-check">✓</span> Tailored Zero-Trust Architecture Blueprints</li>
+Line  220 | Emojis: ✓          | <li class="pricing-feature-item"><span class="feature-check">✓</span> Executive Board Risk Presentations</li>
+Line  221 | Emojis: ✓          | <li class="pricing-feature-item"><span class="feature-check">✓</span> Custom SIEM Parser & API Development</li>
+Line  345 | Emojis: 📊          | <span>📊</span> Generate Custom Board ROI Model
+Line  348 | Emojis: 💬          | <span>💬</span> Consult Cyber Economist
+Line  431 | Emojis: 💳          | <span>💳</span> Request Custom Quote
+Line  434 | Emojis: 📞          | <span>📞</span> Contact Sales Engineering
+Line  453 | Emojis: ⚡          | <div class="card-icon">⚡</div>
+Line  463 | Emojis: 🕵          | <div class="card-icon">🕵️</div>
+Line  473 | Emojis: 📜          | <div class="card-icon">📜</div>
+Line  497 | Emojis: ✓          | <span style="color: var(--accent); font-weight: 800;">✓</span>
+Line  501 | Emojis: ✓          | <span style="color: var(--accent); font-weight: 800;">✓</span>
+Line  505 | Emojis: ✓          | <span style="color: var(--accent); font-weight: 800;">✓</span>
+Line  511 | Emojis: 📄          | <span>📄</span> Download Master Services Agreement (MSA)
+Line  514 | Emojis: 🔒          | <span>🔒</span> Security Whitepaper
+Line  522 | Emojis: 🛡          | <span>🛡️</span> Sovereign Security Warranties
+Line  618 | Emojis: 📍          | <span class="footer-contact-icon">📍</span>
+Line  622 | Emojis: 📞          | <span class="footer-contact-icon">📞</span>
+Line  626 | Emojis: ✉          | <span class="footer-contact-icon">✉️</span>
+
+============================== pages\service-cloud-security.html ==============================
+Line   57 | Emojis: 🛡          | <span class="dropdown-icon">🛡️</span>
+Line   66 | Emojis: 🎯          | <span class="dropdown-icon">🎯</span>
+Line   75 | Emojis: ☁          | <span class="dropdown-icon">☁️</span>
+Line   84 | Emojis: 🚨          | <span class="dropdown-icon">🚨</span>
+Line  174 | Emojis: 🔒          | <div class="card-icon-wrap">🔒</div>
+Line  180 | Emojis: ✓          | <li class="card-meta-item"><span class="card-meta-icon">✓</span> Continuous risk-based evaluation</li>
+Line  181 | Emojis: ✓          | <li class="card-meta-item"><span class="card-meta-icon">✓</span> Multi-factor authentication everywhere</li>
+Line  187 | Emojis: 🔑          | <div class="card-icon-wrap">🔑</div>
+Line  193 | Emojis: ✓          | <li class="card-meta-item"><span class="card-meta-icon">✓</span> Ephemeral cloud tokens</li>
+Line  194 | Emojis: ✓          | <li class="card-meta-item"><span class="card-meta-icon">✓</span> CIEM entitlement pruning</li>
+Line  200 | Emojis: 🧱          | <div class="card-icon-wrap">🧱</div>
+Line  206 | Emojis: ✓          | <li class="card-meta-item"><span class="card-meta-icon">✓</span> Microsegmentation policies</li>
+Line  207 | Emojis: ✓          | <li class="card-meta-item"><span class="card-meta-icon">✓</span> Blast-radius minimization</li>
+Line  229 | Emojis: ☁          | <div class="card-icon-wrap">☁️</div>
+Line  235 | Emojis: ✓          | <li class="card-meta-item"><span class="card-meta-icon">✓</span> AWS Security Hub alignment</li>
+Line  236 | Emojis: ✓          | <li class="card-meta-item"><span class="card-meta-icon">✓</span> SCP boundary enforcement</li>
+Line  243 | Emojis: 🔷          | <div class="card-icon-wrap">🔷</div>
+Line  249 | Emojis: ✓          | <li class="card-meta-item"><span class="card-meta-icon">✓</span> Entra ID security baselines</li>
+Line  250 | Emojis: ✓          | <li class="card-meta-item"><span class="card-meta-icon">✓</span> Azure Key Vault policy guards</li>
+Line  257 | Emojis: 🌐          | <div class="card-icon-wrap">🌐</div>
+Line  263 | Emojis: ✓          | <li class="card-meta-item"><span class="card-meta-icon">✓</span> BeyondCorp implementation</li>
+Line  264 | Emojis: ✓          | <li class="card-meta-item"><span class="card-meta-icon">✓</span> GKE cluster workload identity</li>
+Line  336 | Emojis: 📡          | <div class="card-icon-wrap">📡</div>
+Line  343 | Emojis: 🛡          | <div class="card-icon-wrap">🛡️</div>
+Line  350 | Emojis: 🚢          | <div class="card-icon-wrap">🚢</div>
+Line  357 | Emojis: 📜          | <div class="card-icon-wrap">📜</div>
+Line  380 | Emojis: ☁          | <span>☁️</span> Request Cloud Posture Audit
+Line  383 | Emojis: 💬          | <span>💬</span> Schedule Architecture Review
+Line  402 | Emojis: 🔐          | <div style="font-size: 2rem; margin-bottom: 0.5rem;">🔐</div>
+Line  410 | Emojis: 🧱          | <div style="font-size: 2rem; margin-bottom: 0.5rem;">🧱</div>
+Line  418 | Emojis: ⚡          | <div style="font-size: 2rem; margin-bottom: 0.5rem;">⚡</div>
+Line  426 | Emojis: 📊          | <div style="font-size: 2rem; margin-bottom: 0.5rem;">📊</div>
+Line  451 | Emojis: 🛡          | <span>🛡️</span> Request Cloud Architecture Review
+Line  454 | Emojis: 📑          | <span>📑</span> CIS Benchmark Scoring Guide
+Line  462 | Emojis: ⚙          | <span>⚙️</span> Automated CI/CD Safeguards
+Line  552 | Emojis: 📍          | <span class="footer-contact-icon">📍</span>
+Line  556 | Emojis: 📞          | <span class="footer-contact-icon">📞</span>
+Line  560 | Emojis: ✉          | <span class="footer-contact-icon">✉️</span>
+
+============================== pages\service-incident-response.html ==============================
+Line   57 | Emojis: 🛡          | <span class="dropdown-icon">🛡️</span>
+Line   66 | Emojis: 🎯          | <span class="dropdown-icon">🎯</span>
+Line   75 | Emojis: ☁          | <span class="dropdown-icon">☁️</span>
+Line   84 | Emojis: 🚨          | <span class="dropdown-icon">🚨</span>
+Line  176 | Emojis: 🚨          | <span>🚨</span> Establish IR Retainer Agreement
+Line  179 | Emojis: 📋          | <span>📋</span> Review Retainer Hours Policy
+Line  210 | Emojis: 📋          | <div class="card-icon-wrap">📋</div>
+Line  217 | Emojis: 🔍          | <div class="card-icon-wrap">🔍</div>
+Line  224 | Emojis: 🛑          | <div class="card-icon-wrap">🛑</div>
+Line  231 | Emojis: 🧹          | <div class="card-icon-wrap">🧹</div>
+Line  238 | Emojis: 🔄          | <div class="card-icon-wrap">🔄</div>
+Line  245 | Emojis: 📑          | <div class="card-icon-wrap">📑</div>
+Line  267 | Emojis: 🧠          | <div class="card-icon-wrap">🧠</div>
+Line  274 | Emojis: 🔬          | <div class="card-icon-wrap">🔬</div>
+Line  281 | Emojis: ☁          | <div class="card-icon-wrap">☁️</div>
+Line  288 | Emojis: ⚖          | <div class="card-icon-wrap">⚖️</div>
+Line  362 | Emojis: 🚨          | <span>🚨</span> Connect to Emergency Triage
+Line  365 | Emojis: 📞          | <span>📞</span> Call +91 9876543210
+Line  384 | Emojis: 💾          | <div style="font-size: 2rem; margin-bottom: 0.5rem;">💾</div>
+Line  390 | Emojis: 💿          | <div style="font-size: 2rem; margin-bottom: 0.5rem;">💿</div>
+Line  396 | Emojis: 🔐          | <div style="font-size: 2rem; margin-bottom: 0.5rem;">🔐</div>
+Line  402 | Emojis: 📜          | <div style="font-size: 2rem; margin-bottom: 0.5rem;">📜</div>
+Line  425 | Emojis: 🚨          | <span>🚨</span> Dispatch Rapid Incident Commander
+Line  428 | Emojis: 📑          | <span>📑</span> Post-Incident Hardening Roadmap
+Line  436 | Emojis: 🛡          | <span>🛡️</span> Retainer SLA Guarantees
+Line  526 | Emojis: 📍          | <span class="footer-contact-icon">📍</span>
+Line  530 | Emojis: 📞          | <span class="footer-contact-icon">📞</span>
+Line  534 | Emojis: ✉          | <span class="footer-contact-icon">✉️</span>
+
+============================== pages\service-pentest.html ==============================
+Line   57 | Emojis: 🛡          | <span class="dropdown-icon">🛡️</span>
+Line   66 | Emojis: 🎯          | <span class="dropdown-icon">🎯</span>
+Line   75 | Emojis: ☁          | <span class="dropdown-icon">☁️</span>
+Line   84 | Emojis: 🚨          | <span class="dropdown-icon">🚨</span>
+Line  174 | Emojis:            | <div class="card-icon-wrap">⬛</div>
+Line  180 | Emojis: ✓          | <li class="card-meta-item"><span class="card-meta-icon">✓</span> OSINT reconnaissance sweeps</li>
+Line  181 | Emojis: ✓          | <li class="card-meta-item"><span class="card-meta-icon">✓</span> Unauthenticated exploit attempts</li>
+Line  187 | Emojis: 🔘          | <div class="card-icon-wrap">🔘</div>
+Line  193 | Emojis: ✓          | <li class="card-meta-item"><span class="card-meta-icon">✓</span> Role-based access control (RBAC) tests</li>
+Line  194 | Emojis: ✓          | <li class="card-meta-item"><span class="card-meta-icon">✓</span> BOLA / IDOR vulnerability hunting</li>
+Line  200 | Emojis:            | <div class="card-icon-wrap">⬜</div>
+Line  206 | Emojis: ✓          | <li class="card-meta-item"><span class="card-meta-icon">✓</span> Static + Dynamic SAST/DAST verification</li>
+Line  207 | Emojis: ✓          | <li class="card-meta-item"><span class="card-meta-icon">✓</span> Comprehensive attack chain modeling</li>
+Line  228 | Emojis: 🌐          | <div class="card-icon-wrap">🌐</div>
+Line  235 | Emojis: 🔌          | <div class="card-icon-wrap">🔌</div>
+Line  242 | Emojis: ☁          | <div class="card-icon-wrap">☁️</div>
+Line  249 | Emojis: 🏢          | <div class="card-icon-wrap">🏢</div>
+Line  322 | Emojis: 👔          | <div class="card-icon-wrap">👔</div>
+Line  329 | Emojis: 🛠          | <div class="card-icon-wrap">🛠️</div>
+Line  336 | Emojis: 🔄          | <div class="card-icon-wrap">🔄</div>
+Line  359 | Emojis: 🎯          | <span>🎯</span> Request Scope & Proposal
+Line  362 | Emojis: ✉          | <span>✉️</span> Speak with a Lead Tester
+Line  381 | Emojis: 📘          | <div style="font-size: 2rem; margin-bottom: 0.5rem;">📘</div>
+Line  388 | Emojis: ⚔          | <div style="font-size: 2rem; margin-bottom: 0.5rem;">⚔️</div>
+Line  395 | Emojis: 📜          | <div style="font-size: 2rem; margin-bottom: 0.5rem;">📜</div>
+Line  402 | Emojis: 🔬          | <div style="font-size: 2rem; margin-bottom: 0.5rem;">🔬</div>
+Line  426 | Emojis: 📄          | <span>📄</span> Sample Executive Attestation Letter
+Line  429 | Emojis: 🔒          | <span>🔒</span> Red Team Playbook Guide
+Line  437 | Emojis: 🛡          | <span>🛡️</span> Deliverables Guarantee
+Line  527 | Emojis: 📍          | <span class="footer-contact-icon">📍</span>
+Line  531 | Emojis: 📞          | <span class="footer-contact-icon">📞</span>
+Line  535 | Emojis: ✉          | <span class="footer-contact-icon">✉️</span>
+
+============================== pages\service-soc.html ==============================
+Line   57 | Emojis: 🛡          | <span class="dropdown-icon">🛡️</span>
+Line   66 | Emojis: 🎯          | <span class="dropdown-icon">🎯</span>
+Line   75 | Emojis: ☁          | <span class="dropdown-icon">☁️</span>
+Line   84 | Emojis: 🚨          | <span class="dropdown-icon">🚨</span>
+Line  176 | Emojis: 🛡          | <span>🛡️</span> Onboard Your Environment
+Line  179 | Emojis: 📋          | <span>📋</span> Read SOC Service SLA
+Line  210 | Emojis: 📡          | <div class="card-icon-wrap">📡</div>
+Line  217 | Emojis: 🧠          | <div class="card-icon-wrap">🧠</div>
+Line  224 | Emojis: 👨💻         | <div class="card-icon-wrap">👨‍💻</div>
+Line  231 | Emojis: 🛑          | <div class="card-icon-wrap">🛑</div>
+Line  253 | Emojis: 🟢          | <div class="card-icon-wrap">🟢</div>
+Line  259 | Emojis: ✓          | <li class="card-meta-item"><span class="card-meta-icon">✓</span> Average response time: &lt; 3 minutes</li>
+Line  260 | Emojis: ✓          | <li class="card-meta-item"><span class="card-meta-icon">✓</span> Initial false-positive filtering</li>
+Line  266 | Emojis: 🟡          | <div class="card-icon-wrap">🟡</div>
+Line  272 | Emojis: ✓          | <li class="card-meta-item"><span class="card-meta-icon">✓</span> Root cause timeline reconstruction</li>
+Line  273 | Emojis: ✓          | <li class="card-meta-item"><span class="card-meta-icon">✓</span> Live memory and process inspection</li>
+Line  279 | Emojis: 🔴          | <div class="card-icon-wrap">🔴</div>
+Line  285 | Emojis: ✓          | <li class="card-meta-item"><span class="card-meta-icon">✓</span> Direct executive briefing channel</li>
+Line  286 | Emojis: ✓          | <li class="card-meta-item"><span class="card-meta-icon">✓</span> Advanced malware sandboxing</li>
+Line  395 | Emojis: 🛡          | <span>🛡️</span> Request Managed SOC Trial
+Line  398 | Emojis: 📞          | <span>📞</span> Contact SOC Engineering
+Line  417 | Emojis: ☁          | <div class="card-icon">☁️</div>
+Line  426 | Emojis: 🔷          | <div class="card-icon">🔷</div>
+Line  435 | Emojis: 🌐          | <div class="card-icon">🌐</div>
+Line  514 | Emojis: 📍          | <span class="footer-contact-icon">📍</span>
+Line  518 | Emojis: 📞          | <span class="footer-contact-icon">📞</span>
+Line  522 | Emojis: ✉          | <span class="footer-contact-icon">✉️</span>
+
+============================== pages\services.html ==============================
+Line   57 | Emojis: 🛡          | <span class="dropdown-icon">🛡️</span>
+Line   66 | Emojis: 🎯          | <span class="dropdown-icon">🎯</span>
+Line   75 | Emojis: ☁          | <span class="dropdown-icon">☁️</span>
+Line   84 | Emojis: 🚨          | <span class="dropdown-icon">🚨</span>
+Line  173 | Emojis: 🛡          | <div class="card-icon-wrap">🛡️</div>
+Line  179 | Emojis: ✓          | <li class="card-meta-item"><span class="card-meta-icon">✓</span> Multi-cloud SIEM, EDR & XDR management</li>
+Line  180 | Emojis: ✓          | <li class="card-meta-item"><span class="card-meta-icon">✓</span> Real-time behavioral anomaly tracking</li>
+Line  181 | Emojis: ✓          | <li class="card-meta-item"><span class="card-meta-icon">✓</span> Dedicated Threat Hunting unit</li>
+Line  191 | Emojis: 🎯          | <div class="card-icon-wrap">🎯</div>
+Line  197 | Emojis: ✓          | <li class="card-meta-item"><span class="card-meta-icon">✓</span> Full OWASP Top 10 Web & API testing</li>
+Line  198 | Emojis: ✓          | <li class="card-meta-item"><span class="card-meta-icon">✓</span> Cloud container & Kubernetes escapes</li>
+Line  199 | Emojis: ✓          | <li class="card-meta-item"><span class="card-meta-icon">✓</span> Comprehensive executive report & PoC codes</li>
+Line  209 | Emojis: ☁          | <div class="card-icon-wrap">☁️</div>
+Line  215 | Emojis: ✓          | <li class="card-meta-item"><span class="card-meta-icon">✓</span> AWS, Azure, Google Cloud posture audits</li>
+Line  216 | Emojis: ✓          | <li class="card-meta-item"><span class="card-meta-icon">✓</span> Least-privilege IAM entitlement enforcement</li>
+Line  217 | Emojis: ✓          | <li class="card-meta-item"><span class="card-meta-icon">✓</span> Zero Trust network access (ZTNA) gateways</li>
+Line  227 | Emojis: 🚨          | <div class="card-icon-wrap">🚨</div>
+Line  233 | Emojis: ✓          | <li class="card-meta-item"><span class="card-meta-icon">✓</span> Emergency containment & ransomware mitigation</li>
+Line  234 | Emojis: ✓          | <li class="card-meta-item"><span class="card-meta-icon">✓</span> Court-admissible forensic evidence acquisition</li>
+Line  235 | Emojis: ✓          | <li class="card-meta-item"><span class="card-meta-icon">✓</span> Regulatory breach notification guidance</li>
+Line  259 | Emojis: 🔍          | <div class="card-icon-wrap">🔍</div>
+Line  266 | Emojis: 🛡          | <div class="card-icon-wrap">🛡️</div>
+Line  273 | Emojis: ⚡          | <div class="card-icon-wrap">⚡</div>
+Line  280 | Emojis: 🛑          | <div class="card-icon-wrap">🛑</div>
+Line  287 | Emojis: 🔄          | <div class="card-icon-wrap">🔄</div>
+Line  294 | Emojis: 📊          | <div class="card-icon-wrap">📊</div>
+Line  318 | Emojis: 🔐          | <span>🔐</span> Request Defense Architecture Review
+Line  321 | Emojis: 💰          | <span>💰</span> Compare Service Tiers
+Line  355 | Emojis: 🚀          | <span>🚀</span> Start 14-Day Pilot Assessment
+Line  358 | Emojis: 📞          | <span>📞</span> Speak to a CISO
+Line  377 | Emojis: ☁          | <div style="font-size: 2rem; margin-bottom: 0.5rem;">☁️</div>
+Line  384 | Emojis: 💻          | <div style="font-size: 2rem; margin-bottom: 0.5rem;">💻</div>
+Line  391 | Emojis: 📦          | <div style="font-size: 2rem; margin-bottom: 0.5rem;">📦</div>
+Line  398 | Emojis: 🔑          | <div style="font-size: 2rem; margin-bottom: 0.5rem;">🔑</div>
+Line  422 | Emojis: 🔍          | <span>🔍</span> Sample Threat Intelligence Bulletin
+Line  425 | Emojis: 📑          | <span>📑</span> Honeypot Methodology
+Line  433 | Emojis: ⚡          | <span>⚡</span> Ingested Threat Feed Feats
+Line  513 | Emojis: 🛡          | <span>🛡️</span> Schedule Scoping Consultation
+Line  587 | Emojis: 📍          | <span class="footer-contact-icon">📍</span>
+Line  591 | Emojis: 📞          | <span class="footer-contact-icon">📞</span>
+Line  595 | Emojis: ✉          | <span class="footer-contact-icon">✉️</span>
+
+============================== pages\sign-in.html ==============================
+Line   54 | Emojis: ✓          | <span class="auth-trust-icon">✓</span>
+Line   58 | Emojis: ✓          | <span class="auth-trust-icon">✓</span>
+Line   62 | Emojis: ✓          | <span class="auth-trust-icon">✓</span>
+Line  114 | Emojis: ❌          | <span>❌</span> Please enter a valid corporate email format (e.g. name@domain.com).
+Line  143 | Emojis: 🔒          | 🔒
+Line  147 | Emojis: ❌          | <span>❌</span> Password must contain at least 6 characters.
+Line  159 | Emojis: 🛡          | <option value="Chief Information Security Officer (CISO)">🛡️ Chief Information Security Officer (CISO)</option>
+Line  160 | Emojis: ⚡          | <option value="Lead SOC Operations Commander">⚡ Lead SOC Operations Commander</option>
+Line  161 | Emojis: 🏢          | <option value="Enterprise Client IT Director">🏢 Enterprise Client IT Director</option>
+Line  164 | Emojis: ❌          | <span>❌</span> Please select a security clearance role.
+Line  173 | Emojis: 🔒          | <span>🔒</span> Authenticate & Launch Dashboard
+
+============================== pages\sign-up.html ==============================
+Line   54 | Emojis: ✓          | <span class="auth-trust-icon">✓</span>
+Line   58 | Emojis: ✓          | <span class="auth-trust-icon">✓</span>
+Line   62 | Emojis: ✓          | <span class="auth-trust-icon">✓</span>
+Line   97 | Emojis: 🛡          | <span>🛡️</span> Account Provisioned Successfully!
+Line  125 | Emojis: ❌          | <span>❌</span> Letters only (no digits).
+Line  147 | Emojis: ❌          | <span>❌</span> Letters only (no digits).
+Line  188 | Emojis: ❌          | <span>❌</span> Valid email format required.
+Line  202 | Emojis: 🇮🇳         | <option value="+91">🇮🇳 +91 (India)</option>
+Line  203 | Emojis: 🇺🇸         | <option value="+1">🇺🇸 +1 (USA)</option>
+Line  204 | Emojis: 🇬🇧         | <option value="+44">🇬🇧 +44 (UK)</option>
+Line  205 | Emojis: 🇸🇬         | <option value="+65">🇸🇬 +65 (Singapore)</option>
+Line  206 | Emojis: 🇦🇺         | <option value="+61">🇦🇺 +61 (Australia)</option>
+Line  207 | Emojis: 🇩🇪         | <option value="+49">🇩🇪 +49 (Germany)</option>
+Line  224 | Emojis: ❌          | <span>❌</span> Mobile must be exactly 10 numerical digits.
+Line  235 | Emojis: 🛡          | <option value="Chief Information Security Officer (CISO)">🛡️ Chief Information Security Officer (CISO)</option>
+Line  236 | Emojis: ⚡          | <option value="Lead SOC Operations Commander">⚡ Lead SOC Operations Commander</option>
+Line  237 | Emojis: 🏢          | <option value="Enterprise Client IT Director">🏢 Enterprise Client IT Director</option>
+Line  240 | Emojis: ❌          | <span>❌</span> Please select a role clearance.
+Line  301 | Emojis: 🔒          | 🔒
+Line  320 | Emojis: ❌          | <span>❌</span> Password does not meet security requirements.
+Line  348 | Emojis: 🔒          | 🔒
+Line  352 | Emojis: ❌          | <span>❌</span> Passwords do not match.
+Line  366 | Emojis: ❌          | <span>❌</span> You must accept the Terms of Use to create an account.
+Line  379 | Emojis: 🛡          | <span>🛡️</span> Complete Account Registration
