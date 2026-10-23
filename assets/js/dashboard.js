@@ -112,7 +112,7 @@ function renderUserTopBar(user) {
   }
 
   if (greetingEl) {
-    greetingEl.innerHTML = `${timeGreeting}, <strong>${displayName}</strong> <span class="dash-status-badge"><span class="badge-dot"></span> ${meta.status}</span>`;
+    greetingEl.innerHTML = `<span class="dash-greeting-salute">${timeGreeting}, <strong>${displayName}</strong></span><span class="dash-status-badge"><span class="badge-dot"></span> ${meta.status}</span>`;
   }
   if (nameEl) {
     nameEl.textContent = displayName;
