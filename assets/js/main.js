@@ -106,24 +106,59 @@ function initMobileNav() {
   const overlay = document.querySelector('.mobile-nav-overlay');
   if (!toggleBtn || !overlay) return;
 
-  const toggleMenu = () => {
-    const isOpen = toggleBtn.classList.toggle('open');
+  const toggleMenu = (forceState) => {
+    const isOpen = typeof forceState === 'boolean' 
+      ? forceState 
+      : toggleBtn.classList.toggle('open');
+    
+    if (typeof forceState === 'boolean') {
+      toggleBtn.classList.toggle('open', isOpen);
+    }
     overlay.classList.toggle('open', isOpen);
     document.body.classList.toggle('drawer-open', isOpen);
     toggleBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    if (isOpen) {
+      overlay.scrollTop = 0;
+      window.scrollTo({ top: 0, behavior: 'instant' });
+    }
   };
 
-  toggleBtn.addEventListener('click', toggleMenu);
+  toggleBtn.addEventListener('click', () => toggleMenu());
 
-  // Close overlay when clicking any navigation link
+  // Interactive Services Dropdown Submenu Accordion Toggle
+  const dropdownToggleBtns = overlay.querySelectorAll('.mobile-dropdown-btn');
+  dropdownToggleBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      const parentItem = btn.closest('.has-dropdown');
+      if (parentItem) {
+        const submenu = parentItem.querySelector('.mobile-submenu');
+        const isCurrentlyOpen = submenu && submenu.classList.contains('open');
+        const willOpen = !isCurrentlyOpen;
+        
+        btn.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
+        btn.classList.toggle('open', willOpen);
+        if (submenu) {
+          submenu.classList.toggle('open', willOpen);
+        }
+      }
+    });
+  });
+
+  // Close overlay when clicking any destination link (excluding dropdown toggles)
   const links = overlay.querySelectorAll('a');
   links.forEach(link => {
-    link.addEventListener('click', () => {
-      toggleBtn.classList.remove('open');
-      overlay.classList.remove('open');
-      document.body.classList.remove('drawer-open');
-      toggleBtn.setAttribute('aria-expanded', 'false');
+    link.addEventListener('click', (e) => {
+      toggleMenu(false);
     });
+  });
+
+  // Close on Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && overlay.classList.contains('open')) {
+      toggleMenu(false);
+    }
   });
 }
 

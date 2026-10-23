@@ -1,6 +1,7 @@
 with open('assets/css/style.css', 'r', encoding='utf-8') as f:
-    lines = f.readlines()
+    text = f.read()
 
-for i, l in enumerate(lines[750:980], start=751):
-    print(f"{i:4}: {l}", end='')
-
+import re
+idx = text.find('.page-hero')
+print("Position:", idx)
+print(text[idx-200:idx+800])

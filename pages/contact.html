@@ -37,7 +37,7 @@
   <header class="site-header" role="banner">
     <div class="container navbar">
       <a href="../index.html" class="nav-brand" aria-label="Stackly Cyber Security Services Home">
-        <img src="../assets/images/logoStackly.webp" alt="Stackly Logo" class="nav-brand-logo" width="145" height="38">
+        <img src="../assets/images/logoStackly-wine.webp" alt="Stackly Logo" class="nav-brand-logo" width="145" height="38">
       </a>
 
       <nav class="nav-menu-wrapper" role="navigation" aria-label="Main Navigation">
@@ -57,7 +57,7 @@
             </a>
             <ul class="dropdown-menu">
               <li class="dropdown-item">
-                <a href="404.html" class="dropdown-link">
+                <a href="service-soc.html" class="dropdown-link">
                   <span class="dropdown-icon">🛡️</span>
                   <div class="dropdown-info">
                     <span class="dropdown-title">24/7 Managed SOC</span>
@@ -66,7 +66,7 @@
                 </a>
               </li>
               <li class="dropdown-item">
-                <a href="404.html" class="dropdown-link">
+                <a href="service-pentest.html" class="dropdown-link">
                   <span class="dropdown-icon">🎯</span>
                   <div class="dropdown-info">
                     <span class="dropdown-title">Penetration Testing</span>
@@ -75,7 +75,7 @@
                 </a>
               </li>
               <li class="dropdown-item">
-                <a href="404.html" class="dropdown-link">
+                <a href="service-cloud-security.html" class="dropdown-link">
                   <span class="dropdown-icon">☁️</span>
                   <div class="dropdown-info">
                     <span class="dropdown-title">Cloud & Zero Trust</span>
@@ -84,11 +84,29 @@
                 </a>
               </li>
               <li class="dropdown-item">
-                <a href="404.html" class="dropdown-link">
+                <a href="service-incident-response.html" class="dropdown-link">
                   <span class="dropdown-icon">🚨</span>
                   <div class="dropdown-info">
                     <span class="dropdown-title">Incident Response</span>
                     <span class="dropdown-desc">1-hour rapid retainer & digital forensics</span>
+                  </div>
+                </a>
+              </li>
+              <li class="dropdown-item">
+                <a href="service-vulnerability-management.html" class="dropdown-link">
+                  <span class="dropdown-icon">🔍</span>
+                  <div class="dropdown-info">
+                    <span class="dropdown-title">Vulnerability Management</span>
+                    <span class="dropdown-desc">Continuous CVE radar & risk prioritization</span>
+                  </div>
+                </a>
+              </li>
+              <li class="dropdown-item">
+                <a href="service-compliance.html" class="dropdown-link">
+                  <span class="dropdown-icon">📜</span>
+                  <div class="dropdown-info">
+                    <span class="dropdown-title">ISO 27001 Compliance</span>
+                    <span class="dropdown-desc">Audit readiness & automated evidence vault</span>
                   </div>
                 </a>
               </li>
@@ -117,46 +135,166 @@
   </header>
 
   <!-- Mobile Fullscreen Overlay Drawer -->
-  <div class="mobile-nav-overlay" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
-    <ul class="mobile-menu-list">
-      <li><a href="../index.html" class="mobile-nav-link">Home</a></li>
-      <li><a href="about.html" class="mobile-nav-link">About Us</a></li>
-      <li>
-        <a href="services.html" class="mobile-nav-link">Services</a>
-        <ul class="mobile-submenu">
-          <li><a href="404.html" class="mobile-submenu-link">• 24/7 Managed SOC</a></li>
-          <li><a href="404.html" class="mobile-submenu-link">• Penetration Testing</a></li>
-          <li><a href="404.html" class="mobile-submenu-link">• Cloud & Zero Trust</a></li>
-          <li><a href="404.html" class="mobile-submenu-link">• Incident Response</a></li>
-        </ul>
-      </li>
-      <li><a href="pricing.html" class="mobile-nav-link">Pricing</a></li>
-      <li><a href="contact.html" class="mobile-nav-link active">Contact</a></li>
-    </ul>
+      <!-- Fullscreen Mobile Navigation Overlay Drawer -->
+    <div
+      class="mobile-nav-overlay"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Mobile Navigation"
+    >
+      <div class="mobile-nav-brand">
+        <a href="../index.html" class="mobile-brand-link" aria-label="Stackly Home">
+          <img src="../assets/images/logoStackly-wine.webp" alt="Stackly Logo" width="145" height="38">
+        </a>
+      </div>
 
-    <div class="mobile-actions">
-      <a href="sign-in.html" class="btn btn-secondary btn-block">Sign In</a>
-      <a href="sign-up.html" class="btn btn-primary btn-block">Register Account</a>
+      <ul class="mobile-menu-list">
+        <li><a href="../index.html" class="mobile-nav-link">Home</a></li>
+        <li><a href="about.html" class="mobile-nav-link">About Us</a></li>
+        <li class="mobile-nav-item has-dropdown">
+          <div class="mobile-dropdown-header">
+            <a href="services.html" class="mobile-nav-link">Services</a>
+            <button type="button" class="mobile-dropdown-btn open" aria-expanded="true" aria-label="Toggle Services Submenu">
+              <svg class="mobile-chevron" viewBox="0 0 20 20" fill="currentColor" width="18" height="18">
+                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+              </svg>
+            </button>
+          </div>
+          <ul class="mobile-submenu open">
+            <li>
+              <a href="service-soc.html" class="mobile-service-card">
+                <span class="mobile-service-icon">🛡️</span>
+                <div class="mobile-service-info">
+                  <span class="mobile-service-title">24/7 Managed SOC</span>
+                  <span class="mobile-service-desc">Continuous threat detection & SIEM monitoring</span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="service-pentest.html" class="mobile-service-card">
+                <span class="mobile-service-icon">🎯</span>
+                <div class="mobile-service-info">
+                  <span class="mobile-service-title">Penetration Testing</span>
+                  <span class="mobile-service-desc">Red Teaming, Web, API & Cloud assessments</span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="service-cloud-security.html" class="mobile-service-card">
+                <span class="mobile-service-icon">☁️</span>
+                <div class="mobile-service-info">
+                  <span class="mobile-service-title">Cloud & Zero Trust</span>
+                  <span class="mobile-service-desc">Multi-cloud architecture & posture management</span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="service-incident-response.html" class="mobile-service-card">
+                <span class="mobile-service-icon">🚨</span>
+                <div class="mobile-service-info">
+                  <span class="mobile-service-title">Incident Response</span>
+                  <span class="mobile-service-desc">1-hour rapid retainer & digital forensics</span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="service-vulnerability-management.html" class="mobile-service-card">
+                <span class="mobile-service-icon">🔍</span>
+                <div class="mobile-service-info">
+                  <span class="mobile-service-title">Vulnerability Management</span>
+                  <span class="mobile-service-desc">Continuous CVE radar & risk prioritization</span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="service-compliance.html" class="mobile-service-card">
+                <span class="mobile-service-icon">📜</span>
+                <div class="mobile-service-info">
+                  <span class="mobile-service-title">ISO 27001 Compliance</span>
+                  <span class="mobile-service-desc">Audit readiness & automated evidence vault</span>
+                </div>
+              </a>
+            </li>
+            <li class="mobile-service-overview-item">
+              <a href="services.html" class="mobile-overview-link">View All Services Overview &rarr;</a>
+            </li>
+          </ul>
+        </li>
+        <li><a href="pricing.html" class="mobile-nav-link">Pricing</a></li>
+        <li><a href="contact.html" class="mobile-nav-link active">Contact</a></li>
+      </ul>
+
+      <div class="mobile-actions">
+        <a href="sign-in.html" class="btn btn-secondary btn-block">Sign In</a>
+        <a href="sign-up.html" class="btn btn-primary btn-block">Get Started</a>
+      </div>
     </div>
-  </div>
 
   <main id="main-content">
     <!-- SECTION 1: HERO & BREADCRUMB -->
     <section class="page-hero" aria-label="Contact Hero">
-      <div class="container">
-        <nav class="breadcrumb-nav" aria-label="Breadcrumb">
-          <a href="../index.html">Home</a>
-          <span class="breadcrumb-separator">/</span>
-          <span aria-current="page">Contact Us</span>
-        </nav>
-        <div class="badge-tag" style="margin-bottom: 1rem;">
-          <span class="badge-dot"></span>
-          Direct Security Operations Link
+        <!-- Cyber Background Technical Backdrop & HUD Telemetry -->
+        <div class="hero-cyber-backdrop" aria-hidden="true">
+          <div class="cyber-hud-corner corner-tl"></div>
+          <div class="cyber-hud-corner corner-tr"></div>
+          <div class="cyber-hud-corner corner-bl"></div>
+          <div class="cyber-hud-corner corner-br"></div>
+          <div class="cyber-hud-telemetry hud-left">
+            <span class="hud-pulse-dot"></span>
+            <span>DISPATCH_CHANNEL // 24/7 ENCRYPTED HOTLINE</span>
+            <span class="hud-sep">::</span>
+            <span>STANDBY</span>
+          </div>
+          <div class="cyber-hud-telemetry hud-right">
+            <span>SLA_RESPONSE // &lt; 15 MIN GUARANTEED</span>
+            <span class="hud-sep">::</span>
+            <span>COMMAND_OPS</span>
+          </div>
+          <svg class="cyber-backdrop-svg" viewBox="0 0 1440 480" fill="none" preserveAspectRatio="none">
+            <line x1="80" y1="40" x2="1360" y2="40" stroke="rgba(122, 16, 40, 0.12)" stroke-width="1" stroke-dasharray="6 6" />
+            <line x1="80" y1="440" x2="1360" y2="440" stroke="rgba(122, 16, 40, 0.12)" stroke-width="1" stroke-dasharray="6 6" />
+            <circle cx="120" cy="40" r="3" fill="#D97706" opacity="0.6" />
+            <circle cx="720" cy="40" r="2.5" fill="#7A1028" opacity="0.5" />
+            <circle cx="1320" cy="40" r="3" fill="#10B981" opacity="0.6" />
+            <circle cx="120" cy="440" r="3" fill="#7A1028" opacity="0.5" />
+            <circle cx="1320" cy="440" r="3" fill="#D97706" opacity="0.6" />
+          </svg>
         </div>
-        <h1 class="page-hero-title">Connect with Our Cyber Defense Specialists</h1>
-        <p class="page-hero-desc">
-          Have questions regarding our 24/7 Managed SOC, require immediate penetration test scoping, or need emergency incident triage? Our engineers respond promptly.
-        </p>
+      <div class="container">
+        <div class="page-hero-grid">
+          <div class="page-hero-content" data-animate="fade-up">
+            <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+              <a href="../index.html">Home</a>
+              <span class="breadcrumb-separator">/</span>
+              <span aria-current="page">Contact Us</span>
+            </nav>
+            <div class="badge-tag" style="margin-bottom: 1rem;">
+              <span class="badge-dot"></span>
+              Direct Security Operations Link
+            </div>
+            <h1 class="page-hero-title">Connect with Our Cyber Defense Specialists</h1>
+            <p class="page-hero-desc">
+              Have questions regarding our 24/7 Managed SOC, require immediate penetration test scoping, or need emergency incident triage? Our engineers respond promptly.
+            </p>
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1.5rem;">
+              <a href="#contact-form-section" class="btn btn-primary btn-lg">Dispatch An Inquiry</a>
+              <a href="404.html" class="btn btn-outline btn-lg">Emergency Hotline</a>
+            </div>
+          </div>
+
+          <div class="page-hero-visual" data-animate="zoom-in">
+            <div class="hero-visual-radar" aria-hidden="true"></div>
+            <div class="hero-visual-frame">
+              <div class="hero-floating-pill pill-top-left">
+                <span class="hero-pill-dot"></span> Global SOC Dispatch: Standing By
+              </div>
+              <img src="../assets/images/cyber-defense-command-center.webp" alt="Global Cyber Defense Command Operations" width="480" height="280" loading="eager">
+              <div class="hero-floating-pill pill-bottom-right">
+                <span class="hero-pill-dot dot-amber"></span> SLA Triage: &lt; 15 Minutes
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -174,7 +312,7 @@
             <p style="font-size: 0.825rem; color: var(--text-muted); margin-bottom: 1rem;">
               Tier-4 Operations Enclave • Physical Access by Clearance Only
             </p>
-            <a href="#map-section" class="btn btn-outline btn-sm">View Location Map</a>
+            <a href="404.html" class="btn btn-outline btn-sm">View Location Map</a>
           </div>
 
           <!-- Card 2: Phone Number (Redirects to 404 as requested) -->
@@ -244,7 +382,7 @@
     </section>
 
     <!-- SECTION 3: STRICT CONTACT FORM -->
-    <section class="section section-alt" aria-label="Direct Message Form">
+    <section id="contact-form-section" class="section section-alt" aria-label="Direct Message Form">
       <div class="container-narrow">
         <div class="section-header" data-animate="fade-up">
           <div class="section-subtitle">Confidential Inquiry</div>
@@ -506,12 +644,12 @@
         <div class="footer-links-col">
           <h4 class="footer-heading">Defense Services</h4>
           <ul class="footer-links-list">
-            <li><a href="../404.html" class="footer-link">Managed SOC 24/7</a></li>
-            <li><a href="../404.html" class="footer-link">Penetration Testing</a></li>
-            <li><a href="../404.html" class="footer-link">Cloud Security & Zero Trust</a></li>
-            <li><a href="../404.html" class="footer-link">Incident Response Retainer</a></li>
-            <li><a href="../404.html" class="footer-link">Vulnerability Management</a></li>
-            <li><a href="../404.html" class="footer-link">ISO 27001 Compliance</a></li>
+            <li><a href="service-soc.html" class="footer-link">Managed SOC 24/7</a></li>
+            <li><a href="service-pentest.html" class="footer-link">Penetration Testing</a></li>
+            <li><a href="service-cloud-security.html" class="footer-link">Cloud Security & Zero Trust</a></li>
+            <li><a href="service-incident-response.html" class="footer-link">Incident Response Retainer</a></li>
+            <li><a href="service-vulnerability-management.html" class="footer-link">Vulnerability Management</a></li>
+            <li><a href="service-compliance.html" class="footer-link">ISO 27001 Compliance</a></li>
           </ul>
         </div>
 
