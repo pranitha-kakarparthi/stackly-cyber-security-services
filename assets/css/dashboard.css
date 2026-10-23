@@ -544,6 +544,24 @@
   box-shadow: 0 4px 14px rgba(58, 1, 14, 0.03);
   min-width: 0;
   box-sizing: border-box;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+.dash-stat-card > div:first-child {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.dash-stat-card [style*="font-family: var(--font-mono)"],
+.dash-stat-card code,
+.dash-stat-card pre {
+  word-break: break-all;
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
 }
 
 .dash-stat-card:hover {
@@ -602,12 +620,16 @@
 }
 
 .dash-panel-title {
-  font-size: 1.15rem;
+  font-size: clamp(1rem, 1.25vw, 1.15rem);
   font-weight: 700;
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  flex-wrap: wrap;
   color: var(--text-primary);
+  line-height: 1.35;
+  word-break: break-word;
+  max-width: 100%;
 }
 
 /* Data Table with Smooth Mobile Touch Scrolling */
@@ -827,9 +849,10 @@ body.drawer-open .dash-drawer-backdrop {
     gap: 1.25rem;
   }
   
-  .dash-split-grid {
+  .dash-split-grid,
+  .dash-grid-2 {
     grid-template-columns: 1fr !important;
-    gap: 1.5rem;
+    gap: 1.25rem;
   }
 
   .dash-grid-4 {

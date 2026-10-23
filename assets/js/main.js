@@ -106,20 +106,51 @@ function initMobileNav() {
   const overlay = document.querySelector('.mobile-nav-overlay');
   if (!toggleBtn || !overlay) return;
 
+  let lockedScrollPos = 0;
+
+  // Helper: always keep Services dropdown closed by default on menu open
+  const resetDropdowns = () => {
+    overlay.querySelectorAll('.mobile-dropdown-btn').forEach(btn => {
+      btn.classList.remove('open');
+      btn.setAttribute('aria-expanded', 'false');
+    });
+    overlay.querySelectorAll('.mobile-submenu').forEach(sub => {
+      sub.classList.remove('open');
+    });
+  };
+
   const toggleMenu = (forceState) => {
-    const isOpen = typeof forceState === 'boolean' 
+    const isCurrentlyOpen = overlay.classList.contains('open');
+    const willOpen = typeof forceState === 'boolean' 
       ? forceState 
-      : toggleBtn.classList.toggle('open');
+      : !isCurrentlyOpen;
     
-    if (typeof forceState === 'boolean') {
-      toggleBtn.classList.toggle('open', isOpen);
-    }
-    overlay.classList.toggle('open', isOpen);
-    document.body.classList.toggle('drawer-open', isOpen);
-    toggleBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-    if (isOpen) {
+    toggleBtn.classList.toggle('open', willOpen);
+    overlay.classList.toggle('open', willOpen);
+    toggleBtn.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
+
+    if (willOpen) {
+      // 1. Lock background content fixed at current scroll position
+      lockedScrollPos = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+      document.documentElement.classList.add('drawer-open');
+      document.body.classList.add('drawer-open');
+      document.body.style.top = `-${lockedScrollPos}px`;
+      
+      // 2. Services dropdown must be in closed mode by default upon opening menu
+      resetDropdowns();
+
+      // 3. Ensure menu starts scrolled at the very top of its full container
       overlay.scrollTop = 0;
-      window.scrollTo({ top: 0, behavior: 'instant' });
+    } else {
+      // Restore background position cleanly
+      document.documentElement.classList.remove('drawer-open');
+      document.body.classList.remove('drawer-open');
+      const restorePos = Math.abs(parseInt(document.body.style.top || '0', 10)) || lockedScrollPos;
+      document.body.style.top = '';
+      window.scrollTo({ top: restorePos, behavior: 'instant' });
+
+      // Reset dropdowns on close
+      resetDropdowns();
     }
   };
 
