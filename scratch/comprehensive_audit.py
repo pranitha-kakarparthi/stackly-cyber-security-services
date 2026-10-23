@@ -57,7 +57,6 @@ all_logos_pass = True
 for np in nav_pages:
     with open(np, 'r', encoding='utf-8') as fp:
         c = fp.read()
-    has_nav_wine = 'logoStackly-wine.webp' in c
     has_header_logo = re.search(r'class="nav-brand"[^>]*>[\s\S]*?logoStackly-wine\.webp', c) is not None
     has_mobile_logo = re.search(r'class="mobile-brand-link"[^>]*>[\s\S]*?logoStackly-wine\.webp', c) is not None
     passed = has_header_logo and has_mobile_logo
@@ -65,30 +64,53 @@ for np in nav_pages:
         all_logos_pass = False
     print(f"[{'PASS' if passed else 'FAIL'}] {np}: Header={has_header_logo}, MobileDrawer={has_mobile_logo}")
 
-# 4. Auth Pages Back to Home in Header
-print("\n--- 4. AUTH PAGES MOBILE BACK-TO-HOME BUTTON ---")
-auth_pages = ['pages/sign-in.html', 'pages/sign-up.html']
-all_auth_pass = True
-for ap in auth_pages:
-    with open(ap, 'r', encoding='utf-8') as fp:
+# 4. Collapse Option in Side Menu / Mobile Drawer
+print("\n--- 4. COLLAPSE OPTION IN SIDE MENU / MOBILE DRAWER ---")
+all_collapse_pass = True
+for np in nav_pages:
+    with open(np, 'r', encoding='utf-8') as fp:
         c = fp.read()
-    has_banner_back = 'auth-banner-back-btn' in c and 'Back to Home' in c
-    has_form_back = 'Back to Home' in c and 'auth-nav-top' in c
-    passed = has_banner_back and has_form_back
-    if not passed:
-        all_auth_pass = False
-    print(f"[{'PASS' if passed else 'FAIL'}] {ap}: BannerHeaderBack={has_banner_back}, FormTopBack={has_form_back}")
+    has_close_btn = 'mobile-nav-close-btn' in c
+    if not has_close_btn:
+        all_collapse_pass = False
+    print(f"[{'PASS' if has_close_btn else 'FAIL'}] {np}: Mobile Drawer has Close/Collapse Option = {has_close_btn}")
 
-# 5. Index Hero Image Cleanup
-print("\n--- 5. INDEX HERO IMAGE CLEANUP (No content boxes on hero image) ---")
-with open('index.html', 'r', encoding='utf-8') as fp:
-    idx_c = fp.read()
-has_floating_pill = 'hero-floating-pill' in idx_c
-passed_idx_pill = not has_floating_pill
-print(f"[{'PASS' if passed_idx_pill else 'FAIL'}] index.html: Floating pills removed from hero sentinel image frame = {passed_idx_pill}")
+with open('pages/dashboard.html', 'r', encoding='utf-8') as fp:
+    dash_c = fp.read()
+dash_has_collapse = 'sidebar-collapse-btn' in dash_c and 'mobile-sidebar-close-btn' in dash_c
+print(f"[{'PASS' if dash_has_collapse else 'FAIL'}] pages/dashboard.html has Sidebar Collapse Option = {dash_has_collapse}")
 
-# 6. Form Select Inputs Default to 'Select one'
-print("\n--- 6. FORM SELECT FIRST OPTION (Must be 'Select one') ---")
+# 5. Hero Images Clean (No content boxes on images)
+print("\n--- 5. HERO IMAGES CLEANUP (No white boxes on images) ---")
+all_clean_heroes = True
+for f in html_files:
+    with open(f, 'r', encoding='utf-8') as fp:
+        c = fp.read()
+    pills = re.findall(r'<div class="[^"]*hero-floating-pill[^"]*"', c)
+    if len(pills) > 0:
+        all_clean_heroes = False
+        print(f"[FAIL] {f} has {len(pills)} floating pills!")
+if all_clean_heroes:
+    print("[PASS] 100% of hero sections across all pages have zero content boxes on images!")
+
+# 6. Footer Quick Links (NO Sign In or Sign Up)
+print("\n--- 6. FOOTER QUICK LINKS (NO Sign In / Sign Up) ---")
+all_footer_clean = True
+for np in nav_pages:
+    with open(np, 'r', encoding='utf-8') as fp:
+        c = fp.read()
+    footer_m = re.search(r'<footer\b[\s\S]*?</footer>', c)
+    if footer_m:
+        ft = footer_m.group(0)
+        has_auth_link = 'sign-in.html' in ft or 'sign-up.html' in ft
+        if has_auth_link:
+            all_footer_clean = False
+            print(f"[FAIL] {np} footer still has auth links!")
+        else:
+            print(f"[PASS] {np} footer has no Sign In/Sign Up in Quick Links")
+
+# 7. Form Select First Option == 'Select one'
+print("\n--- 7. FORM SELECT FIRST OPTION (Must be 'Select one') ---")
 all_selects_pass = True
 for f in html_files:
     with open(f, 'r', encoding='utf-8') as fp:
@@ -105,41 +127,22 @@ for f in html_files:
 if all_selects_pass:
     print("[PASS] All <select> elements across all pages default to 'Select one'!")
 
-# 7. Mobile Drawer Accordion with 6 Services
-print("\n--- 7. MOBILE DRAWER WITH 6 SERVICES ACCORDION ---")
-all_drawers_pass = True
-services = [
-    'service-soc.html',
-    'service-pentest.html',
-    'service-cloud-security.html',
-    'service-incident-response.html',
-    'service-vulnerability-management.html',
-    'service-compliance.html'
-]
+# 8. Services Dropdown Closed by Default
+print("\n--- 8. SERVICES DROPDOWN CLOSED BY DEFAULT ---")
+all_closed_pass = True
 for np in nav_pages:
     with open(np, 'r', encoding='utf-8') as fp:
         c = fp.read()
-    missing_svc = [s for s in services if s not in c]
-    passed = len(missing_svc) == 0 and 'mobile-nav-overlay' in c and 'mobile-submenu' in c
+    has_open_submenu = '<ul class="mobile-submenu open">' in c
+    has_open_btn = 'mobile-dropdown-btn open' in c
+    passed = not has_open_submenu and not has_open_btn
     if not passed:
-        all_drawers_pass = False
-        print(f"[FAIL] {np} missing services: {missing_svc}")
+        all_closed_pass = False
+        print(f"[FAIL] {np} has open dropdown by default!")
     else:
-        print(f"[PASS] {np} has full mobile drawer with all 6 services")
-
-# 8. Back to Top Button in All Pages
-print("\n--- 8. BACK TO TOP BUTTON IN ALL PAGES ---")
-all_btt_pass = True
-for f in html_files:
-    with open(f, 'r', encoding='utf-8') as fp:
-        c = fp.read()
-    has_btt = 'back-to-top' in c
-    if not has_btt:
-        all_btt_pass = False
-    print(f"[{'PASS' if has_btt else 'FAIL'}] {f}")
+        print(f"[PASS] {np} services dropdown is closed by default")
 
 print("\n" + "=" * 60)
-overall = all_sections_pass and all_imgs_pass and all_logos_pass and all_auth_pass and passed_idx_pill and all_selects_pass and all_drawers_pass and all_btt_pass
+overall = all_sections_pass and all_imgs_pass and all_logos_pass and all_collapse_pass and all_clean_heroes and all_footer_clean and all_selects_pass and all_closed_pass
 print("OVERALL SUITE RESULT: " + ("ALL TESTS PASSED!" if overall else "SOME TESTS FAILED - REVIEW ABOVE!"))
 print("=" * 60)
-

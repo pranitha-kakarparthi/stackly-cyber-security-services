@@ -156,6 +156,15 @@ function initMobileNav() {
 
   toggleBtn.addEventListener('click', () => toggleMenu());
 
+  // Close / Collapse button inside the mobile drawer
+  const closeBtns = overlay.querySelectorAll('.mobile-nav-close-btn');
+  closeBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      toggleMenu(false);
+    });
+  });
+
   // Interactive Services Dropdown Submenu Accordion Toggle
   const dropdownToggleBtns = overlay.querySelectorAll('.mobile-dropdown-btn');
   dropdownToggleBtns.forEach(btn => {

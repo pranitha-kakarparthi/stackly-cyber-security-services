@@ -150,10 +150,15 @@ function initSidebarControls() {
 
   if (collapseBtn && sidebar) {
     collapseBtn.onclick = () => {
-      sidebar.classList.toggle('collapsed');
-      if (layout) layout.classList.toggle('sidebar-collapsed');
-      const isCollapsed = sidebar.classList.contains('collapsed');
-      collapseBtn.setAttribute('aria-expanded', !isCollapsed);
+      if (window.innerWidth <= 1024) {
+        sidebar.classList.remove('mobile-open');
+        document.body.classList.remove('drawer-open');
+      } else {
+        sidebar.classList.toggle('collapsed');
+        if (layout) layout.classList.toggle('sidebar-collapsed');
+        const isCollapsed = sidebar.classList.contains('collapsed');
+        collapseBtn.setAttribute('aria-expanded', !isCollapsed);
+      }
     };
   }
 
