@@ -32,3 +32,12 @@ logs/
 dist/
 build/
 
+# Development, Tests & Scratch Files
+scratch/
+__pycache__/
+*.py[cod]
+*$py.class
+*.tmp
+*.bak
+
+
