@@ -47,6 +47,35 @@
   width: 76px;
 }
 
+.dash-sidebar.collapsed .dash-sidebar-header {
+  height: auto;
+  min-height: 84px;
+  padding: 0.75rem 0.5rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.dash-sidebar.collapsed .dash-sidebar-brand {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  overflow: visible;
+}
+
+.dash-sidebar.collapsed .dash-sidebar-logo {
+  max-width: 54px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.dash-sidebar.collapsed .sidebar-collapse-toggle {
+  margin: 0 auto;
+}
+
 .dash-sidebar-header {
   height: 74px;
   display: flex;
