@@ -241,7 +241,7 @@ function initDashboardModules(role) {
 
 /* Ensure all action buttons inside dashboard redirect to 404 page */
 function initDashboardActionButtons() {
-  const actionButtons = document.querySelectorAll('.dash-action-btn, [data-action="404"]');
+  const actionButtons = document.querySelectorAll('.dash-action-btn, [data-action="404"], .dash-content button:not(#back-to-top):not(#dash-signout-btn):not(.sidebar-collapse-toggle):not(.mobile-dash-toggle), .dash-main button:not(#back-to-top):not(#dash-signout-btn):not(.sidebar-collapse-toggle):not(.mobile-dash-toggle)');
   actionButtons.forEach(btn => {
     btn.onclick = (e) => {
       e.preventDefault();
